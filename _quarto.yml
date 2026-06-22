@@ -1,0 +1,31 @@
+project:
+  type: book
+
+book:
+  title: "Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution"
+  author: "Norah Jones"
+  date: "6/22/2026"
+  chapters:
+    - index.qmd
+    - part: "Empfehlungen"
+      chapters: 
+      - 1_Einführung.qmd
+      - 2_Vorarbeiten.qmd
+      - 3_Durchführung.qmd
+      - 4_Verwendung.qmd
+      - 5_Ausblick.qmd
+      - references.qmd
+    - part: "Notebooks"
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+    number-depth: 3
+
+editor: visual
