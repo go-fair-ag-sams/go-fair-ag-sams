@@ -3,8 +3,32 @@ project:
 
 book:
   title: "Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution"
-  author: "Norah Jones"
-  date: "6/22/2026"
+  author:  
+    - name: Birte Cordes
+      orcid: 0000-0001-5068-5034
+      affiliations: 
+        - name: Universitätsbibliothek, Universität Kassel, Deutschland
+    - name: Anna Daudrich
+      orcid: 0000-0002-7663-5630
+      affiliations: 
+        - name: Universitätsbibliothek, Zürcher Hochschule für Angewandte Wissenschaften, Schweiz
+    - name: Jessica Hiller
+      orcid: 0009-0000-1619-0070
+      affiliations: 
+        - name: Universitätsbibliothek, Technische Universität Clausthal, Deutschland
+    - name: Isabel Schuster
+      orcid: 0009-0009-0780-8006
+      affiliations: 
+        - name: Universitätsbibliothek, Friedrich-Alexander-Universität Erlangen-Nürnberg, Deutschland
+    - name: Martin Spenger
+      orcid: 0000-0002-8841-5985
+      affiliations: 
+        - name: Universitätsbibliothek, Ludwig-Maximilians-Universität München, Deutschland
+    - name: Dorothea Strecker
+      orcid: 0000-0002-9754-3807
+      affiliations: 
+        - name: Institut für Bibliotheks- und Informationswissenschaft, Humboldt-Universität zu Berlin, Deutschland
+  date: "9/09/2026"
   chapters:
     - index.qmd
     - part: "Empfehlungen"
