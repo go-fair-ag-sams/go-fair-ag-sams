@@ -2,7 +2,7 @@ project:
   type: book
 
 book:
-  title: "Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution"
+  title: "GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution"
   author:  
     - name: Birte Cordes
       orcid: 0000-0001-5068-5034
@@ -33,15 +33,16 @@ book:
     - index.qmd
     - part: "Empfehlungen"
       chapters: 
-      - 1_Einführung.qmd
-      - 2_Vorarbeiten.qmd
-      - 3_Durchführung.qmd
-      - 4_Verwendung.qmd
-      - 5_Ausblick.qmd
-      - references.qmd
+      - strategien/1_Einführung.qmd
+      - strategien/2_Vorüberlegungen.qmd
+      - strategien/3_Durchführung.qmd
+      - strategien/4_Verwendung.qmd
+      - strategien/5_Vorbereitung.qmd
+      - strategien/6_Zusammenfassung.qmd 
+      - strategien/references.qmd
     - part: "Notebooks"
 
-bibliography: references.bib
+bibliography: strategien/references.bib
 
 format:
   html:
