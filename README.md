@@ -1,3 +1,4 @@
-# Überarbeitung der Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution
+# GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution
 
-Stand: 2026-06-22
+Dieses Repositorium umfasst die Dateien für die *GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution*.
+Das Dokument basiert auf Quarto.
