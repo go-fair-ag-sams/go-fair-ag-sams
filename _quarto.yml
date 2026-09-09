@@ -31,7 +31,7 @@ book:
   date: "9/09/2026"
   chapters:
     - index.qmd
-    - part: "Empfehlungen"
+    - part: "Strategien"
       chapters: 
       - strategien/1_Einführung.qmd
       - strategien/2_Vorüberlegungen.qmd
