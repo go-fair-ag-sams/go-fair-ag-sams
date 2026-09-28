@@ -1,7 +1,5 @@
 # Über dieses Dokument {.unnumbered}
 
-**Platzhalter-Text**
-
 Dieses Dokument ist eine Aktualisierung und Überarbeitung von:
 
 Putnings, M., Daudrich, A., Dille, N., Iarkaeva, A., Kühner, J., & Wollmann, A. (2024). GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution. Zenodo. <https://doi.org/10.5281/zenodo.11102368>
