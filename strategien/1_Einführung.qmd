@@ -1,3 +1,68 @@
 # Einführung
 
-asd
+## Ziel, Zielgruppe und Gegenstand des Dokumentes
+
+Dieses Dokument verfolgt das Ziel, praxisorientierte Strategien für die
+Identifizierung, zentrale Erfassung und das Monitoring von
+Forschungsdaten bereitzustellen, die von Angehörigen einer Institution
+dezentral auf verschiedenen Plattformen -- beispielsweise Zenodo, Dryad
+oder fachspezifischen Repositorien -- publiziert wurden. Es baut auf dem
+Dokument „GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von
+Forschungsdaten der eigenen Institution" (@putnings_go_2024) auf,
+wurde aber stark überarbeitet -- einerseits aufgrund inhaltlicher
+Weiterentwicklungen, andererseits um die Praxisrelevanz zu erhöhen.
+
+In erster Linie richtet sich das Dokument an Personen, die mit dem
+Monitoring und der Erfassung von Forschungsdaten betraut sind, etwa
+Forschungsdatenbeauftragte, Mitarbeitende von
+Forschungsinformationssystemen (FIS) sowie Bibliothekar:innen, aber auch
+an alle, die sich sonst für dieses Thema interessieren.
+
+In diesem Dokument umfasst der Begriff „Forschungsdaten" sowohl Daten im
+engeren Sinne -- etwa Mess- und Beobachtungsdaten, Laborergebnisse,
+audiovisuelle Materialien, Texte, Umfragedaten, Sammlungsobjekte oder
+Proben.
+
+Viele der beschriebenen Vorgehensweisen gelten in ähnlicher Weise auch
+für Forschungssoftware und Code, allerdings müssen hierfür zusätzliche
+Datenquellen und -repositorien berücksichtigt werden. Wie die Abfragen
+zum Zwecke des Monitorings dort funktionieren, ist nicht Gegenstand
+dieses Dokuments.
+
+## Motivation zur Durchführung des Datenmonitorings an der eigenen Einrichtung
+
+Ein Monitoring und zentralisierende Maßnahmen, wie z. B. eine
+Indexierung von Forschungsdaten der eigenen Einrichtung kann maßgeblich
+dazu beitragen, deren Auffindbarkeit und Nachnutzbarkeit im
+institutionellen Kontext zu verbessern. Darüber hinaus erhöht sie die
+Sichtbarkeit der publizierten Forschungsergebnisse über institutionelle
+Grenzen hinaus, indem ihre Erschließung in externen Suchmaschinen,
+Harvesting-Diensten, Forschungsinformationssystemen und weiteren
+Aggregatoren erleichtert wird.
+
+Die Sichtbarkeit von Forschungsdaten ist nicht nur im Hinblick auf deren
+Nachnutzung von Bedeutung, sondern gewinnt auch vor dem Hintergrund der
+zunehmenden Anerkennung von Forschungsdatenpublikationen als
+eigenständige wissenschaftliche Leistung an Relevanz. Entsprechend
+finden Forschungsdaten verstärkt Berücksichtigung in Verfahren der
+Bewertung wissenschaftlicher Leistungen.
+
+## Struktur des Dokuments
+
+Die Struktur des Dokuments orientiert sich am Prozess der
+Identifizierung von Forschungsdaten. Entsprechend werden zunächst
+notwendige Vorarbeiten und Voraussetzungen dargestellt, danach die
+Durchführung beschrieben und schließlich weiterführende Perspektiven
+sowie Entwicklungsmöglichkeiten aufgezeigt.
+
+Ergänzend zu diesen Handlungsempfehlungen wird voraussichtlich in Q1
+2027 ein separates Dokument veröffentlicht, das als Ergänzung zu diesem
+Text zu verstehen ist. Darin wird anhand konkreter Praxisbeispiele
+beschrieben, wie einzelne Plattformen nach den Forschungsdaten der
+eigenen Institution durchsucht werden können.
+
+Hilfreich sind darüber hinaus auch die Texte und Handreichungen, die von
+weiteren Unterarbeitsgruppen der AG Sammlung und Sichtbarkeit von
+Forschungsdaten der eigenen Institution entwickelt wurden.[^1]
+
+[^1]: [https://go-unite.de/index.php/aktivitaeten-und-publikationen/](https://go-unite.de/index.php/aktivitaeten-und-publikationen/)

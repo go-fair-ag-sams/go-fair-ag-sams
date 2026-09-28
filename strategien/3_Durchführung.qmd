@@ -1,93 +1,308 @@
 # Durchführung
 
-Bevor mit dem Monitoring begonnen wird, sollte ein Workflow festgelegt werden, der sich an einem klar definierten Anlass des Monitorings orientiert.
+Das folgende Kapitel behandelt die praktische Durchführung des
+institutionellen Forschungsdatenmanagement. Es stellt leitende
+Grundprinzipien vor und fasst den schematischen Ablauf von
+Monitoringaktivitäten zusammen. Zudem werden zwei Suchstrategien -- die
+direkte und die indirekte Suche - beschrieben. Abschließend werden
+exemplarische Datenquellen für die direkte Suche präsentiert.
 
-Beispielsweise ist je nach Zielsetzung eine einmalige Abfrage oder ein kontinuierliches Prüfen nötig. Bei kontinuierlichem Monitoring sollte die Reproduzierbarkeit des Verfahrens sichergestellt werden, etwa indem Skripte für die Abfragen erstellt und abgespeichert werden oder das Vorgehen gründlich dokumentiert wird. Insbesondere die verwendeten Suchbegriffe sollten dokumentiert werden, etwa für die Einschränkung auf bestimmte Publikationstypen oder Namensvarianten der Einrichtung. Zur Erleichterung einer kontinuierlichen Überprüfung können zudem verbindliche Anforderungen für Forschende eingeführt werden. Dazu zählen beispielsweise Empfehlungen oder Vorgaben zur Nutzung bestimmter Repositorien sowie die Verpflichtung, Metadaten veröffentlichter Forschungsdaten in einem zentralen institutionellen Verzeichnis (z. B. einem CRIS) zu erfassen.
+## Grundprinzipien und schematischer Ablauf
 
-Der nächste Schritt ist die Auswahl geeigneter Suchstrategien und Datenquellen. Diese werden in den folgenen Abschnitten nächer vorgestellt.
+Monitoringaktivitäten sollten grundsätzlich individuell auf die
+jeweilige Einrichtung zugeschnitten werden, einem klar definierten
+Anlass folgen, bestehende Rahmenbedingungen -- etwa Leitlinien und
+Fächerprofile -- berücksichtigen und alle relevanten Akteure
+einbeziehen, wobei diese je nach Einrichtung variieren.
 
-Nach der Durchführung der Suche muss die Treffermenge bereinigt werden. Dieser Schritt beinhaltet das Entfernen von Dubletten, Dubletten können am sichersten durch einen Abgleich von Identifiern wie etwa DOIs erkannt werden. Ist das nicht möglich, können auch andere Metadatenelemente wie Titel oder Autor\*innennamen herangezogen werden. Die Ergebnisse sollten im Idealfall auch auf Korrektheit überprüft werden, um falschpositive Treffer auszuschließen.
+Einige Grundprinzipien sind auf alle Monitoringaktivitäten im Kontext
+Open Science anwendbar. 2025 veröffentlichte eine Gruppe internationaler
+Expert:innen die "Principles of Open Science Monitoring" (@bobrov_principles_2025). Dieses Dokument formuliert Anforderungen an Monitoringaktivitäten
+wie die Offenheit und Qualität der genutzten Datenquellen oder die
+Berücksichtigung spezifischer Fächerkulturen. Einrichtungen, die ihren
+Forschungsdatenoutput messen möchten, wird nahegelegt, ihre Aktivitäten
+in regelmäßigen Abständen mit den Principles of Open Science Monitoring
+abzugleichen.
 
-Nach der Bereinigung können die Ergebnisse schließlich für die Weiterverarbeitung im Zielsystem aufbereitet werden.
+Die praktische Ausgestaltung des Monitorings hängt neben den Zielen von
+weiteren Faktoren ab, etwa den vorhandenen Ressourcen. In den meisten
+Fällen wird der Ablauf die folgenden Schritte beinhalten:
+
+1.  **Die Auswahl geeigneter Suchstrategien**. Diese werden in Abschnitt
+    3.2 näher vorgestellt.
+
+2.  **Die Auswahl geeigneter Datenquellen**. Einige Datenquellen werden
+    exemplarisch in Abschnitt 3.3 präsentiert.
+
+3.  **Die Durchführung der Abfragen**. Um die Überprüfbarkeit der
+    Ergebnisse und die Reproduzierbarkeit des Verfahrens
+    sicherzustellen, sollte die Durchführung gründlich dokumentiert
+    werden, etwa indem Skripte für die Abfragen erstellt und
+    abgespeichert werden. Insbesondere die verwendeten Suchbegriffe,
+    Filter und das Abfragedatum sind zu dokumentieren, etwa für die
+    Einschränkung auf bestimmte Publikationstypen oder Namensvarianten
+    der Einrichtung. Einige Beispiele werden voraussichtlich ab Q1 2027
+    in Notebooks zur Verfügung gestellt.
+
+4.  **Die Bereinigung der Ergebnisse**. Nach der Durchführung der
+    Abfragen muss die Treffermenge bereinigt werden. In erster Linie
+    geht es hierbei um das Entfernen von Dubletten, die Zusammenfassung
+    von Versionen und gegebenenfalls die einheitliche Ansetzung von
+    Werten in Freitextfeldern. Die Vereinheitlichung von Werten in
+    Freitextfeldern, etwa für die Namen von Autor:innen, Repositorien
+    und Förderorganisationen, kann sehr aufwendig sein (@kirsch_assessing_2026). Wenn Forschungsdaten über die Suche in Volltexten ermittelt
+    werden, zählt dazu auch der Ausschluss von Fällen, die lediglich
+    "Datennachnutzung" darstellen.
+
+5.  **Die Bewertung der Ergebnisse**. Die Treffermenge sollte auf
+    Korrektheit überprüft werden, um falschpositive Treffer
+    auszuschließen. Dazu zählt insbesondere eine Prüfung der
+    Affiliationsangaben, um sicherzustellen, dass die gefundenen
+    Forschungsdaten tatsächlich der Einrichtung zugeordnet werden
+    können.
+
+Nach diesen Prozessschritten können die Ergebnisse schließlich für die
+Weiterverarbeitung im Zielsystem aufbereitet werden (Kapitel 4).
+
+Welche weiteren Maßnahmen zur Erleichterung zukünftiger
+Monitoringaktivitäten ergriffen werden können, wird in Kapitel 5 genauer
+dargelegt.
 
 ## Suchstrategien
 
-Die grundlegende Herausforderung beim Monitoring des Forschungsdatenoutputs einer Einrichtung ist die gesicherte Herstellung eines Bezugs zwischen Forschungsdatensätzen und der Einrichtung. Diese Zuordnung kann durch zwei verschiedene Ansätze realisiert werden. Die Treffermenge erhöht sich, wenn beide Ansätze kombiniert werden.
+Die grundlegende Herausforderung beim Monitoring des
+Forschungsdatenoutputs einer Einrichtung ist die gesicherte Herstellung
+eines Bezugs zwischen Forschungsdatensätzen und der Einrichtung. Diese
+Zuordnung kann durch zwei verschiedene Ansätze realisiert werden. Durch
+eine Kombination der beiden Ansätze erhöht sich die Treffermenge.
 
-Der Bezug zwischen einer Einrichtung und einem Datensatz kann direkt hergestellt werden, indem Metadatensätze, die Forschungsdaten beschreiben, durchsucht werden – etwa nach Angaben zu Personen, die Datensätze erstellt haben, und ihrer Affiliation. @gee_hunt_2026 beschreibt die Durchführung dieser Suchstrategie umfassend am Beispiel der University of Texas. Häufig fehlen diese Angaben jedoch in Metadaten, beispielsweise weil sie bei der Übergabe an ein Repositorium nicht mit überliefert werden (@robinson-garcia_datacite_2017).
+Der Bezug zwischen einer Einrichtung und einem Datensatz lässt sich
+**direkt** herstellen, indem Metadatensätze, die Forschungsdaten
+beschreiben, durchsucht werden -- etwa nach Angaben zu Personen, welche
+die Datensätze erstellt haben, und ihrer Affiliation. @gee_hunt_2026
+beschreibt die Durchführung dieser Suchstrategie umfassend am Beispiel
+der University of Texas. Häufig fehlen diese Angaben jedoch in den
+Metadaten, beispielsweise weil sie bei der Übergabe an ein Repositorium
+nicht mit überliefert werden (@robinson-garcia_datacite_2017).
 
-Darum ist ergänzend die Suche über andere Forschungsoutputs, die der Einrichtung zugeordnet werden können, sinnvoll – dazu zählen beispielsweise Zeitschriftenartikel, die auf zugrundeliegende Datensätze verweisen. Der Bezug zwischen einer Einrichtung und einem Datensatz wird dann indirekt über diesen Forschungsoutput hergestellt. @cohen_matching_2026 verdeutlichen am Beispiel der Charité Berlin, wie mit diesem Ansatz Forschungsdatenpublikationen identifiziert werden können.
+Darum ist ergänzend die **indirekte** Suche über andere
+Forschungsoutputs, die der Einrichtung zugeordnet werden können,
+sinnvoll. Dazu zählen beispielsweise Zeitschriftenartikel, die auf
+zugrundeliegende Datensätze verweisen. Der Bezug zwischen einer
+Einrichtung und einem Datensatz wird dann indirekt über diesen
+Forschungsoutput hergestellt. Cohen et al. (2026) verdeutlichen am
+Beispiel der Charité Universitätsmedizin Berlin, wie mit diesem Ansatz
+Forschungsdatenpublikationen identifiziert werden können.
 
 Im Folgenden werden die beiden Ansätze näher beschrieben.
 
-### Suche in Metadaten
+### Direkte Suche
 
-Forschungsdatensätze können einer Einrichtung zugeordnet werden, wenn die Metadaten, die den Datensatz beschreiben, entsprechende Angaben enthalten. Für diese Suchstrategie können die unten beschriebenen Datenquellen genutzt werden.
+Forschungsdatensätze können einer Einrichtung direkt zugeordnet werden,
+wenn die Metadaten, die den Datensatz beschreiben, entsprechende Angaben
+enthalten. Für diese Suchstrategie können die unten beschriebenen
+Datenquellen genutzt werden.
 
-Grundsätzlich sind hier zwei Ansätze denkbar: die Suche in Affiliationsangaben oder die Suche nach Autor:innen. Einige Datenquellen nutzen in ihren Metadaten persistente Identifikatoren für Institutionen (z. B. ROR IDs) und Autor\*innen (z. B. ORCID IDs). Diese ermöglichen eine eindeutige Zuordnung zur Einreichtung bzw. Person, darum wäre diese Option besonders wünschenswert für das Monitoring. Da persistente Identifier allerdings nicht immer mit angegeben werden, ist ergänzend eine Suche in Freitextfeldern zu empfehlen. Bei der Suche in Affiliationsangaben sollten möglichst viele verschiedene Ansetzungsformen und Schreibweisen des Einrichtungsnamens genutzt werden, zum Beispiel neben “Humboldt-Universität zu Berlin” auch “HU Berlin” oder “Humboldt University Berlin”. Namensvarianten findet man beispielsweise im ROR-Eintrag einer Einrichtung: <https://ror.org/01hcx6992>
+Grundsätzlich sind hier zwei Ansätze denkbar: die Suche in
+Affiliationsangaben oder die Suche nach Autor:innen. Einige Datenquellen
+nutzen in ihren Metadaten persistente Identifikatoren für Institutionen
+(z. B. ROR IDs) und Autor:innen (z. B. ORCID IDs). Diese ermöglichen
+eine eindeutige Zuordnung zur Einrichtung bzw. Person, darum wäre diese
+Option besonders wünschenswert für das Monitoring. Da persistente
+Identifikatoren allerdings nicht immer mit angegeben werden, ist
+ergänzend eine Suche in Freitextfeldern zu empfehlen, etwa im
+Freitextfeld für den Namen der Institution. Bei der Suche in
+Affiliationsangaben sollten möglichst viele verschiedene
+Ansetzungsformen und Schreibweisen des Einrichtungsnamens genutzt
+werden, zum Beispiel neben "Humboldt-Universität zu Berlin" auch "HU
+Berlin" oder "Humboldt University Berlin". Namensvarianten finden sich
+beispielsweise im ROR-Eintrag einer Einrichtung.[^3]
 
-Jede Suche wird verschiedene Treffermengen erzeugen, die im Anschluss dedupliziert werden sollten.
+Jede Suche wird verschiedene Treffermengen erzeugen, die im Anschluss
+dedupliziert werden sollten.
 
-Bei Datenquellen, die nicht auf Forschungsdaten spezialisiert sind, sollte die Suche auf Publikationstypen eingeschränkt werden, die Gegenstand des Monitorings sind. Nach welchen Werten gesucht werden sollte, hängt davon ab, wie die Datenquelle Publikationstypen beschreibt. Wenn kein kontrolliertes Vokabular genutzt wird, ist auch hier zu empfehlen, nach mehreren Varianten und Schreibweisen zu suchen, beispielsweise nach “data”, “dataset” und “data set”. Bei der Wahl von Suchbegriffen kann auch das Vokabular COAR Resource Types zurate gezogen werden: <https://vocabularies.coar-repositories.org/resource_types/>
+Bei Datenquellen, die nicht auf Forschungsdaten spezialisiert sind,
+sollte die Suche auf Publikationstypen eingeschränkt werden, die
+Gegenstand des Monitorings sind. Nach welchen Werten zu suchen ist,
+hängt davon ab, wie die Datenquelle Publikationstypen beschreibt. Wenn
+kein kontrolliertes Vokabular genutzt wird, ist auch hier
+empfehlenswert, nach mehreren Varianten und Schreibweisen zu suchen,
+beispielsweise nach "data", "dataset" und "data set". Bei der Wahl von
+Suchbegriffen kann z. B. das Vokabular COAR Resource Types zurate
+gezogen werden.[^4]
 
-Die größte Limitation dieses Ansatzes ist, dass er wesentlich von der Metadatenqualität der genutzten Datenquellen abhängt. Fehlende oder fehlerhafte Werte können das Ergebnis verfälschen.
+Die größte Limitation dieses Ansatzes ist, dass er wesentlich von der
+Metadatenqualität der genutzten Datenquellen abhängt (@robinson-garcia_datacite_2017). Fehlende oder fehlerhafte Werte können das Ergebnis
+verfälschen.
 
-### Suche in Volltexten
+### Indirekte Suche
 
-Da Affiliationsangaben in Metadaten, die Forschungsdaten beschreiben, häufig fehlen, kann als weiterer Ansatz die (semi-)automatische Extraktion von Verweisen auf Datensätze in Textpublikationen wie Zeitschriftenartikel oder Data Paper herangezogen werden. Die Verknüpfung zwischen einem Datensatz und einer Einrichtung erfolgt bei diesem Ansatz mittelbar über eine Textpublikation, die sowohl einer Einrichtung zugeordnet werden kann als auch auf einen Datensatz verweist, der die vorgestellten Ergebnisse stützt. Einige Einrichtungen sammeln bereits den Publikationsoutput der Einrichtungsangehörigen, z. B. in Form eines Fachinformationssystems (FIS) oder einer Hochschulbibliographie. Diese können als Basis dienen, zugehörige Datensätze zu finden. Auch der OA Monitor kann als Ausgangspunkt für diese Suchstrategie genutzt werden, da diese Datenquelle Textpublikationen mit wissenschaftlichen Einrichtungen verknüpft.
+Da Affiliationsangaben in Metadaten, die Forschungsdaten beschreiben,
+häufig fehlen (@habermann_datacite_2025), kann als weiterer Ansatz eine indirekte
+Suche über Verweise auf Datensätze in Textpublikationen wie
+Zeitschriftenartikel oder Data Paper herangezogen werden. Die
+Verknüpfung zwischen einem Datensatz und einer Einrichtung erfolgt bei
+diesem Ansatz mittelbar über eine Textpublikation, die sowohl einer
+Einrichtung zugeordnet werden kann als auch auf einen Datensatz
+verweist, der die vorgestellten Ergebnisse stützt. Einige Einrichtungen
+sammeln bereits den Publikationsoutput der Einrichtungsangehörigen, z.
+B. in einem FIS oder in Form einer Hochschulbibliografie. Diese
+Sammlungen können als Basis dienen, zugehörige Datensätze zu finden.
+Auch der OA Monitor[^5] kann als Ausgangspunkt für diese Suchstrategie
+genutzt werden, da diese Datenquelle Textpublikationen mit
+wissenschaftlichen Einrichtungen verknüpft.
 
-Verweise auf Datensätze in Textpublikaitonen werden bereits an einigen Einrichtungen extrahiert, um den Forschungsdatenoutput zu bestimmen. Hier ist insbesondere ein Projekt am QUEST Center for Responsible Research am Berlin Institute of Health at Charité zu nennen, das einen Workflow und Software für diesen Ansatz entwickelt hat (@Iarkaeva-et-al-Workflow-Artikel ; @nachev_oddpub_2025). Die Methode ist jedoch für die Charité und mit dem Fokus auf die Medizin entwickelt worden. Dieser Weg kann daher nicht ohne Anpassungsschritte auf andere Institutionen oder Fachbereiche angewandt werden. Auch an der Universitätsbibliothek Mannheim wurden Workflows und Software entwickelt, um über die Extraktion von Verweisen auf Datensätzen aus Publikationen in der Universitätsbibliografie den Forschungsdatenoutptu zu erfassen (@noauthor_ub-mannheimmadabi_2026).
+Der Verweis auf einen Datensatz kann sowohl im Literaturverzeichnis der
+Textpublikation als auch an anderer Stelle im Volltext, zum Beispiel im
+Methodenteil oder in einem Data Availability Statement, erfolgen.
+@gregory_tracing_2023 (S. 625) unterscheiden zwischen:
 
-Bei dieser Suchstrategie ist bei der Prüfung der Treffermenge zu beachten, dass Fälle von “data reuse” ausgeschlossen werden sollten. Damit ist gemeint, dass Datensätze, die nicht von den Autor:innen der Textpublikation erstellt wurden (also “nachgenutzt” wurden), herausgefiltert werden. Das ist wichtig, da sie nicht zum Forschungsoutput der Einrichtung gehören und das Ergebnis verfälschen können. Wie dieser Abgleich der Autor\*innenlisten von Text- und Forschugnsdatenpublikation erfolgen kann, beschreiben @cohen_matching_2026 für die Charité Berlin.
+- data citation: Verweis auf Datensätze im Literaturverzeichnis
 
-Die zentrale Limitation dieses Ansatzes ist, dass er von der Verfügbarkeit von Volltexten abhängt. Textpublikationen können nur nach Verweisen auf Datensätze durchsucht werden, wenn Zugriff auf die Volltexte besteht. Darum ist es möglich, dass dieser Ansatz für bestimmte Einrichtungen nur unvollständige Ergebnisse liefert.
+- data mention: Verweis auf Datensätze an anderer Stelle
 
-## Datenquellen für die Suche in Metadaten
+- indirect data citation: Verweis auf eine Textpublikation statt des
+  Datensatzes im Literaturverzeichnis
 
-Es gibt verschiedene Arten von Datenquellen, die für das Monitoring genutzt werden können. Datenquellen können beispielsweise unterschieden werden in individuelle Repositorien und Aggregatoren, die Metadaten aus mehreren Quellen zusammenführen. Einige Datenquellen sind spezialisiert auf Forschungsdaten, andere weisen darüber hinaus auch andere Forschungsoutputs nach.
+"Data citations" werden von verschiedenen Datenquellen erfasst, zum
+Beispiel vom Data Citation Corpus (@datacite_data_2025)
+oder von DataCite (@datacite_datacite_2026). Allerdings gibt es große
+Abweichungen zwischen den Datenquellen in der Abdeckung von
+Zitationsbeziehungen (@gerasimov_comparison_2024 ; @strecker_how_2025). Darum sollten unbedingt mehrere Datenquellen kombiniert
+werden, um Lücken auszugleichen.
 
-Grundsätzlich empfiehlt es sich, zunächst die für die eigene Einrichtung relevanten Datenquellen zu identifizieren. Dabei sollten Abdeckung, Metadatenschema, Zugänge und Ausgabeformate berücksichtigt werden.
+Einige Einrichtungen extrahieren darüber hinaus bereits "data mentions",
+also Verweise auf Datensätze in Textpublikationen, um den
+Forschungsdatenoutput zu bestimmen. Hier ist insbesondere ein Projekt am
+QUEST Center for Responsible Research am Berlin Institute of Health at
+Charité zu nennen, das einen eigenen Workflow und Algorithmus für diesen
+Ansatz entwickelt hat (@iarkaeva_workflow_2024 ; @riedel_oddpub_2026). Die Methode ist jedoch für die Charité
+Universitätsmedizin Berlin und mit Fokus auf die Medizin entwickelt
+worden. Folglich kann diese Vorgehensweise nicht ohne Anpassung auf
+andere Institutionen oder Fachbereiche übertragen werden. Diese
+Anpassung hat das Team am Beispiel der Geowisseschaften für die
+Fachbibliothek Geowissenschaften an der Freien Universität Berlin[^6]
+demonstriert (@iarkaeva_methodology_2026). Auch an der
+Universitätsbibliothek Mannheim wurden Workflows und Software
+entwickelt, um über die Extraktion von Verweisen auf Datensätzen aus
+Publikationen in der Universitätsbibliografie den Forschungsdatenoutput
+zu erfassen (@noauthor_ub-mannheimmadabi_2026).
 
-Wir empfehlen, bei der Suche zunächst auf Aggregatoren zu setzen, da dieser Ansatz Ressourcen spart und einheitlichere Treffermengen liefert. Es ist jedoch ratsam, je nach Bedarf auch in individuellen Repositorien zu suchen - insbesondere wenn bekannt ist, dass Einrichtungsangehörige auch kleinere oder disziplinspezifische Repositorien nutzen, die beispielsweise keine DOIs vergeben, etwa Sequenzdatenbanken.
+Im Rahmen der Prüfung der Treffermenge bei der Suchstrategie „indirekte
+Suche" ist sicherzustellen, dass Fälle von "Datennachnutzung"
+ausgeschlossen werden sollten. Leider ist der Begriff „Datennachnutzung"
+nicht eindeutig definiert (@van_de_sandt_definition_2019). Näherungsweise
+können Datensätze, die nicht von den Autor:innen der Textpublikation
+selbst erstellt wurden (also "nachgenutzt" wurden), herausgefiltert
+werden. Das ist wichtig, da sie nicht zum Forschungsoutput der
+Einrichtung gehören und das Ergebnis verfälschen würden. Wie dieser
+Abgleich der Autor:innenlisten des Artikels, mit dem die Daten geteilt
+wurden, und des Artikels, der die Daten referenziert erfolgen kann,
+beschreiben @cohen_matching_2026 für die Charité Universitätsmedizin
+Berlin.
 
-Insbesondere bei der Abfrage individueller Repositorien ist es ratsam, ausreichend Zeit für die vorbereitenden Arbeiten einzuplanen. Die meisten disziplinspezifischen Repositorien verwenden eigene oder angepasste Metadatenschemata, die Suchoberflächen unterscheiden sich teils stark und die Suchmöglichkeiten ebenso (z. B. ob über die Nutzeroberfläche gesucht werden kann, ob eine Erweiterte Suchfunktionalität bereitsteht und/oder eine API, ob Filter gesetzt werden können etc.). Um sich einen ersten Überblick über ein bestimmtes Repositorium zu verschaffen, kann re3data (<https://re3data.org>) gute Dienste leisten. re3data ist das größte internationale Verzeichnis von Forschungsdatenrepositorien und enthält mittels eines spezifisch darauf zugeschnittenen Metadatenschemas detaillierte Informationen über die verzeichneten Repositorien, u. a. URL, verantwortliche Organisation, Scope, Standards, allerdings eher auf die Bedarfe einer Person zugeschnitten, die einen Ort zur Veröffentlichung ihrer Forschungsdaten sucht, nicht auf eine, die Forschungsdaten finden möchte. Eine ähnliche, weniger umfangreiche, aber dafür stärker kuratierte Datenbank für (u. a.) Forschungsdatenrepositorien ist Fairsharing.org (<https://fairsharing.org/>); auch diese ist geeignet, um sich zu einem bestimmten Repositorium zu orientieren.
+Dieser Ansatz bringt allerdings einige Limitationen mit sich. Zunächst
+hängt er wesentlich von den Zitationspraktiken der Forschenden ab.
+Studien zeigen, dass Forschende Datensätze oft nicht oder nur indirekt
+zitieren (@gregory_tracing_2023). Auch hängt er von der Verfügbarkeit von
+Volltexten ab: Textpublikationen können nur nach Verweisen auf
+Datensätze durchsucht werden, wenn Zugriff auf die Volltexte besteht.
+Darum ist es möglich, dass dieser Ansatz für bestimmte Einrichtungen
+oder Fächerprofile nur unvollständige Ergebnisse liefert. Insgesamt ist
+die indirekte Suche ressourcenintensiver als die direkte Suche (@gee_hunt_2026).
 
-Da sich Datenquellen im Laufe der Zeit verändern können, etwa wenn das Metadatenschema aktualisiert wird, verzichten wir an dieser Stelle auf Beispiele für spezifische Abfragen. Konkrete Beispiele erstellen wir in der Form von interaktiven Notebooks, die angepasst und ergänzt werden können.
+## Datenquellen für die direkte Suche
 
-Im Folgenden stellen wir einige zentrale Datenbanken vor, die als Aggregatoren einen guten Einstieg in das Monitoring bieten können.
+Es gibt verschiedene Arten von Datenquellen, die für das Monitoring über
+die direkte Suche genutzt werden können. Datenquellen können
+beispielsweise unterschieden werden in individuelle Repositorien und
+Aggregatoren, die Metadaten aus mehreren Quellen zusammenführen. Einige
+Datenquellen sind spezialisiert auf Forschungsdaten, andere weisen
+darüber hinaus auch weitere Forschungsoutputs nach.
+
+Grundsätzlich empfiehlt es sich, zunächst die für die eigene Einrichtung
+relevanten Datenquellen zu identifizieren. Dabei sollten Abdeckung,
+Metadatenschema, Zugänge und Ausgabeformate berücksichtigt werden. Um
+die Transparenz der Ergebnisse sicherzustellen, sollten nach Möglichkeit
+offene Datenquellen genutzt werden, wie die UNESCO Recommendations on
+Open Science nahelegen: "The monitoring of open science should be
+explicitly kept under public oversight, including the scientific
+community, and whenever possible supported by open non-proprietary and
+transparent infrastructures." (@noauthor_unesco_2021; S. 34)
+
+Es ist empfehlenswert, bei der Suche zunächst auf Aggregatoren zu
+setzen, da dies Ressourcen spart und einheitlichere Treffermengen
+liefert. Je nach Bedarf sollte darüber hinaus auch in individuellen
+Repositorien recherchiert werden -- v.a. dann, wenn bekannt ist, dass
+Einrichtungsangehörige auch kleinere oder disziplinspezifische
+Repositorien nutzen, die bspw. keine DOIs vergeben (etwa
+Sequenzdatenbanken). Darüber hinaus kann eine Direktsuche in
+Repositorien zur Evaluation der Vollständigkeit der über Suchmaschinen
+gefundenen Publikationen herangezogen werden.
+
+Da sich Datenquellen im Laufe der Zeit verändern können, etwa wenn das
+Metadatenschema aktualisiert wird, wird an dieser Stelle auf Beispiele
+für spezifische Abfragen verzichtet. Stattdessen werden wir voraussichtlich in Q1 2027
+interaktive Notebooks veröffentlichen, die angepasst und ergänzt werden können.
+
+Im Folgenden werden einige zentrale offene Datenbanken vorgestellt, die
+als Aggregatoren einen guten Einstieg in das Monitoring bieten können.
+Kriterien für die Auswahl von Datenquellen sind in der Infobox in
+Kapitel 2 zu finden.
+
+### BASE
+
+| Typ             | Suchmaschine ; Aggregator |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beschreibung    | [https://www.base-search.net/about/en/index.php](https://www.base-search.net/about/en/index.php) |
+| Abdeckung       | Metadaten zu Forschungsoutputs, die von Datengebenden über OAI-PMH-Schnittstellen zum Harvesting angeboten werden; [Datenlieferanten](https://www.base-search.net/about/de/about_sources_date.php) |
+| Metadatenschema | [oai-dc](https://oai.base-search.net/#oai-dc) ; [base-dc](https://oai.base-search.net/#base-dc) |
+| Zugänge         | GUI mit “[Erweiterter Suche](https://www.base-search.net/Search/Advanced)” ; API ([OAI-PMH](https://oai.base-search.net/)) ; Der Zugang via API ist ausschließlich für nicht-kommerzielle Zwecke gestattet und erfordert einen API-Key, der nach erfolgter Registrierung zur Verfügung gestellt wird (siehe [https://ubib-baseapi.ub.uni-bielefeld.de/](https://ubib-baseapi.ub.uni-bielefeld.de/), zuletzt aufgerufen am 02.09.2026). Das Anfragenlimit beträgt eine Anfrage pro Sekunde. |
+| Suchfelder      | Publikationstyp kann auf Forschungsdaten eingeschränkt werden (doctype:7) ;Kein Metadatenfeld für Affiliation / ROR ID vorhanden, daher muss mit Freitext gesucht werden. |
+| Ausgabeformate  | GUI: verschiedene Formate, u. a. JSON (kein csv) ; API: XML |
+
 
 ### DataCite
 
-Bei DataCite werden die meisten DOIs für Datensätze registriert, entsprechend umfangreich ist die Datenbank. Über die Nutzeroberfläche ist allerdings nur ein eingeschränkter Export der Trefferliste möglich, weshalb diese Datenquelle per API besser nutzbar ist.
-
-|  |  |
-|----|----|
-| Name | DataCite |
-| Typ | DOI registration agency ; Aggregator |
-| Beschreibung | "We are a global community that shares a common interest: to ensure that research outputs and resources are openly available and connected so that their reuse can advance knowledge across and between disciplines, now and in the future. As a community, we make research more effective with metadata that connects research outputs and resources–from samples and images to data and preprints. We enable the creation and management of persistent identifiers (PIDs), integrate services to improve research workflows, and facilitate the discovery and reuse of research outputs and resources." ([[Quelle]{.underline}](https://datacite.org/mission/)) |
-| Abdeckung | Metadaten zu Forschungsoutputs, für die eine DOI bei DataCite vergeben wurde |
-| Metadatenschema | [[DataCite Metadata Schema v4.7]{.underline}](https://doi.org/10.14454/qdd3-ps68) |
-| Zugänge | DataCite Commons ([[GUI]{.underline}](https://commons.datacite.org/)) ; DataCite [[REST API]{.underline}](https://support.datacite.org/docs/api) mit [[rate limits]{.underline}](https://support.datacite.org/docs/rate-limit) |
-| Ausgabeformate | DataCite Commons: Download einer csv-Datei; DataCite REST API: JSON |
+| Typ             | DOI registration agency ; Aggregator |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beschreibung    | [https://datacite.org/mission/](https://datacite.org/mission/) |
+| Abdeckung       | Metadaten zu Forschungsoutputs, für die eine DOI bei DataCite vergeben wurde, sowie verwandte Publikationen ([Quelle](https://support.datacite.org/docs/works-in-datacite-commons)) |
+| Metadatenschema | [DataCite Metadata Schema v4.7](https://doi.org/10.14454/qdd3-ps68)  |
+| Zugänge         | DataCite Commons ([GUI](https://commons.datacite.org/)) ; DataCite [REST API](https://support.datacite.org/docs/api) mit [rate limits](https://support.datacite.org/docs/rate-limit) ; DataCite metadata dashboards ([GUI](https://metadata.datacite.org/)) ; Die öffentliche REST API kann ohne Authentifizierung genutzt werden und wird von DataCite für das Abrufen und Suchen von DOI-Metadaten empfohlen. |
+| Suchfelder      | Im Tab “Organizations” kann mit ROR ID gesucht werden, dies führt zum Dashboard für die Institution. Die Treffermenge kann dann auf den work type „Dataset“ eingeschränkt werden. |
+| Ausgabeformate  | DataCite Commons: Download einer csv-Datei; DataCite REST API: JSON |
 
 ### OpenAIRE
 
-OpenAIRE enthält Metadaten nicht nur von Datensätzen, sondern auch von weiteren Forschungsoutputs. Es ist über die Nutzeroberfläche gut ansprechbar, obwohl unklar bleibt, ob die Institutionen mit ihrer ROR ID hinterlegt sind.
+| Typ             | Aggregator |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Beschreibung    | [https://www.openaire.eu/faqs](https://www.openaire.eu/faqs) |
+| Abdeckung       | Zahlreiche europäische Datenquellen, darunter sowohl DOI-Agenturen und Aggregatoren als auch Repositorien ([Quellenliste](https://explore.openaire.eu/search/find/dataproviders)) |
+| Metadatenschema | [JSON-Schema](https://doi.org/10.5281/zenodo.4238938) |
+| Zugänge         | OpenAIRE Explore [(GUI)](https://explore.openaire.eu/) ; OpenAIRE Graph ([API](https://graph.openaire.eu/docs/apis/graph-api/)) ; Die öffentliche Graph API kann sowohl mit als auch ohne Authentifizierung genutzt werden. Das Anfragenlimit beträgt bei authentifiziertem Zugang 7200 Anfragen pro Stunde, bei unauthentifiziertem Zugang 60 Anfragen pro Stunde. Zur Authentifizierung ist ein API-Key erforderlich; dieser wird nach Erstellung eines Nutzeraccounts zur Verfügung gestellt. |
+| Suchfelder      | Institutionen sind als kontrolliertes Vokabular angelegt und können in der Advanced Search in Research products mit “Organization is” ausgewählt werden. Filter auf “Research Data” möglich  |
+| Ausgabeformate  | GUI: csv |
 
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Name            | OpenAIRE                                                                                                                                                                                                                                                                                                                                                                                               |
-+=================+========================================================================================================================================================================================================================================================================================================================================================================================================+
-| Typ             | Aggregator                                                                                                                                                                                                                                                                                                                                                                                             |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Beschreibung    | “OpenAIRE is a European project supporting Open Science. On the one hand OpenAIRE is an network of dedicated Open Science experts promoting and providing training on Open Science.                                                                                                                                                                                                                    |
-|                 |                                                                                                                                                                                                                                                                                                                                                                                                        |
-|                 | On the other hand OpenAIRE is a technical infrastructure harvesting research output from connected data providers. OpenAIRE aims to establish an open and sustainable scholarly communication infrastructure responsible for the overall management, analysis, manipulation, provision, monitoring and cross-linking of all research outcomes.” ([[Quelle]{.underline}](https://www.openaire.eu/faqs)) |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Abdeckung       | Zahlreiche europäische Datenquellen, darunter sowohl DOI-Agenturen und Aggregatoren als auch Repositorien ([[Quellenliste]{.underline}](https://explore.openaire.eu/search/find/dataproviders), auch: [[OpenAIRE Graph]{.underline}](https://graph.openaire.eu/docs/))                                                                                                                                 |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Metadatenschema | Eigenes JSON-Schema ([[Zenodo-Publikation]{.underline}](https://doi.org/10.5281/zenodo.4238938))                                                                                                                                                                                                                                                                                                       |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Zugänge         | [[OpenAIRE Explore (GUI)]{.underline}](https://explore.openaire.eu/), [[Advanced Search nach Datasets]{.underline}](https://explore.openaire.eu/search/find/research-outcomes?type=%22dataset%22)                                                                                                                                                                                                      |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Ausgabeformate  | Komplettdownload der Suchergebnisse als csv-Datei                                                                                                                                                                                                                                                                                                                                                      |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+### OpenAlex
+
+| Typ             | Aggregator |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beschreibung    | [https://openalex.org/about](https://openalex.org/about) |
+| Abdeckung       | Aggregatoren sowie Repositorien ([Repositorien-Liste](https://openalex.org/sources?page=1&filter=type:repository), [Information zu Datenquellen](https://help.openalex.org/hc/en-us/articles/28932712154391-How-does-OpenAlex-work), [Noch eine Information zu Datenquellen](https://help.openalex.org/hc/en-us/articles/24397285563671-About-the-data)) |
+| Metadatenschema | [API Overview](https://developers.openalex.org/api-reference/introduction)_<br>_Institutionen werden automatisch zugeordnet ([Beschreibung](https://help.openalex.org/hc/en-us/articles/24831328396311-Institutions-and-Raw-Affiliation-String-Parsing)) |
+| Zugänge         | [OpenAlex GUI](https://openalex.org/), [API](https://developers.openalex.org/), [Snapshot](https://developers.openalex.org/download/overview) ; Suchfilter Institution über die Nutzeroberfläche (mit Lookup) ; Ab Februar 2026 ist für die Nutzung der API im real-produktiven Maßstab ein API-Key erforderlich. Dieser wird nach der Erstellung eines Nutzeraccounts zur Verfügung gestellt und ist im Basismodell kostenlos. Das Anfragenlimit beträgt 100 Anfragen pro Sekunde und 100.000 Credits pro Tag. |
+| Suchfelder | Im Suchfilter “Institution” können per Lookup Institutionen ausgewählt werden. Der Publikationstyp (“Type”) kann auf “dataset” gefiltert werden. |
+| Ausgabeformate  | GUI: vollständiger Export nach Login (kostenfrei), csv oder “csv excel-optimiert” (d. h. [nicht zu viel Inhalt pro Zelle](https://help.openalex.org/hc/en-us/articles/24829724234007-Export-results-from-the-OpenAlex-website)) ; REST API: JSON ; Snapshot: JSON, Parquet |
+
+
+
+[^3]: Beispiel für Namensvarianten im ROR-Profil der
+    Humboldt-Universität zu Berlin: [https://ror.org/01hcx6992](https://ror.org/01hcx6992)
+
+[^4]: [https://vocabularies.coar-repositories.org/resource_types/](https://vocabularies.coar-repositories.org/resource_types/)
+    (abgerufen am 02.09.2026)
+
+[^5]: [https://open-access-monitor.de/](https://open-access-monitor.de/) (abgerufen am 02.09.2026)
+
+[^6]: [https://www.geo.fu-berlin.de/bibliotheken/geo/index.html](https://www.geo.fu-berlin.de/bibliotheken/geo/index.html)
