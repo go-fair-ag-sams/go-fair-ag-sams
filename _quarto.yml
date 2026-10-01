@@ -1,5 +1,6 @@
 project:
   type: book
+  output-dir: _book
 
 book:
   title: "GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution"
@@ -36,7 +37,7 @@ book:
     - part: "Strategien"
       chapters: 
       - strategien/1_Einführung.qmd
-      - strategien/2_Vorüberlegungen.qmd
+      - strategien/2_Vorüberlegungen.qmd
       - strategien/3_Durchführung.qmd
       - strategien/4_Verwendung.qmd
       - strategien/5_Vorbereitung.qmd
@@ -54,5 +55,3 @@ format:
   pdf:
     documentclass: scrreprt
     number-depth: 3
-
-editor: visual
