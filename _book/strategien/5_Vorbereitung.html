@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.38">
@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -59,17 +78,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
   }
 }</script>
 
@@ -82,13 +101,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../strategien/1_Einführung.html">Strategien</a></li><li class="breadcrumb-item"><a href="../strategien/5_Vorbereitung.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Vorbereitung</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -105,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Suchen"></div>
         </div>
         </div>
     <div class="sidebar-menu-container"> 
@@ -120,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Strategien</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -128,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../strategien/1_Einführung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">1 Einführung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -178,8 +197,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#organisatorische-maßnahmen-für-sammlungen" id="toc-organisatorische-maßnahmen-für-sammlungen" class="nav-link active" data-scroll-target="#organisatorische-maßnahmen-für-sammlungen"><span class="header-section-number">5.1</span> Organisatorische Maßnahmen für Sammlungen</a>
+  <ul class="collapse">
+  <li><a href="#leit--und-richtlinien" id="toc-leit--und-richtlinien" class="nav-link" data-scroll-target="#leit--und-richtlinien"><span class="header-section-number">5.1.1</span> Leit- und Richtlinien</a></li>
+  <li><a href="#institutsseitige-empfehlungen-für-die-repositorienwahl" id="toc-institutsseitige-empfehlungen-für-die-repositorienwahl" class="nav-link" data-scroll-target="#institutsseitige-empfehlungen-für-die-repositorienwahl"><span class="header-section-number">5.1.2</span> Institutsseitige Empfehlungen für die Repositorienwahl</a></li>
+  <li><a href="#technische-voraussetzungen-schaffen" id="toc-technische-voraussetzungen-schaffen" class="nav-link" data-scroll-target="#technische-voraussetzungen-schaffen"><span class="header-section-number">5.1.3</span> Technische Voraussetzungen schaffen</a></li>
+  <li><a href="#teilnahme-am-orcid-de-konsortium" id="toc-teilnahme-am-orcid-de-konsortium" class="nav-link" data-scroll-target="#teilnahme-am-orcid-de-konsortium"><span class="header-section-number">5.1.4</span> Teilnahme am ORCID-DE Konsortium</a></li>
+  </ul></li>
+  <li><a href="#motivation-und-befähigung-von-forschenden" id="toc-motivation-und-befähigung-von-forschenden" class="nav-link" data-scroll-target="#motivation-und-befähigung-von-forschenden"><span class="header-section-number">5.2</span> Motivation und Befähigung von Forschenden</a>
+  <ul class="collapse">
+  <li><a href="#anreizsysteme" id="toc-anreizsysteme" class="nav-link" data-scroll-target="#anreizsysteme"><span class="header-section-number">5.2.1</span> Anreizsysteme</a></li>
+  <li><a href="#informationsangebote-für-forschende" id="toc-informationsangebote-für-forschende" class="nav-link" data-scroll-target="#informationsangebote-für-forschende"><span class="header-section-number">5.2.2</span> Informationsangebote für Forschende</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -203,8 +239,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Bestimmte Rahmenbedingungen können die Erfassung des Forschungsdatenoutputs an einer Einrichtung erleichtern. Das ist insbesondere bei permanentem Monitoring relevant, also wenn die Erfassung in regelmäßigen Abständen wiederholt werden soll. Im Folgenden wird auf einige dieser Rahmenbedingungen eingegangen und beschreiben Maßnahmen beschrieben, die zukünftige Monitoringaktivitäten unterstützen können. Die beschriebenen Maßnahmen betreffen neben dem Sammeln der Metadaten auch die Motivation und Befähigung von Forschenden.</p>
+<section id="organisatorische-maßnahmen-für-sammlungen" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="organisatorische-maßnahmen-für-sammlungen"><span class="header-section-number">5.1</span> Organisatorische Maßnahmen für Sammlungen</h2>
+<p>Mit gezielten Maßnahmen können Prozesse und Infrastrukturen besser auf die Erfassung von Forschungsdatenpublikationen vorbereitet werden. Da Voraussetzungen an jeder Einrichtung sehr vielseitig sein können, dienen die genannten Beispiele primär der Orientierung.</p>
+<section id="leit--und-richtlinien" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="leit--und-richtlinien"><span class="header-section-number">5.1.1</span> Leit- und Richtlinien</h3>
+<p>Um einen Rahmen für das Monitoring von Forschungsdatenpublikationen zu schaffen und entsprechende Abfragen zu vereinfachen, können Einrichtungen die Absicht einer möglichst vollständigen Erfassung in Open-Science- oder Forschungsdatenleitlinien aufnehmen. Eine verpflichtende Erfassung sieht beispielsweise die Research Data Management Policy der Buckinghamshire New University vor: „All research data must be registered with the University whether it is hosted by the University or retained elsewhere” (<span class="citation" data-cites="buckinghamshire_new_university_research_2016">Buckinghamshire New University (<a href="references.html#ref-buckinghamshire_new_university_research_2016" role="doc-biblioref">2016</a>)</span> ; S. 3). Hierbei lassen sich auch Regelungen zur Nutzung des institutionellen Repositoriums und zu Communities der Institution in externen Repositorien wie Zenodo festhalten.</p>
+<p>Formulierte Vorgaben und Handreichungen zielen darauf ab, eine bestmöglichen Angabe von Metadaten bei Forschungsdatenpublikationen durch die Autor:innen der eigenen Einrichtung zu erreichen. Dies umfasst neben der korrekten Affiliationsangabe, etwa festgelegt durch eine Affiliationsrichtlinie, auch die Förderung der Nutzung von persistenten Identifikatoren für Einrichtungen (ROR) und Autor:innen (ORCID). Affiliationsrichtlinien werden in der Regel nach Abstimmung mit dem Präsidium erarbeitet und vom Senat verabschiedet. Viele universitäre Einrichtungen haben eine Affiliationsrichtlinie, beispielsweise die TU Clausthal.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="institutsseitige-empfehlungen-für-die-repositorienwahl" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="institutsseitige-empfehlungen-für-die-repositorienwahl"><span class="header-section-number">5.1.2</span> Institutsseitige Empfehlungen für die Repositorienwahl</h3>
+<p>Es gibt eine Vielzahl von Forschungsdatenrepositorien, die sich mit Blick auf ihren Anwendungsbereich, die technische Basis, Implementierung von Standards und weiteren Eigenschaften unterscheiden. Das Verzeichnis re3data weist inzwischen mehr als 3500 Repositorien nach.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Forschungsförderer und Akteure wie z. B. DINI definieren vermehrt Anforderungen an geeignete Forschungsdatenrepositorien, um Forschende Orientierung bei der Repositorienwahl zu geben (<span class="citation" data-cites="gollwitzer_management_2020">Gollwitzer u.&nbsp;a. (<a href="references.html#ref-gollwitzer_management_2020" role="doc-biblioref">2020</a>)</span>). Auch Einrichtungen können Empfehlungen aussprechen, wie etwa die ETH Zürich in den „Guidelines for Research Data Management at ETH Zurich”<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> oder die Forschungsdatenleitlinie der Max-Weber-Stiftung<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>Durch Empfehlungen wie diese können Einrichtungen ihre Angehörigen an Forschungsdatenrepositorien verweisen, die gewünschte Eigenschaften aufweisen. Hierzu zählen beispielsweise die Nutzung persistenter Identifikatoren oder das Harvesten der Datensätze durch Aggregatoren. Wenn Forschende ihre Daten dort veröffentlichen, wird die zukünftige Erfassung des Publikationsoutputs erleichtert.</p>
+</section>
+<section id="technische-voraussetzungen-schaffen" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="technische-voraussetzungen-schaffen"><span class="header-section-number">5.1.3</span> Technische Voraussetzungen schaffen</h3>
+<p>Je nach gewünschtem Verfahren (s. <a href="../strategien/3_Durchführung.html">Kapitel 3</a>) und Voraussetzungen des Zielsystems (s. <a href="../strategien/4_Verwendung.html">Kapitel 4</a>) können (semi-)automatisierte Importroutinen implementiert werden. Das für die Erfassung zuständige Team kann unabhängig von Forschenden Einträge importieren. Auch manuelle Such- und Erfassungsvorgänge sind – mit entsprechendem Aufwand – denkbar, etwa für einen anlassbezogenen Überblick (s. <a href="./2_Vorüberlegungen.qmd#ziele">Kapitel 2.1</a>).</p>
+</section>
+<section id="teilnahme-am-orcid-de-konsortium" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="teilnahme-am-orcid-de-konsortium"><span class="header-section-number">5.1.4</span> Teilnahme am ORCID-DE Konsortium</h3>
+<p>Sofern es keine vertragliche Verpflichtung gibt, obliegt die Entscheidung, einen persönlichen ORCID-Account einzurichten und zu pflegen, jedem Forschenden selbst. Während das Einrichten und die Angabe der ORCID meist ohne Unterstützungs- oder Korrekturbedarf abläuft, erfolgt die aktive Pflege der Einträge nicht immer konsequent. Einrichtungen, die Mitglied im ORCID-DE Konsortium sind, erhalten die Möglichkeit, die ORCID-Einträge ihrer Forschenden zu kuratieren und sie somit bei der Pflege des Accounts zu unterstützen. Der Zugriff auf die ORCID-Einträge erfolgt von technischer Seite über eine API und bedarf der expliziten Zustimmung des jeweiligen Forschenden. Weitere Informationen zum Vorgang sind unter <a href="https://www.orcid-de.org/konsortium/ueber-das-konsortium">https://www.orcid-de.org/konsortium/ueber-das-konsortium</a> und auf den verknüpften Seiten zu finden.</p>
+<p>Durch diese Serviceleistung kann die Akzeptanz der ORCID bei Forschenden erhöht und zugleich die Metadatenqualität in den institutseigenen Forschungsinformationssystemen verbessert werden. Dennoch ist an dieser Stelle anzumerken, dass die Konsortialmitgliedschaft nicht kostenlos ist. Einrichtungen müssen hier abwägen, ob sie den Mitgliedsbetrag aufbringen können bzw. wollen. Auch der erforderliche Personaleinsatz für die Datenpflege sollte bedacht werden.</p>
+</section>
+</section>
+<section id="motivation-und-befähigung-von-forschenden" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="motivation-und-befähigung-von-forschenden"><span class="header-section-number">5.2</span> Motivation und Befähigung von Forschenden</h2>
+<p>Die Einbindung von Forschenden in den Prozess der Sammlung und Sichtbarmachung des Forschungsoutputs der eigenen Einrichtung bereits während des Publikationsprozesses kann zu einer Verbesserung der Metadatenqualität führen und so das spätere Auffinden der Datensätze sowie das Transferieren in andere Systeme erleichtern. Wesentliche Punkte bei diesem Vorgehen sind die Motivation und die Befähigung der Forschenden, sich aktiv in den Prozess einzubringen. Hierfür müssen seitens der Einrichtung die Rahmenbedingungen in Form von Leit- und Richtlinien ausgearbeitet, verabschiedet und veröffentlicht werden. Außerdem können Anreize geschaffen werden, die das Mitwirken der Forschenden positiv beeinflussen. Um die Forschenden über ihre Rolle im Prozess, das damit verbundene Ziel und die zugrundeliegenden Bedingungen aufzuklären sowie dafür zu sensibilisieren, ist eine zielgerichtete Informationsbereitstellung von großer Bedeutung.</p>
+<section id="anreizsysteme" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="anreizsysteme"><span class="header-section-number">5.2.1</span> Anreizsysteme</h3>
+<p>Die Publikation von Forschungsdaten sowie die damit verknüpfte Beachtung der Leit- und Richtlinien lassen sich durch bestimmte Anreizmechanismen fördern.</p>
+<p>Durch die Berücksichtigung von Open-Science-Praktiken in Einstellungs- und Evaluationsverfahren oder in der leistungsorientierten Mittelvergabe können Anreize für die Veröffentlichung von Forschungsdaten gesetzt werden. Dies erfolgt bereits an einigen Einrichtungen, wie eine internationale Sammlung von Stellenausschreibungen zeigt (<span class="citation" data-cites="schonbrodt_academic_2018">Schönbrodt u.&nbsp;a. (<a href="references.html#ref-schonbrodt_academic_2018" role="doc-biblioref">2018</a>)</span>). Darüber hinaus können Datenpublikationen inkl. korrekter Affiliationsangaben durch Preise honoriert werden.</p>
+</section>
+<section id="informationsangebote-für-forschende" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="informationsangebote-für-forschende"><span class="header-section-number">5.2.2</span> Informationsangebote für Forschende</h3>
+<p>Um die Forschenden als aktive Akteure über die anvisierte Sammlung und die damit designierte Verbesserung der Sichtbarkeit von Forschungsdaten der eigenen Einrichtung zu sensibilisieren, sind zielgerichtete Informationen – auch über die am jeweiligen Standort herrschende Verbindlichkeit der Umsetzung - essentiell.</p>
+<p>Die Informationsangebote können die folgenden Aspekte in Bezug auf die Datenpublikation behandeln (soweit zutreffend):</p>
+<ul>
+<li>die Nutzung persistenter Identifier (insbesondere DOI, ORCID, ROR)</li>
+<li>die Wahl eines Repositoriums (Auswahlkriterien, empfohlene Repositorien, Verweis auf das institutionelle Repositorium)</li>
+<li>Institutsseitige Vorgaben
+<ol type="1">
+<li>Forschungsdatenleitlinie oder Open-Science-Leitlinie</li>
+<li>Affiliationsrichtlinie</li>
+<li>Leitlinien für die Datenaufnahme und -kuration in Repositorien (z. B. in Zenodo-Communities)</li>
+<li>Vorgaben zur Dateneinspeisung ins FIS</li>
+<li>Honorierung guter Praxis bei Einstellungsverfahren</li>
+</ol></li>
+<li>FAIR Data Principles</li>
+</ul>
+<p>Forschende können hierbei über unterschiedliche Kommunikationskanäle erreicht werden. Dafür bieten sich die folgenden Wege an:</p>
+<ul>
+<li>Internetseiten des lokalen Forschungsdatenmanagements oder der zugehörigen Universitätsbibliothek</li>
+<li>Unterlagen in Onboarding- und Offboarding-Verfahren</li>
+<li>Newsletter</li>
+<li>Leitlinien und Handlungsempfehlungen</li>
+</ul>
+<p>Eine dynamische Informationsbereitstellung kann unter anderem durch die direkte Interaktion mit den Forschenden auf Informationsveranstaltungen, Multiplikatorveranstaltungen (z. B. Sitzungstermine im Senat oder Fakultätsrat), in Onboarding-Gesprächen und in gezielten Schulungen erfolgen.</p>
+<p>Hierbei ist hervorzuheben, dass erfahrungsgemäß insbesondere (Post-)Doktoranden gut über Schulungen und Workshops zu Themen des Forschungsdatenmanagements erreichbar sind, aber auch andere Zielgruppen können durch spezialisierte Angebote angesprochen werden.</p>
+<p>Neben dem FDM- und Bibliothekspersonal werden hinsichtlich der Kommunikation mit den Forschenden aber auch die Präsidiumsmitglieder, welche für das Ressort Forschung zuständig sind, in der Verantwortung gesehen, sich unterstützend einzubringen. Eine vom Präsidiumsmitglied verfasste Rundmail, in der die Forschenden dazu ermutigend aufgefordert werden, eine ORCID anzulegen und zu pflegen, die Affiliationsrichtlinie zu beachten oder bestimmte Vorgaben bei der Datenpublikation zu erfüllen, kann eine verstärkende Wirkung besitzen.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-buckinghamshire_new_university_research_2016" class="csl-entry" role="listitem">
+Buckinghamshire New University. 2016. <em>Research Data Management Policy</em>. <a href="https://www.bucks.ac.uk/sites/default/files/2021-03/research_data_management_policy.pdf">https://www.bucks.ac.uk/sites/default/files/2021-03/research_data_management_policy.pdf</a>.
+</div>
+<div id="ref-gollwitzer_management_2020" class="csl-entry" role="listitem">
+Gollwitzer, Mario, Andrea Abele-Brehm, Christian Fiebach, u.&nbsp;a. 2020. <em>Management und Bereitstellung von Forschungsdaten in der Psychologie: Überarbeitung der <span>DGPs</span>-Empfehlungen</em>. <span>PsyArXiv</span>. <a href="https://doi.org/10.31234/osf.io/hcxtm">https://doi.org/10.31234/osf.io/hcxtm</a>.
+</div>
+<div id="ref-schonbrodt_academic_2018" class="csl-entry" role="listitem">
+Schönbrodt, Felix, Leonhard Schramm, Franka Etzel, u.&nbsp;a. 2018. <em>Academic job offers that mentioned open science</em>. <span>OSF</span>. <a href="https://doi.org/10.17605/OSF.IO/7JBNT">https://doi.org/10.17605/OSF.IO/7JBNT</a>.
+</div>
+</div>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://doi.org/10.21268/20260119-0">https://doi.org/10.21268/20260119-0</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://www.re3data.org/">https://www.re3data.org</a> (abgerufen am 30.09.2026)<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf">https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf</a> (abgerufen am 30.09.2026)<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><a href="https://doi.org/10.5281/zenodo.10219502">https://doi.org/10.5281/zenodo.10219502</a><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -232,12 +349,12 @@ ul.task-list li input[type="checkbox"] {
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Kopiert");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Kopiert");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

@@ -1,9 +1,13 @@
+---
+lang: de
+---
+
 # Durchführung
 
 Das folgende Kapitel behandelt die praktische Durchführung des
-institutionellen Forschungsdatenmanagement. Es stellt leitende
-Grundprinzipien vor und fasst den schematischen Ablauf von
-Monitoringaktivitäten zusammen. Zudem werden zwei Suchstrategien -- die
+Monitorings des institutionellen Forschungsdatenoutputs. Es stellt
+leitende Grundprinzipien vor und fasst den schematischen Ablauf von
+Monitoringaktivitäten zusammen. Zudem werden zwei Suchstrategien - die
 direkte und die indirekte Suche - beschrieben. Abschließend werden
 exemplarische Datenquellen für die direkte Suche präsentiert.
 
@@ -11,8 +15,8 @@ exemplarische Datenquellen für die direkte Suche präsentiert.
 
 Monitoringaktivitäten sollten grundsätzlich individuell auf die
 jeweilige Einrichtung zugeschnitten werden, einem klar definierten
-Anlass folgen, bestehende Rahmenbedingungen -- etwa Leitlinien und
-Fächerprofile -- berücksichtigen und alle relevanten Akteure
+Anlass folgen, bestehende Rahmenbedingungen - etwa Leitlinien und
+Fächerprofile - berücksichtigen und alle relevanten Akteure
 einbeziehen, wobei diese je nach Einrichtung variieren.
 
 Einige Grundprinzipien sind auf alle Monitoringaktivitäten im Kontext
@@ -28,44 +32,17 @@ Die praktische Ausgestaltung des Monitorings hängt neben den Zielen von
 weiteren Faktoren ab, etwa den vorhandenen Ressourcen. In den meisten
 Fällen wird der Ablauf die folgenden Schritte beinhalten:
 
-1.  **Die Auswahl geeigneter Suchstrategien**. Diese werden in Abschnitt
-    3.2 näher vorgestellt.
-
-2.  **Die Auswahl geeigneter Datenquellen**. Einige Datenquellen werden
-    exemplarisch in Abschnitt 3.3 präsentiert.
-
-3.  **Die Durchführung der Abfragen**. Um die Überprüfbarkeit der
-    Ergebnisse und die Reproduzierbarkeit des Verfahrens
-    sicherzustellen, sollte die Durchführung gründlich dokumentiert
-    werden, etwa indem Skripte für die Abfragen erstellt und
-    abgespeichert werden. Insbesondere die verwendeten Suchbegriffe,
-    Filter und das Abfragedatum sind zu dokumentieren, etwa für die
-    Einschränkung auf bestimmte Publikationstypen oder Namensvarianten
-    der Einrichtung. Einige Beispiele werden voraussichtlich ab Q1 2027
-    in Notebooks zur Verfügung gestellt.
-
-4.  **Die Bereinigung der Ergebnisse**. Nach der Durchführung der
-    Abfragen muss die Treffermenge bereinigt werden. In erster Linie
-    geht es hierbei um das Entfernen von Dubletten, die Zusammenfassung
-    von Versionen und gegebenenfalls die einheitliche Ansetzung von
-    Werten in Freitextfeldern. Die Vereinheitlichung von Werten in
-    Freitextfeldern, etwa für die Namen von Autor:innen, Repositorien
-    und Förderorganisationen, kann sehr aufwendig sein (@kirsch_assessing_2026). Wenn Forschungsdaten über die Suche in Volltexten ermittelt
-    werden, zählt dazu auch der Ausschluss von Fällen, die lediglich
-    "Datennachnutzung" darstellen.
-
-5.  **Die Bewertung der Ergebnisse**. Die Treffermenge sollte auf
-    Korrektheit überprüft werden, um falschpositive Treffer
-    auszuschließen. Dazu zählt insbesondere eine Prüfung der
-    Affiliationsangaben, um sicherzustellen, dass die gefundenen
-    Forschungsdaten tatsächlich der Einrichtung zugeordnet werden
-    können.
+1.  **Die Auswahl geeigneter Suchstrategien**. Diese werden in [Kapitel 3.2](./3_Durchführung.qmd#suchstrategien) näher vorgestellt.
+2.  **Die Auswahl geeigneter Datenquellen**. Einige Datenquellen werden exemplarisch in [Kapitel 3.3](./3_Durchführung.qmd#datenquellen-für-die-direkte-suche) präsentiert.
+3.  **Die Durchführung der Abfragen**. Um die Überprüfbarkeit der Ergebnisse und die Reproduzierbarkeit des Verfahrens sicherzustellen, sollte die Durchführung gründlich dokumentiert werden, etwa indem Skripte für die Abfragen erstellt und abgespeichert werden. Insbesondere die verwendeten Suchbegriffe, Filter und das Abfragedatum sind zu dokumentieren, etwa für die Einschränkung auf bestimmte Publikationstypen oder Namensvarianten der Einrichtung. Einige Beispiele werden ergänzend zu diesem Dokument voraussichtlich ab Q1 2027 in Notebooks zur Verfügung gestellt.
+4.  **Die Bereinigung der Ergebnisse**. Nach der Durchführung der Abfragen muss die Treffermenge bereinigt werden. In erster Linie geht es hierbei um das Entfernen von Dubletten, die Zusammenfassung von Versionen und gegebenenfalls die einheitliche Ansetzung von Werten in Freitextfeldern. Die Vereinheitlichung von Werten in Freitextfeldern, etwa für die Namen von Autor:innen, Repositorien und Förderorganisationen, kann sehr aufwendig sein (@kirsch_assessing_2026). Wenn Forschungsdaten über die Suche in Volltexten ermittelt werden, zählt dazu auch der Ausschluss von Fällen, die lediglich "Datennachnutzung" darstellen.
+5.  **Die Bewertung der Ergebnisse**. Die Treffermenge sollte auf Korrektheit überprüft werden, um falschpositive Treffer auszuschließen. Dazu zählt insbesondere eine Prüfung der Affiliationsangaben, um sicherzustellen, dass die gefundenen Forschungsdaten tatsächlich der Einrichtung zugeordnet werden können.
 
 Nach diesen Prozessschritten können die Ergebnisse schließlich für die
-Weiterverarbeitung im Zielsystem aufbereitet werden (Kapitel 4).
+Weiterverarbeitung im Zielsystem aufbereitet werden (s. [Kapitel 4](./4_Verwendung.qmd)).
 
 Welche weiteren Maßnahmen zur Erleichterung zukünftiger
-Monitoringaktivitäten ergriffen werden können, wird in Kapitel 5 genauer
+Monitoringaktivitäten ergriffen werden können, wird in [Kapitel 5](./5_Vorbereitung) genauer
 dargelegt.
 
 ## Suchstrategien
@@ -90,7 +67,7 @@ Forschungsoutputs, die der Einrichtung zugeordnet werden können,
 sinnvoll. Dazu zählen beispielsweise Zeitschriftenartikel, die auf
 zugrundeliegende Datensätze verweisen. Der Bezug zwischen einer
 Einrichtung und einem Datensatz wird dann indirekt über diesen
-Forschungsoutput hergestellt. Cohen et al. (2026) verdeutlichen am
+Forschungsoutput hergestellt. @cohen_matching_2026 verdeutlichen am
 Beispiel der Charité Universitätsmedizin Berlin, wie mit diesem Ansatz
 Forschungsdatenpublikationen identifiziert werden können.
 
@@ -116,7 +93,8 @@ Affiliationsangaben sollten möglichst viele verschiedene
 Ansetzungsformen und Schreibweisen des Einrichtungsnamens genutzt
 werden, zum Beispiel neben "Humboldt-Universität zu Berlin" auch "HU
 Berlin" oder "Humboldt University Berlin". Namensvarianten finden sich
-beispielsweise im ROR-Eintrag einer Einrichtung.[^3]
+beispielsweise im ROR-Eintrag einer Einrichtung oder auch in der
+institutionellen Affiliationsrichtlinie, falls vorhanden.[^3]
 
 Jede Suche wird verschiedene Treffermengen erzeugen, die im Anschluss
 dedupliziert werden sollten.
@@ -158,9 +136,7 @@ Methodenteil oder in einem Data Availability Statement, erfolgen.
 @gregory_tracing_2023 (S. 625) unterscheiden zwischen:
 
 - data citation: Verweis auf Datensätze im Literaturverzeichnis
-
 - data mention: Verweis auf Datensätze an anderer Stelle
-
 - indirect data citation: Verweis auf eine Textpublikation statt des
   Datensatzes im Literaturverzeichnis
 
@@ -182,7 +158,7 @@ worden. Folglich kann diese Vorgehensweise nicht ohne Anpassung auf
 andere Institutionen oder Fachbereiche übertragen werden. Diese
 Anpassung hat das Team am Beispiel der Geowisseschaften für die
 Fachbibliothek Geowissenschaften an der Freien Universität Berlin[^6]
-demonstriert (@iarkaeva_methodology_2026). Auch an der
+demonstriert (@iarkaeva_methodology_nodate). Auch an der
 Universitätsbibliothek Mannheim wurden Workflows und Software
 entwickelt, um über die Extraktion von Verweisen auf Datensätzen aus
 Publikationen in der Universitätsbibliografie den Forschungsdatenoutput
@@ -195,11 +171,10 @@ nicht eindeutig definiert (@van_de_sandt_definition_2019). Näherungsweise
 können Datensätze, die nicht von den Autor:innen der Textpublikation
 selbst erstellt wurden (also "nachgenutzt" wurden), herausgefiltert
 werden. Das ist wichtig, da sie nicht zum Forschungsoutput der
-Einrichtung gehören und das Ergebnis verfälschen würden. Wie dieser
-Abgleich der Autor:innenlisten des Artikels, mit dem die Daten geteilt
-wurden, und des Artikels, der die Daten referenziert erfolgen kann,
-beschreiben @cohen_matching_2026 für die Charité Universitätsmedizin
-Berlin.
+Einrichtung gehören und das Ergebnis verfälschen würden. Wie das
+Herausfiltern nachgenutzter Datensätze durch einen Abgleich der
+Autor:innen erfolgen kann, beschreiben @cohen_matching_2026 für die
+Charité Universitätsmedizin Berlin.
 
 Dieser Ansatz bringt allerdings einige Limitationen mit sich. Zunächst
 hängt er wesentlich von den Zitationspraktiken der Forschenden ab.
@@ -228,7 +203,7 @@ offene Datenquellen genutzt werden, wie die UNESCO Recommendations on
 Open Science nahelegen: "The monitoring of open science should be
 explicitly kept under public oversight, including the scientific
 community, and whenever possible supported by open non-proprietary and
-transparent infrastructures." (@noauthor_unesco_2021; S. 34)
+transparent infrastructures." (@noauthor_unesco_2021 ; S. 34)
 
 Es ist empfehlenswert, bei der Suche zunächst auf Aggregatoren zu
 setzen, da dies Ressourcen spart und einheitlichere Treffermengen
@@ -248,12 +223,12 @@ interaktive Notebooks veröffentlichen, die angepasst und ergänzt werden könne
 Im Folgenden werden einige zentrale offene Datenbanken vorgestellt, die
 als Aggregatoren einen guten Einstieg in das Monitoring bieten können.
 Kriterien für die Auswahl von Datenquellen sind in der Infobox in
-Kapitel 2 zu finden.
+[Kapitel 2](./2_Vorüberlegungen.qmd) zu finden.
 
 ### BASE
 
 | Typ             | Suchmaschine ; Aggregator |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------- | --------------------------------------------------------------------------------------------------|
 | Beschreibung    | [https://www.base-search.net/about/en/index.php](https://www.base-search.net/about/en/index.php) |
 | Abdeckung       | Metadaten zu Forschungsoutputs, die von Datengebenden über OAI-PMH-Schnittstellen zum Harvesting angeboten werden; [Datenlieferanten](https://www.base-search.net/about/de/about_sources_date.php) |
 | Metadatenschema | [oai-dc](https://oai.base-search.net/#oai-dc) ; [base-dc](https://oai.base-search.net/#base-dc) |
@@ -265,7 +240,7 @@ Kapitel 2 zu finden.
 ### DataCite
 
 | Typ             | DOI registration agency ; Aggregator |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------- | --------------------------------------------------------------------------------------------------|
 | Beschreibung    | [https://datacite.org/mission/](https://datacite.org/mission/) |
 | Abdeckung       | Metadaten zu Forschungsoutputs, für die eine DOI bei DataCite vergeben wurde, sowie verwandte Publikationen ([Quelle](https://support.datacite.org/docs/works-in-datacite-commons)) |
 | Metadatenschema | [DataCite Metadata Schema v4.7](https://doi.org/10.14454/qdd3-ps68)  |
@@ -276,7 +251,7 @@ Kapitel 2 zu finden.
 ### OpenAIRE
 
 | Typ             | Aggregator |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| --------------- | --------------------------------------------------------------------------------------------------|
 | Beschreibung    | [https://www.openaire.eu/faqs](https://www.openaire.eu/faqs) |
 | Abdeckung       | Zahlreiche europäische Datenquellen, darunter sowohl DOI-Agenturen und Aggregatoren als auch Repositorien ([Quellenliste](https://explore.openaire.eu/search/find/dataproviders)) |
 | Metadatenschema | [JSON-Schema](https://doi.org/10.5281/zenodo.4238938) |
@@ -287,7 +262,7 @@ Kapitel 2 zu finden.
 ### OpenAlex
 
 | Typ             | Aggregator |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------- | --------------------------------------------------------------------------------------------------|
 | Beschreibung    | [https://openalex.org/about](https://openalex.org/about) |
 | Abdeckung       | Aggregatoren sowie Repositorien ([Repositorien-Liste](https://openalex.org/sources?page=1&filter=type:repository), [Information zu Datenquellen](https://help.openalex.org/hc/en-us/articles/28932712154391-How-does-OpenAlex-work), [Noch eine Information zu Datenquellen](https://help.openalex.org/hc/en-us/articles/24397285563671-About-the-data)) |
 | Metadatenschema | [API Overview](https://developers.openalex.org/api-reference/introduction)_<br>_Institutionen werden automatisch zugeordnet ([Beschreibung](https://help.openalex.org/hc/en-us/articles/24831328396311-Institutions-and-Raw-Affiliation-String-Parsing)) |
@@ -297,12 +272,10 @@ Kapitel 2 zu finden.
 
 
 
-[^3]: Beispiel für Namensvarianten im ROR-Profil der
-    Humboldt-Universität zu Berlin: [https://ror.org/01hcx6992](https://ror.org/01hcx6992)
+[^3]: Beispiel für Namensvarianten im ROR-Profil der Humboldt-Universität zu Berlin: [https://ror.org/01hcx6992](https://ror.org/01hcx6992)
 
-[^4]: [https://vocabularies.coar-repositories.org/resource_types/](https://vocabularies.coar-repositories.org/resource_types/)
-    (abgerufen am 02.09.2026)
+[^4]: [https://vocabularies.coar-repositories.org/resource_types/](https://vocabularies.coar-repositories.org/resource_types/) (abgerufen am 30.09.2026)
 
-[^5]: [https://open-access-monitor.de/](https://open-access-monitor.de/) (abgerufen am 02.09.2026)
+[^5]: [https://open-access-monitor.de/](https://open-access-monitor.de/) (abgerufen am 30.09.2026)
 
-[^6]: [https://www.geo.fu-berlin.de/bibliotheken/geo/index.html](https://www.geo.fu-berlin.de/bibliotheken/geo/index.html)
+[^6]: [https://www.geo.fu-berlin.de/bibliotheken/geo/index.html](https://www.geo.fu-berlin.de/bibliotheken/geo/index.html) (abgerufen am 30.09.2026)

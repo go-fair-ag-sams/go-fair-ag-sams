@@ -1,1 +1,131 @@
-# Verwendung
+---
+lang: de
+---
+
+# Verwendung 
+
+Einrichtungen verfügen über unterschiedliche technische Möglichkeiten,
+die aus den verschiedenen Quellen erhobenen Daten zu verwenden. Je nach
+Zielsetzung (s. [Kapitel 2](./2_Vorüberlegungen.qmd)) variieren die Zwecke und Prioritäten.
+Dieses Kapitel gibt zunächst einen Überblick über die möglichen
+Zielsysteme für die erhobenen Daten und skizziert anschließend den
+Ingest[^7]-Vorgang mit den zu berücksichtigenden Entscheidungen und
+Rahmenbedingungen.
+
+## Zielsysteme
+
+### Forschungsinformationssysteme
+
+Die Verwendung eines FIS als Zielsystem liegt nahe, sofern die eigene
+Institution eines betreibt bzw. zur Verfügung stellt.
+
+Es gibt verschiedene Softwarelösungen für ein FIS.[^8] Im Folgenden wird
+eine Auswahl von FIS-Softwarelösungen inkl. einiger Besonderheiten ihres
+jeweiligen Umgangs mit Forschungsdaten vorgestellt.
+
+- [DSpace-CRIS](https://wiki.lyrasis.org/display/DSPACECRIS): DSpace-CRIS unterstützt ein erweitertes, an Dublin Core und CERIF orientiertes Datenmodell, konfigurierbare Beziehungen, Workflows, ORCID-Anbindungen sowie REST-Schnittstellen.[^9] Ein eigener Dokumenttyptyp für Forschungsdatenpublikationen mit lokal individuell konfigurierten Metadatenfeldern ist beispielsweise möglich. Mit DSpace 10.0 wurde 2026 die Integration von DSpace-CRIS-Funktionen in den DSpace-Kern begonnen; der Funktionsumfang kann deshalb je nach verwendeter Softwareversion deutlich variieren.[^10]
+- [Pure](https://www.elsevier.com/solutions/pure): Die Erfassung von Forschungsdaten ist als eigener Content-Type „Forschungsdaten", „Datasets" möglich. Verknüpfungen zu Personen, Organisationseinheiten etc. werden in Form von „Master data" erfasst.[^11] In Pure lassen sich auch Berichte zum Forschungsdatenaufkommen einer Einrichtung umsetzen sowie eine (Zweit-)Veröffentlichung der gefundenen Forschungsdatensätze im Pure-eigenen Open Science Portal realisieren.
+- [Elements](https://www.symplectic.co.uk/theelementsplatform/): Die Erfassung von Forschungsdaten war in Elements seit jeher als eigener Datentyp (mit dem Anzeigenamen „Dataset") möglich. Bei der Konfiguration von Elements kann der Datentyp zudem umbenannt werden (z. B. in „Forschungsdaten") oder einen eigenen Datentyp mit einem eigenen Satz von Metadatenfeldern erstellen. Für Elements ist „Dataset" ein Untertyp der Kategorie „Publikation"; die Kategorie lässt sich jedoch ebenfalls umbenennen (z. B. in „Scholar and Creative Work", falls die semantische Bandbreite erhöht werden soll, bspw. mit Blick auf nicht veröffentlichte Forschungsdaten wie solche mit „restricted access"). Elements verfügt über eine Integration von Figshare, welche die Aufnahme von Metadaten zur Beschreibung von Forschungsdaten unterstützt und bei der Aufnahme einen Datensatz direkt mit einem Benutzer im Elements-Objektmodell verknüpft. Ebenso kann Elements so konfiguriert werden, dass es Metadaten zur Beschreibung von Forschungsdaten aus dem institutionellen Repositorium einer Einrichtung übernimmt. Derzeit unterstützt Elements Integrationen von DSpace, EPrints, Hyrax und Figshare for Institutions. Mittels der Elements-Benutzeroberfläche lassen sich Metadaten zur Beschreibung von Forschungsdaten hinzufügen; alternativ können sie über die Elements-API aus anderen strukturierten Datenquellen bezogen werden, sofern entsprechende Zugriffsrechte vorliegen.
+- [Converis](https://clarivate.com/academia-government/ko/scientific-and-academic-research/research-funding-analytics/converis/): In der FIS-Software sind ebenfalls schon seit jeher individuelle Anpassungen am Datenmodell und Metadatenschema möglich; das System kann Publikationen, Personen, Organisationseinheiten, Projekte und weitere Forschungsinformationen zusammenführen und mit Repositorien sowie öffentlichen Forschungsportalen verbinden. Die Converis-Instanz der Universität Kassel enthält bspw. den Publikationstyp „Forschungsdatenpublikation".[^12] Das FIS der Friedrich-Alexander-Universität Erlangen-Nürnberg basiert ebenfalls auf Converis und erfasst Forschungsdaten; die Entwickler:innen können zum Erfahrungsaustausch angesprochen werden.
+- [HISinOne-RES](https://www.his.de/hisinone/forschungsmanagement): Das System enthält Funktionalitäten für ein umfassendes Forschungsmanagement und orientiert sich beim Metadatenschema eng am Kerndatensatz Forschung (KDSF). Der KDSF-Systematik entsprechend gibt es einen Publikationstyp „Forschungsdaten", der mit anderen Objekten wie Personen, Projekten und Förderinformationen verknüpft werden kann. Außerdem bietet die Software Optionen des automatisierten Ingests per API. Importmöglichkeiten bestehen via ORCID, RIS, BibTeX, OpenAlex und OAI-PMH. Um den Import von Metadaten aus Radar Local (RADAR XML) per API zu ermöglichen, hat die Universitätsbibliothek Würzburg ein XSLT-Stylesheet zur Metadatentransformation erstellt, welches seit Januar 2026 zusammen mit dem FIZ Karlsruhe auch zur Nachnutzung bereitgestellt wird.[^13]
+
+### Institutionelles Repositorium
+
+Forschungsdaten bzw. ihre Metadaten können auch im institutionellen
+Repositorium, das entweder ein reines Forschungsdaten- oder ein
+gemischtes Daten- und Textrepositorium sein kann, verzeichnet werden.
+Institutionen entscheiden sich für das institutionelle Repositorium als
+Zielsystem beispielsweise, weil die Einrichtung kein
+Forschungsinformationssystem nutzt oder weil eine regelmäßige
+automatisierte Übertragung von Publikationsmetadaten vom Repositorium
+ins Forschungsinformationssystem bereits etabliert ist. Im zweiten Fall
+kann die bestehende Integration für die aus externen Quellen
+geharvesteten Metadaten ohne weitere Entwicklungsarbeit auf
+Forschungsdaten ausgeweitet werden.
+
+Beispiele für Forschungsdatenrepositorien als Zielsysteme finden sich
+bei:
+
+- [University of Virginia Dataverse](https://dataverse.lib.virginia.edu/dataverse/libradata?q=&fq2=metadataSource%3A%5C%22Harvested%5C%22&fq0=subtreePaths%3A%5C%22%2F1%5C%22&fq1=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=)
+- [Harvard Dataverse](https://dataverse.harvard.edu/dataverse/harvard;jsessionid=3945204ee9c13b5ef80975f097f4?q=&fq1=metadataSource%3A%5C%22Harvested%5C%22&fq0=dvObjectType%3A%28dataverses+OR+datasets%29&types=dataverses%3Adatasets&sort=dateSort&order=)
+- [The Open University](https://university.open.ac.uk/library-research-support/research-data-management/open-university-research-data-management-policy): „4.2 Where data have been archived in a repository other than ORDO or the OU Scholarship Exchange, a metadata-only record should be published on ORDO which describes the data and provides a persistent link (such as a DOI) to the data."
+- @baldwin_instant_2024
+- [University of Eastern Finland](https://www.uef.fi/en/open-research-data)
+
+Die folgenden Softwarelösungen für Repositorien sind derzeit weit verbreitet:
+
+- [MyCoRe](https://www.mycore.de/en/)
+- [DSpace](https://dspace.lyrasis.org/) (das auch eine FIS-Version anbietet, siehe oben). In DSpace können diverse Publikationstypen mit jeweils eigenem Metadatensatz konfiguriert werden, ab Version 9 auch als eigenständige Entitäten, die miteinander in Beziehung gesetzt werden können.
+- [EPrints](https://www.eprints.org/uk/) (@eprints_eprints_2015)
+- [Invenio](https://inveniosoftware.org/) (als Open-Source-Framework für groß anzulegende digitale Repositorien oder spezifisch InvenioRDM
+  für Forschungsdaten)
+- [RADAR](https://www.fiz-karlsruhe.de/de/produkte-und-dienstleistungen/radar) (In den Betriebsvarianten RADAR Local und RADAR Cloud)
+
+Gegebenenfalls muss vor der Erfassung von Forschungsdaten zunächst ein
+Dokumenttyp oder eine Entität für Forschungsdaten angelegt werden.
+
+### Hochschulbibliografie und Bibliothekskatalog
+
+Des Weiteren können Forschungsdaten in der Hochschulbibliografie
+verzeichnet oder in den Bibliothekskatalog aufgenommen werden.
+
+Die Universität Heidelberg verzeichnet beispielsweise in ihrer
+Hochschulbibliografie heiBIB auch Forschungsdatenpublikationen.[^14] Ein
+weiteres Beispiel ist die Universität Bamberg, die seit Anfang 2022
+Forschungsinformationen zu Forschungsdaten in ihrer
+Universitätsbibliografie im FIS verzeichnet und mit
+Forschungsinformationen zu Personen, Einrichtungen, Projekten,
+Publikationen und Auszeichnungen verknüpft (@ziegler_6_2023 ; S.
+1 - 13).
+
+Im gemeinsamen Katalog der Bibliotheksverbünde BVB und KOBV, B3Kat,
+können Forschungsdatenpublikationen manuell erfasst werden.[^15] Das
+Discovery-System EBSCO, das Daten an mehrere Bibliothekskataloge
+liefert, bezieht Metadaten unter anderem von der Bielefeld Academic
+Search Engine (BASE), die auch Forschungsdatenpublikationen verzeichnet.
+Auf diese Art gelangen Datenpublikations-Metadaten also auch automatisch
+über Umwege in manche Bibliothekskataloge.
+
+Eine Art Hochschulbibliografie für Daten führt die University of
+Helsinki mit ihrem Data catalogue. „The metadata are gathered in Data
+catalogue through automatic data transfer (harvesting), and user
+submissions. For harvestable repositories, the researcher must have the
+\"University of Helsinki\" in their affiliation for the metadata to
+appear in the Data catalogue."[^16]
+
+## Schritte zum Ingest in das Zielsystem
+
+Nach den Vorarbeiten (s. [Kapitel 2](./2_Vorüberlegungen.qmd)) und der Datensuche (s. [Kapitel 3](./3_Durchführung.qmd)) sollen
+die identifizierten Publikationsmetadaten nun in das anvisierte
+Zielsystem überführt werden. Unabhängig vom konkreten Zielsystem umfasst
+der Ingest-Prozess die folgenden Schritte.
+
+- **Abbildung, Sichtbarkeit und Berechtigungen festlegen** Um die erfassten Forschungsdaten importieren oder händisch eintragen zu können, muss sichergestellt sein, dass passende Metadatenfelder im Zielsystem existieren oder geschaffen werden können, idealerweise auf Basis bestehender gängiger Standards wie dem Kerndatensatz Forschung.[^17] Das Zielsystem hat eine bestimmte Struktur mit festgelegten Elementen. Ein CRIS kann beispielsweise in Sammlungen für Fachbereiche organisiert sein und Entitäten wie „Artikel", „Dissertation", „Person", „Projekt" u. a. enthalten. Wie sollen die Metadaten der Datenpublikationen abgebildet werden? Gibt es bspw. einen Elementtyp „Dataset" oder „Datensatz"? Die gewünschte Darstellungsform ist bei den weiteren Überlegungen (Ingest-Optionen, Metadatenschema) zu berücksichtigen. Ebenso sollte vorab geplant werden, welche Beschränkungen und Berechtigungen für die eingespielten Daten gelten sollen (read / write). Je nachdem, wie diese im Zielsystem organisiert sind, können oder sollten die Berechtigungen direkt beim Ingest gesetzt werden, bspw. über entsprechende Metadatenfelder oder zusätzliche Angaben im Ingest-Prozess.
+- **Ingest-Optionen des Zielsystems prüfen** In den meisten Fällen ist eine manuelle Eingabe der Publikationsmetadaten nicht wünschenswert. In manche Systeme (z. B. DSpace) können Daten in strukturierter Form (z. B. als CSV-Datei mit bestimmten Spaltenbezeichnungen, oder im OAIS-Format) importiert werden. Möglicherweise steht auch eine API für den Import zur Verfügung. Für den Import müssen ggf. die nötigen Berechtigungen erteilt werden.
+- **Metadatenschema des Zielsystems prüfen** Das Metadatenschema des Zielsystems kann von denen der genutzten Datenquellen abweichen. Beispielsweise können die Namen der Autor:innen im Metadatenfeld dc.contributor.author stehen, in dcterms.creator oder in Feldern aus noch anderen Metadatenschemata. Damit die Metadaten korrekt in das Zielsystem übertragen werden, muss ein Mapping zwischen dem Metadatenschema der Treffermenge auf das des Zielsystems erstellt werden.
+- **Datensatz-Metadaten auf Zielsystem anpassen** Anschließend werden die Publikationsmetadaten transformiert, um a) dem Metadatenschema des Zielsystems und b) ggf. der für den Ingest erforderlichen strukturierten Form zu entsprechen. Für diesen Schritt ist eine gute Dokumentation von besonderer Bedeutung, um eine wiederholte oder regelmäßige Durchführung vorzubereiten. Die Dokumente für die Transformation können ggf. auch veröffentlicht werden, um die Nachnutzung durch Dritte zu ermöglichen.
+- **Ingest testen** Vor dem Komplett-Ingest ist ein Test mit begrenztem Umfang (z. B. 10 Publikationen) unbedingt empfehlenswert.
+- **Ingest durchführen** War der Test erfolgreich, kann der Ingest vollständig durchgeführt und anschließend geprüft werden.
+- **Überprüfen und dokumentieren** Eine Überprüfung des Ingests, entweder stichprobenartig oder automatisiert und vollständig, ist angeraten. Eine gute Dokumentation hilft, wie immer, sowohl bei der Identifizierung von Fehlerquellen als auch bei einer potentiellen erneuten Ausführung zu einem späteren Zeitpunkt.
+
+[^7]: Mit „Ingest" ist hier die Einspeisung in ein System gemeint. Da der englische Begriff im Deutschen geläufig ist, verwenden wir ihn im gesamten Dokument.
+
+[^8]: [https://kfid-online.de/fis_landkarte_visual/fis_landkarte_software.php](https://kfid-online.de/fis_landkarte_visual/fis_landkarte_software.php) (abgerufen am 30.09.2026)
+
+[^9]: [https://4science.com/english-dspace-cris-7-has-landed/](https://4science.com/english-dspace-cris-7-has-landed/) (abgerufen am 30.09.2026)
+
+[^10]: [https://dspace.org/dspace-10-0-released/](https://dspace.org/dspace-10-0-released/) (abgerufen am 30.09.2026)
+
+[^11]: [https://helpcenter.pure.elsevier.com/overview-of-content-types](https://helpcenter.pure.elsevier.com/overview-of-content-types) (abgerufen am 30.09.2026)
+
+[^12]: [https://forschung.uni-kassel.de/converis/portal/list?show=Publication&filter=%5Bfpublyear%3D%5D%2C%5Bfpublicationtype%3D15998%5D&sortBy=publYear&sortOrder=false&cypher=All&page=1&items=10&showAll=&treeView=false&moreOrLess=%5Bfpublyear%3Dtrue%5D%2C%5Bfpublicationtype%3Dfalse%5D&auxfun=&lang=de_DE](https://forschung.uni-kassel.de/converis/portal/list?show=Publication&filter=%5Bfpublyear%3D%5D%2C%5Bfpublicationtype%3D15998%5D&sortBy=publYear&sortOrder=false&cypher=All&page=1&items=10&showAll=&treeView=false&moreOrLess=%5Bfpublyear%3Dtrue%5D%2C%5Bfpublicationtype%3Dfalse%5D&auxfun=&lang=de_DE) (abgerufen am 30.09.2026)
+
+[^13]: [https://github.com/ER-FIZKarlsruhe/radar-stylesheets](https://github.com/ER-FIZKarlsruhe/radar-stylesheets) (abgerufen am 30.09.2026)
+
+[^14]: [https://heibib.ub.uni-heidelberg.de/search/Search/Results?type=AllFields&filter%5B%5D=format%3A%22Research+Data%22](https://heibib.ub.uni-heidelberg.de/search/Search/Results?type=AllFields&filter%5B%5D=format%3A%22Research+Data%22) (abgerufen am 30.09.2026)
+
+[^15]: [https://www.bib-bvb.de/web/kkb-online/forschungsdaten](https://www.bib-bvb.de/web/kkb-online/forschungsdaten) (abgerufen am 30.09.2026)
+
+[^16]: [https://www.helsinki.fi/en/research/services-researchers/data-support/preservation-research-data/data-catalogue](https://www.helsinki.fi/en/research/services-researchers/data-support/preservation-research-data/data-catalogue) (abgerufen am 30.09.2026)
+
+[^17]: [https://www.kerndatensatz-forschung.de/kdsf20/kdsf20.php](https://www.kerndatensatz-forschung.de/kdsf20/kdsf20.php) (abgerufen am 30.09.2026)

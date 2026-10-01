@@ -1,1 +1,186 @@
+---
+lang: de
+---
+
 # Vorbereitung
+
+Bestimmte Rahmenbedingungen können die Erfassung des
+Forschungsdatenoutputs an einer Einrichtung erleichtern. Das ist
+insbesondere bei permanentem Monitoring relevant, also wenn die
+Erfassung in regelmäßigen Abständen wiederholt werden soll. Im Folgenden
+wird auf einige dieser Rahmenbedingungen eingegangen und beschreiben
+Maßnahmen beschrieben, die zukünftige Monitoringaktivitäten unterstützen
+können. Die beschriebenen Maßnahmen betreffen neben dem Sammeln der
+Metadaten auch die Motivation und Befähigung von Forschenden.
+
+## Organisatorische Maßnahmen für Sammlungen
+
+Mit gezielten Maßnahmen können Prozesse und Infrastrukturen besser auf
+die Erfassung von Forschungsdatenpublikationen vorbereitet werden. Da
+Voraussetzungen an jeder Einrichtung sehr vielseitig sein können, dienen
+die genannten Beispiele primär der Orientierung.
+
+### Leit- und Richtlinien
+
+Um einen Rahmen für das Monitoring von Forschungsdatenpublikationen zu
+schaffen und entsprechende Abfragen zu vereinfachen, können
+Einrichtungen die Absicht einer möglichst vollständigen Erfassung in
+Open-Science- oder Forschungsdatenleitlinien aufnehmen. Eine
+verpflichtende Erfassung sieht beispielsweise die Research Data
+Management Policy der Buckinghamshire New University vor: „All research
+data must be registered with the University whether it is hosted by the
+University or retained elsewhere" (@buckinghamshire_new_university_research_2016 ;
+S. 3). Hierbei lassen sich auch Regelungen zur Nutzung des
+institutionellen Repositoriums und zu Communities der Institution in
+externen Repositorien wie Zenodo festhalten.
+
+Formulierte Vorgaben und Handreichungen zielen darauf ab, eine
+bestmöglichen Angabe von Metadaten bei Forschungsdatenpublikationen
+durch die Autor:innen der eigenen Einrichtung zu erreichen. Dies umfasst
+neben der korrekten Affiliationsangabe, etwa festgelegt durch eine
+Affiliationsrichtlinie, auch die Förderung der Nutzung von persistenten
+Identifikatoren für Einrichtungen (ROR) und Autor:innen (ORCID).
+Affiliationsrichtlinien werden in der Regel nach Abstimmung mit dem
+Präsidium erarbeitet und vom Senat verabschiedet. Viele universitäre
+Einrichtungen haben eine Affiliationsrichtlinie, beispielsweise die TU
+Clausthal.[^18]
+
+### Institutsseitige Empfehlungen für die Repositorienwahl
+
+Es gibt eine Vielzahl von Forschungsdatenrepositorien, die sich mit
+Blick auf ihren Anwendungsbereich, die technische Basis, Implementierung
+von Standards und weiteren Eigenschaften unterscheiden. Das Verzeichnis
+re3data weist inzwischen mehr als 3500 Repositorien nach.[^19]
+Forschungsförderer und Akteure wie z. B. DINI definieren vermehrt
+Anforderungen an geeignete Forschungsdatenrepositorien, um Forschende
+Orientierung bei der Repositorienwahl zu geben (@gollwitzer_management_2020). Auch Einrichtungen können Empfehlungen aussprechen, wie etwa die
+ETH Zürich in den „Guidelines for Research Data Management at ETH
+Zurich"[^20] oder die Forschungsdatenleitlinie der
+Max-Weber-Stiftung[^21].
+
+Durch Empfehlungen wie diese können Einrichtungen ihre Angehörigen an
+Forschungsdatenrepositorien verweisen, die gewünschte Eigenschaften
+aufweisen. Hierzu zählen beispielsweise die Nutzung persistenter
+Identifikatoren oder das Harvesten der Datensätze durch Aggregatoren.
+Wenn Forschende ihre Daten dort veröffentlichen, wird die zukünftige
+Erfassung des Publikationsoutputs erleichtert.
+
+### Technische Voraussetzungen schaffen
+
+Je nach gewünschtem Verfahren (s. [Kapitel 3](./3_Durchführung.qmd)) und Voraussetzungen des
+Zielsystems (s. [Kapitel 4](./4_Verwendung.qmd)) können (semi-)automatisierte Importroutinen
+implementiert werden. Das für die Erfassung zuständige Team kann
+unabhängig von Forschenden Einträge importieren. Auch manuelle Such- und
+Erfassungsvorgänge sind -- mit entsprechendem Aufwand -- denkbar, etwa
+für einen anlassbezogenen Überblick (s. [Kapitel 2.1](./2_Vorüberlegungen.qmd#ziele)).
+
+### Teilnahme am ORCID-DE Konsortium
+
+Sofern es keine vertragliche Verpflichtung gibt, obliegt die
+Entscheidung, einen persönlichen ORCID-Account einzurichten und zu
+pflegen, jedem Forschenden selbst. Während das Einrichten und die Angabe
+der ORCID meist ohne Unterstützungs- oder Korrekturbedarf abläuft,
+erfolgt die aktive Pflege der Einträge nicht immer konsequent.
+Einrichtungen, die Mitglied im ORCID-DE Konsortium sind, erhalten die
+Möglichkeit, die ORCID-Einträge ihrer Forschenden zu kuratieren und sie
+somit bei der Pflege des Accounts zu unterstützen. Der Zugriff auf die
+ORCID-Einträge erfolgt von technischer Seite über eine API und bedarf
+der expliziten Zustimmung des jeweiligen Forschenden. Weitere
+Informationen zum Vorgang sind unter
+[https://www.orcid-de.org/konsortium/ueber-das-konsortium](https://www.orcid-de.org/konsortium/ueber-das-konsortium) und auf den
+verknüpften Seiten zu finden.
+
+Durch diese Serviceleistung kann die Akzeptanz der ORCID bei Forschenden
+erhöht und zugleich die Metadatenqualität in den institutseigenen
+Forschungsinformationssystemen verbessert werden. Dennoch ist an dieser
+Stelle anzumerken, dass die Konsortialmitgliedschaft nicht kostenlos
+ist. Einrichtungen müssen hier abwägen, ob sie den Mitgliedsbetrag
+aufbringen können bzw. wollen. Auch der erforderliche Personaleinsatz
+für die Datenpflege sollte bedacht werden.
+
+## Motivation und Befähigung von Forschenden
+
+Die Einbindung von Forschenden in den Prozess der Sammlung und
+Sichtbarmachung des Forschungsoutputs der eigenen Einrichtung bereits
+während des Publikationsprozesses kann zu einer Verbesserung der
+Metadatenqualität führen und so das spätere Auffinden der Datensätze
+sowie das Transferieren in andere Systeme erleichtern. Wesentliche
+Punkte bei diesem Vorgehen sind die Motivation und die Befähigung der
+Forschenden, sich aktiv in den Prozess einzubringen. Hierfür müssen
+seitens der Einrichtung die Rahmenbedingungen in Form von Leit- und
+Richtlinien ausgearbeitet, verabschiedet und veröffentlicht werden.
+Außerdem können Anreize geschaffen werden, die das Mitwirken der
+Forschenden positiv beeinflussen. Um die Forschenden über ihre Rolle im
+Prozess, das damit verbundene Ziel und die zugrundeliegenden Bedingungen
+aufzuklären sowie dafür zu sensibilisieren, ist eine zielgerichtete
+Informationsbereitstellung von großer Bedeutung.
+
+### Anreizsysteme
+
+Die Publikation von Forschungsdaten sowie die damit verknüpfte Beachtung
+der Leit- und Richtlinien lassen sich durch bestimmte Anreizmechanismen
+fördern.
+
+Durch die Berücksichtigung von Open-Science-Praktiken in Einstellungs-
+und Evaluationsverfahren oder in der leistungsorientierten Mittelvergabe
+können Anreize für die Veröffentlichung von Forschungsdaten gesetzt
+werden. Dies erfolgt bereits an einigen Einrichtungen, wie eine
+internationale Sammlung von Stellenausschreibungen zeigt (@schonbrodt_academic_2018). Darüber hinaus können Datenpublikationen inkl. korrekter
+Affiliationsangaben durch Preise honoriert werden.
+
+### Informationsangebote für Forschende
+
+Um die Forschenden als aktive Akteure über die anvisierte Sammlung und
+die damit designierte Verbesserung der Sichtbarkeit von Forschungsdaten
+der eigenen Einrichtung zu sensibilisieren, sind zielgerichtete
+Informationen -- auch über die am jeweiligen Standort herrschende
+Verbindlichkeit der Umsetzung - essentiell.
+
+Die Informationsangebote können die folgenden Aspekte in Bezug auf die
+Datenpublikation behandeln (soweit zutreffend):
+
+- die Nutzung persistenter Identifier (insbesondere DOI, ORCID, ROR)
+- die Wahl eines Repositoriums (Auswahlkriterien, empfohlene Repositorien, Verweis auf das institutionelle Repositorium)
+- Institutsseitige Vorgaben
+  1.  Forschungsdatenleitlinie oder Open-Science-Leitlinie
+  2.  Affiliationsrichtlinie
+  3.  Leitlinien für die Datenaufnahme und -kuration in Repositorien (z. B. in Zenodo-Communities)
+  4.  Vorgaben zur Dateneinspeisung ins FIS
+  5.  Honorierung guter Praxis bei Einstellungsverfahren
+- FAIR Data Principles
+
+Forschende können hierbei über unterschiedliche Kommunikationskanäle
+erreicht werden. Dafür bieten sich die folgenden Wege an:
+
+- Internetseiten des lokalen Forschungsdatenmanagements oder der zugehörigen Universitätsbibliothek
+- Unterlagen in Onboarding- und Offboarding-Verfahren
+- Newsletter
+- Leitlinien und Handlungsempfehlungen
+
+Eine dynamische Informationsbereitstellung kann unter anderem durch die
+direkte Interaktion mit den Forschenden auf Informationsveranstaltungen,
+Multiplikatorveranstaltungen (z. B. Sitzungstermine im Senat oder
+Fakultätsrat), in Onboarding-Gesprächen und in gezielten Schulungen
+erfolgen.
+
+Hierbei ist hervorzuheben, dass erfahrungsgemäß insbesondere
+(Post-)Doktoranden gut über Schulungen und Workshops zu Themen des
+Forschungsdatenmanagements erreichbar sind, aber auch andere Zielgruppen
+können durch spezialisierte Angebote angesprochen werden.
+
+Neben dem FDM- und Bibliothekspersonal werden hinsichtlich der
+Kommunikation mit den Forschenden aber auch die Präsidiumsmitglieder,
+welche für das Ressort Forschung zuständig sind, in der Verantwortung
+gesehen, sich unterstützend einzubringen. Eine vom Präsidiumsmitglied
+verfasste Rundmail, in der die Forschenden dazu ermutigend aufgefordert
+werden, eine ORCID anzulegen und zu pflegen, die Affiliationsrichtlinie
+zu beachten oder bestimmte Vorgaben bei der Datenpublikation zu
+erfüllen, kann eine verstärkende Wirkung besitzen.
+
+[^18]: [https://doi.org/10.21268/20260119-0](https://doi.org/10.21268/20260119-0) 
+
+[^19]: [https://www.re3data.org](https://www.re3data.org/) (abgerufen am 30.09.2026)
+
+[^20]: [https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf](https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf) (abgerufen am 30.09.2026)
+
+[^21]: [https://doi.org/10.5281/zenodo.10219502](https://doi.org/10.5281/zenodo.10219502)

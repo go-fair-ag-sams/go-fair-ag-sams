@@ -4,6 +4,12 @@ project:
 book:
   title: "GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution"
   author:  
+    - name: Dorothea Strecker
+      corresponding: true
+      email: dorothea.strecker@hu-berlin.ce
+      orcid: 0000-0002-9754-3807
+      affiliations: 
+        - name: Institut für Bibliotheks- und Informationswissenschaft, Humboldt-Universität zu Berlin, Deutschland
     - name: Birte Cordes
       orcid: 0000-0001-5068-5034
       affiliations: 
@@ -24,11 +30,7 @@ book:
       orcid: 0000-0002-8841-5985
       affiliations: 
         - name: Universitätsbibliothek, Ludwig-Maximilians-Universität München, Deutschland
-    - name: Dorothea Strecker
-      orcid: 0000-0002-9754-3807
-      affiliations: 
-        - name: Institut für Bibliotheks- und Informationswissenschaft, Humboldt-Universität zu Berlin, Deutschland
-  date: "9/09/2026"
+  date: "10/01/2026"
   chapters:
     - index.qmd
     - part: "Strategien"

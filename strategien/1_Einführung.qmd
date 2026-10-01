@@ -1,15 +1,17 @@
-# Einführung
+---
+lang: de
+---
 
-## Ziel, Zielgruppe und Gegenstand des Dokumentes
+# Einführung
 
 Dieses Dokument verfolgt das Ziel, praxisorientierte Strategien für die
 Identifizierung, zentrale Erfassung und das Monitoring von
 Forschungsdaten bereitzustellen, die von Angehörigen einer Institution
 dezentral auf verschiedenen Plattformen -- beispielsweise Zenodo, Dryad
-oder fachspezifischen Repositorien -- publiziert wurden. Es baut auf dem
+oder fachspezifischen Repositorien - publiziert wurden. Es baut auf dem
 Dokument „GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von
 Forschungsdaten der eigenen Institution" (@putnings_go_2024) auf,
-wurde aber stark überarbeitet -- einerseits aufgrund inhaltlicher
+wurde aber stark überarbeitet - einerseits aufgrund inhaltlicher
 Weiterentwicklungen, andererseits um die Praxisrelevanz zu erhöhen.
 
 In erster Linie richtet sich das Dokument an Personen, die mit dem
@@ -21,20 +23,24 @@ an alle, die sich sonst für dieses Thema interessieren.
 In diesem Dokument umfasst der Begriff „Forschungsdaten" sowohl Daten im
 engeren Sinne -- etwa Mess- und Beobachtungsdaten, Laborergebnisse,
 audiovisuelle Materialien, Texte, Umfragedaten, Sammlungsobjekte oder
-Proben.
+Proben -- als auch den zugehörigen Code bzw. die Software, sofern diese
+ebenfalls in Datenrepositorien veröffentlicht wurden. Der primäre Fokus
+liegt auf Datensätzen, doch die hier beschriebenen Suchstrategien
+differenzieren nicht zwischen Daten- und Codepublikationen. Für eine
+gezielte und umfassende Erhebung veröffentlichter Forschungssoftware
+müssten zusätzlich zu den hier genannten weitere, auf Software
+spezialisierte Publikationsplattformen und Datenquellen berücksichtigt
+werden.
 
-Viele der beschriebenen Vorgehensweisen gelten in ähnlicher Weise auch
-für Forschungssoftware und Code, allerdings müssen hierfür zusätzliche
-Datenquellen und -repositorien berücksichtigt werden. Wie die Abfragen
-zum Zwecke des Monitorings dort funktionieren, ist nicht Gegenstand
-dieses Dokuments.
+Wie die Abfragen zum Zwecke des Monitorings dort funktionieren, ist
+nicht Gegenstand dieses Dokuments.
 
 ## Motivation zur Durchführung des Datenmonitorings an der eigenen Einrichtung
 
-Ein Monitoring und zentralisierende Maßnahmen, wie z. B. eine
-Indexierung von Forschungsdaten der eigenen Einrichtung kann maßgeblich
-dazu beitragen, deren Auffindbarkeit und Nachnutzbarkeit im
-institutionellen Kontext zu verbessern. Darüber hinaus erhöht sie die
+Ein Monitoring und begleitende Maßnahmen, wie z. B. eine Indexierung von
+Forschungsdaten der eigenen Einrichtung, können maßgeblich dazu
+beitragen, deren Auffindbarkeit und Nachnutzbarkeit im institutionellen
+Kontext zu verbessern. Darüber hinaus erhöht sich dadurch die
 Sichtbarkeit der publizierten Forschungsergebnisse über institutionelle
 Grenzen hinaus, indem ihre Erschließung in externen Suchmaschinen,
 Harvesting-Diensten, Forschungsinformationssystemen und weiteren
@@ -65,4 +71,4 @@ Hilfreich sind darüber hinaus auch die Texte und Handreichungen, die von
 weiteren Unterarbeitsgruppen der AG Sammlung und Sichtbarkeit von
 Forschungsdaten der eigenen Institution entwickelt wurden.[^1]
 
-[^1]: [https://go-unite.de/index.php/aktivitaeten-und-publikationen/](https://go-unite.de/index.php/aktivitaeten-und-publikationen/)
+[^1]: [https://go-unite.de/index.php/aktivitaeten-und-publikationen/](https://go-unite.de/index.php/aktivitaeten-und-publikationen/) (abgerufen am 30.09.2026)

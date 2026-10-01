@@ -1,7 +1,25 @@
+---
+lang: de
+---
 # Über dieses Dokument {.unnumbered}
 
-Dieses Dokument ist eine Aktualisierung und Überarbeitung von:
+Dieses Dokument zeigt praxisnah, wie verstreut veröffentlichte Forschungsdaten effizient identifiziert und der eigenen Einrichtung zugeordnet werden können.
+
+Der Teil **Strategien** enthält allgemeine Überlegungen zur Konzeption und Durchführung des Monitorings von institutionellem Forschungsdatenoutput.
+
+Aktuell arbeiten wir ergänzend an **Notebooks**, die Code und Text kombinieren und beispielhaft zeigen, wie bestimmte Datenquellen abgefragt werden können. Die Notebooks werden voraussichtlich in Q1 2027 veröffentlicht.
+
+
+Diese Version ist eine Aktualisierung und Überarbeitung von:
 
 Putnings, M., Daudrich, A., Dille, N., Iarkaeva, A., Kühner, J., & Wollmann, A. (2024). GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution. Zenodo. <https://doi.org/10.5281/zenodo.11102368>
 
-Es zeigt praxisnah, wie verstreut veröffentlichte Forschungsdaten effizient identifiziert und der eigenen Einrichtung zugeordnet werden können. Der Teil **Strategien** enthält allgemeine Überlegungen zur Konzeption und Durchführung des Monitorings von institutionellem Forschungsdatenoutput. Aktuell arbeiten wir ergänzend an **Notebooks**, die Code und Text kombinieren und beispielhaft zeigen, wie bestimmte Datenquellen abgefragt werden können. Die Notebooks werden voraussichtlich in Q1 2027 veröffentlicht.
+## Beitragende
+
+Anastasiia Iarkaeva ; [0000-0002-7370-1663](https://orcid.org/0000-0002-7370-1663) ; Berlin Institute of Health, Charité - Universitätsmedizin Berlin, Deutschland
+
+Markus Putnings ; [0000-0002-6014-9048](https://orcid.org/0000-0002-6014-9048) ; Bibliothek, Technische Hochschule Deggendorf, Deutschland
+
+Esther Asef ; [0000-0003-2411-4953](https://orcid.org/0000-0003-2411-4953) ; Universitätsbibliothek, Charité - Universitätsmedizin Berlin, Deutschland
+
+Christian Malzer ;  [0009-0005-0522-7102](https://orcid.org/0009-0005-0522-7102) ; Bibliothek, Universität Würzburg, Deutschland

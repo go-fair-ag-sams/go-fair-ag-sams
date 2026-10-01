@@ -1,1 +1,36 @@
+---
+lang: de
+---
+
 # Zusammenfassung
+
+Abschließend lässt sich festhalten, dass ein institutionelles Monitoring
+dezentral publizierter Forschungsdaten realisierbar, aber mit einigen
+Herausforderungen verbunden ist.
+
+Zu den Herausforderungen gehört insbesondere der Ressourceneinsatz, der
+für die Umsetzung erforderlich ist, und die Limitationen der verwendeten
+Datenquellen, z. B. mit Blick auf deren Datenqualität oder
+Veränderlichkeit (@demes_overhaul_2026). Auch das Policy-Umfeld ist geprägt von
+dynamischen Entwicklungen. So diskutieren verschiedene Akteure die
+Berücksichtigung von Open-Science-Praktiken in Evaluations- und
+Berufungsverfahren und setzen damit Anreize für die Erfassung des
+Forschungsdatenoutputs, und die internationale Open Science Monitoring
+Initiative fördert den Austausch und setzt sich für mehr
+Standardisierung ein. Diese Entwicklungen können schwer zu überblicken
+sein.
+
+Das Monitoring des institutionellen Forschungsdatenoutputs ist ein
+umfangreiches Vorhaben, das nicht nur ein Verständnis für
+institutionelle Gegebenheiten, Datenquellen und Suchstrategien~~,~~
+sondern auch zumindest grundlegende technische Fähigkeiten voraussetzt.
+Das Monitoring betrifft darüber hinaus verschiedene Bereiche der
+Einrichtungen und profitiert darum von klaren Zuständigkeiten und
+Vorgaben.
+
+Diese Handreichung zeigt auf, dass erste Schritte möglich sind, die
+schrittweise ausgebaut und so immer bessere Ergebnisse liefern können.
+Das Dokument sammelt Erfahrungen und bereitet sie in einer Form auf, die
+hoffentlich anderen Interessierten den Einstieg in das Thema
+erleichtert. Dieses Dokument wird zukünftig ergänzt um Notebooks, die
+konkrete Beispiele für Suchanfragen liefern.
