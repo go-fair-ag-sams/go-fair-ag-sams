@@ -35,15 +35,15 @@ book:
   chapters:
     - index.qmd
     - part: "Strategien"
-      chapters: 
+      chapters:
       - strategien/1_Einführung.qmd
       - strategien/2_Vorüberlegungen.qmd
       - strategien/3_Durchführung.qmd
       - strategien/4_Verwendung.qmd
       - strategien/5_Vorbereitung.qmd
-      - strategien/6_Zusammenfassung.qmd 
+      - strategien/6_Zusammenfassung.qmd
       - strategien/references.qmd
-    - part: "Notebooks"
+#    - part: "Notebooks"
 
 bibliography: strategien/references.bib
 
