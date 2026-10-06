@@ -37,7 +37,7 @@ book:
     - part: "Strategien"
       chapters:
       - strategien/1_Einführung.qmd
-      - stretegien/2_Vorüberlegungen.qmd
+      - strategien/2_Vorüberlegungen.qmd
       - strategien/3_Durchführung.qmd
       - strategien/4_Verwendung.qmd
       - strategien/5_Vorbereitung.qmd
