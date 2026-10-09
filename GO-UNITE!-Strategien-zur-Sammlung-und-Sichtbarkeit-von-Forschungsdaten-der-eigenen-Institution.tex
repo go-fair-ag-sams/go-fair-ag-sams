@@ -1,0 +1,1735 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  ngerman,
+  letterpaper,
+  DIV=11]{scrreprt}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{3}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+\ifLuaTeX
+  \usepackage{luacolor}
+  \usepackage[soul]{lua-ul}
+\else
+  \usepackage{soul}
+\fi
+
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off]{babel}
+\else
+\usepackage[bidi=default,shorthands=off]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Inhaltsverzeichnis}
+\else
+  \newcommand\contentsname{Inhaltsverzeichnis}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Abbildungsverzeichnis}
+\else
+  \newcommand\listfigurename{Abbildungsverzeichnis}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Tabellenverzeichnis}
+\else
+  \newcommand\listtablename{Tabellenverzeichnis}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Abbildung}
+\else
+  \newcommand\figurename{Abbildung}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabelle}
+\else
+  \newcommand\tablename{Tabelle}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{Listingverzeichnis}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution},
+  pdfauthor={Dorothea Strecker; Birte Cordes; Anna Daudrich; Jessica Hiller; Isabel Schuster; Martin Spenger},
+  pdflang={de},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{GO UNITE! Strategien zur Sammlung und Sichtbarkeit von
+Forschungsdaten der eigenen Institution}
+\author{Dorothea Strecker \and Birte Cordes \and Anna
+Daudrich \and Jessica Hiller \and Isabel Schuster \and Martin Spenger}
+\date{2026-10-01}
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Inhaltsverzeichnis}
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\bookmarksetup{startatroot}
+
+\chapter*{Über dieses Dokument}\label{uxfcber-dieses-dokument}
+\addcontentsline{toc}{chapter}{Über dieses Dokument}
+
+\markboth{Über dieses Dokument}{Über dieses Dokument}
+
+Dieses Dokument zeigt praxisnah, wie verstreut veröffentlichte
+Forschungsdaten effizient identifiziert und der eigenen Einrichtung
+zugeordnet werden können.
+
+Der Teil \textbf{Strategien} enthält allgemeine Überlegungen zur
+Konzeption und Durchführung des Monitorings von institutionellem
+Forschungsdatenoutput.
+
+Aktuell arbeiten wir ergänzend an \textbf{Notebooks}, die Code und Text
+kombinieren und beispielhaft zeigen, wie bestimmte Datenquellen
+abgefragt werden können. Die Notebooks werden voraussichtlich in Q1 2027
+veröffentlicht.
+
+Diese Version ist eine Aktualisierung und Überarbeitung von:
+
+Putnings, M., Daudrich, A., Dille, N., Iarkaeva, A., Kühner, J., \&
+Wollmann, A. (2024). GO UNITE! Empfehlungen zur Sammlung und
+Sichtbarkeit von Forschungsdaten der eigenen Institution. Zenodo.
+\url{https://doi.org/10.5281/zenodo.11102368}
+
+\section*{Beitragende}\label{beitragende}
+\addcontentsline{toc}{section}{Beitragende}
+
+\markright{Beitragende}
+
+Anastasiia Iarkaeva ;
+\href{https://orcid.org/0000-0002-7370-1663}{0000-0002-7370-1663} ;
+Berlin Institute of Health, Charité - Universitätsmedizin Berlin,
+Deutschland
+
+Markus Putnings ;
+\href{https://orcid.org/0000-0002-6014-9048}{0000-0002-6014-9048} ;
+Bibliothek, Technische Hochschule Deggendorf, Deutschland
+
+Esther Asef ;
+\href{https://orcid.org/0000-0003-2411-4953}{0000-0003-2411-4953} ;
+Universitätsbibliothek, Charité - Universitätsmedizin Berlin,
+Deutschland
+
+Christian Malzer ;
+\href{https://orcid.org/0009-0005-0522-7102}{0009-0005-0522-7102} ;
+Bibliothek, Universität Würzburg, Deutschland
+
+\part{Strategien}
+
+\chapter{Einführung}\label{einfuxfchrung}
+
+Dieses Dokument verfolgt das Ziel, praxisorientierte Strategien für die
+Identifizierung, zentrale Erfassung und das Monitoring von
+Forschungsdaten bereitzustellen, die von Angehörigen einer Institution
+dezentral auf verschiedenen Plattformen -- beispielsweise Zenodo, Dryad
+oder fachspezifischen Repositorien - publiziert wurden. Es baut auf dem
+Dokument „GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von
+Forschungsdaten der eigenen Institution'' (Putnings u.~a. (2024)) auf,
+wurde aber stark überarbeitet - einerseits aufgrund inhaltlicher
+Weiterentwicklungen, andererseits um die Praxisrelevanz zu erhöhen.
+
+In erster Linie richtet sich das Dokument an Personen, die mit dem
+Monitoring und der Erfassung von Forschungsdaten betraut sind, etwa
+Forschungsdatenbeauftragte, Mitarbeitende von
+Forschungsinformationssystemen (FIS) sowie Bibliothekar:innen, aber auch
+an alle, die sich sonst für dieses Thema interessieren.
+
+In diesem Dokument umfasst der Begriff „Forschungsdaten'' sowohl Daten
+im engeren Sinne -- etwa Mess- und Beobachtungsdaten, Laborergebnisse,
+audiovisuelle Materialien, Texte, Umfragedaten, Sammlungsobjekte oder
+Proben -- als auch den zugehörigen Code bzw. die Software, sofern diese
+ebenfalls in Datenrepositorien veröffentlicht wurden. Der primäre Fokus
+liegt auf Datensätzen, doch die hier beschriebenen Suchstrategien
+differenzieren nicht zwischen Daten- und Codepublikationen. Für eine
+gezielte und umfassende Erhebung veröffentlichter Forschungssoftware
+müssten zusätzlich zu den hier genannten weitere, auf Software
+spezialisierte Publikationsplattformen und Datenquellen berücksichtigt
+werden.
+
+Wie die Abfragen zum Zwecke des Monitorings dort funktionieren, ist
+nicht Gegenstand dieses Dokuments.
+
+\section{Motivation zur Durchführung des Datenmonitorings an der eigenen
+Einrichtung}\label{motivation-zur-durchfuxfchrung-des-datenmonitorings-an-der-eigenen-einrichtung}
+
+Ein Monitoring und begleitende Maßnahmen, wie z. B. eine Indexierung von
+Forschungsdaten der eigenen Einrichtung, können maßgeblich dazu
+beitragen, deren Auffindbarkeit und Nachnutzbarkeit im institutionellen
+Kontext zu verbessern. Darüber hinaus erhöht sich dadurch die
+Sichtbarkeit der publizierten Forschungsergebnisse über institutionelle
+Grenzen hinaus, indem ihre Erschließung in externen Suchmaschinen,
+Harvesting-Diensten, Forschungsinformationssystemen und weiteren
+Aggregatoren erleichtert wird.
+
+Die Sichtbarkeit von Forschungsdaten ist nicht nur im Hinblick auf deren
+Nachnutzung von Bedeutung, sondern gewinnt auch vor dem Hintergrund der
+zunehmenden Anerkennung von Forschungsdatenpublikationen als
+eigenständige wissenschaftliche Leistung an Relevanz. Entsprechend
+finden Forschungsdaten verstärkt Berücksichtigung in Verfahren der
+Bewertung wissenschaftlicher Leistungen.
+
+\section{Struktur des Dokuments}\label{struktur-des-dokuments}
+
+Die Struktur des Dokuments orientiert sich am Prozess der
+Identifizierung von Forschungsdaten. Entsprechend werden zunächst
+notwendige Vorarbeiten und Voraussetzungen dargestellt, danach die
+Durchführung beschrieben und schließlich weiterführende Perspektiven
+sowie Entwicklungsmöglichkeiten aufgezeigt.
+
+Ergänzend zu diesen Handlungsempfehlungen wird voraussichtlich in Q1
+2027 ein separates Dokument veröffentlicht, das als Ergänzung zu diesem
+Text zu verstehen ist. Darin wird anhand konkreter Praxisbeispiele
+beschrieben, wie einzelne Plattformen nach den Forschungsdaten der
+eigenen Institution durchsucht werden können.
+
+Hilfreich sind darüber hinaus auch die Texte und Handreichungen, die von
+weiteren Unterarbeitsgruppen der AG Sammlung und Sichtbarkeit von
+Forschungsdaten der eigenen Institution entwickelt wurden.\footnote{\url{https://go-unite.de/index.php/aktivitaeten-und-publikationen/}
+  (abgerufen am 30.09.2026)}
+
+\chapter{Vorüberlegungen}\label{voruxfcberlegungen}
+
+In diesem Kapitel werden Vorüberlegungen, die wissenschaftlichen
+Einrichtungen bei der Konzeption von institutionellem
+Forschungsdatenmonitoring helfen können, thematisiert. Grundsätzlich ist
+es empfehlenswert, dass Einrichtungen, die ihren Forschungsdatenoutput
+erfassen möchten, zunächst ihre Ziele festlegen und die vorhandenen
+Ressourcen (insbesondere personelle Kapazitäten) bestimmen. Für die
+Implementierung von Monitoring-Initiativen bei limitierten Ressourcen
+werden Handlungsempfehlungen in einer Infobox vorgestellt.
+
+\section{Ziele}\label{ziele}
+
+Je nach institutionellen Rahmenbedingungen und strategischen
+Anforderungen können Ziele und Anlässe eines Datenmonitorings variieren.
+Das Monitoring kann ganz allgemein der Erfassung publizierter
+Forschungsdaten dienen, etwa im Sinne einer Hochschulbibliografie, oder
+darüber hinaus als Grundlage für strategische Entscheidungen und die
+Weiterentwicklung des Forschungsdatenmanagements (FDM) genutzt werden.
+Zu den möglichen Anlässen und Zielen eines Datenmonitorings zählen unter
+anderem:
+
+\begin{itemize}
+\tightlist
+\item
+  Erweiterung von Dokumentationstypen in einem bereits bestehenden FIS
+\item
+  die Überprüfung der Umsetzung von Leitlinien
+\item
+  die Weiterentwicklung von Leitlinien
+\item
+  die Unterstützung des Berichtswesens und der strategischen
+  Organisationsentwicklung
+\item
+  die Identifikation von Handlungsbedarfen im institutionellen FDM
+\item
+  die Erfolgskontrolle bereits umgesetzter FDM-Maßnahmen
+\item
+  die Berücksichtigung von Datenpublikationen in Einstellungs- und
+  Evaluationsverfahren oder in der leistungsorientierten Mittelvergabe
+\end{itemize}
+
+Je nach Zielsetzung kann ein einmaliges oder ein permanentes Monitoring
+erforderlich sein:
+
+\begin{itemize}
+\tightlist
+\item
+  Ein \textbf{einmaliges Monitoring} dient der anlassbezogenen Erfassung
+  und Auswertung publizierter Forschungsdaten, beispielsweise zur
+  Vorbereitung einer Evaluation, zur Entwicklung einer institutionellen
+  FDM-Policy oder zur Analyse des aktuellen Stands des
+  Forschungsdatenmanagements.
+\item
+  Im Gegensatz dazu verfolgt ein \textbf{permanentes Monitoring} das
+  Ziel, publizierte Forschungsdaten kontinuierlich zu erfassen und
+  auszuwerten, um Entwicklungen und Trends über einen längeren Zeitraum
+  zu beobachten. Dadurch können beispielsweise die Wirksamkeit von
+  FDM-Maßnahmen regelmäßig überprüft und neue Handlungsbedarfe
+  frühzeitig erkannt werden. Um das Ziel einer möglichst vollständigen
+  regelmäßigen Erfassung der FD-Publikationen zu unterstützen, können
+  verschiedene Maßnahmen etabliert werden. Dazu zählen beispielsweise
+  Empfehlungen oder Vorgaben zur Nutzung bestimmter Repositorien, die
+  Erfassung von Metadaten in einem zentralen institutionellen
+  Verzeichnis (z. B. FIS) sowie die Berücksichtigung der
+  Forschungsdatenpublikation im Rahmen leistungsorientierter
+  Mittelvergabe.
+\end{itemize}
+
+\section{Herausforderungen}\label{herausforderungen}
+
+Die Erfassung von Forschungsdatenpublikationen einer Einrichtung ist mit
+technischen und institutionellen Herausforderungen verbunden.
+Nachfolgend werden die wichtigsten Hürden dargestellt, um sie in der
+Konzeption zu berücksichtigen und realistisch planen zu können.
+
+\subsection{Technische
+Herausforderungen}\label{technische-herausforderungen}
+
+Zunächst werden nun einige technische Herausforderungen vorgestellt,
+welche die Erfassung des Forschungsdatenoutputs beeinträchtigen. Wie
+diese Herausforderungen in der Praxis adressiert werden können, wird in
+\href{./3_Durchführung.qmd}{Kapitel 3} gezeigt.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Verschiedene Datenquellen und Suchstrategien
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Auswahl geeigneter Datenquellen}: Welche Objekte deckt die
+  Datenquelle ab? Enthält die Datenquelle die Metadaten, die für den
+  Zweck erforderlich sind? Bietet die Datenquelle geeignete Zugänge und
+  Ausgabeformate an? In \hyperref[suchstrategien]{Kapitel 3.2} werden
+  einige zentrale Datenquellen vorgestellt. Grundsätzlich sollten
+  Datenquellen vor der Auswahl gründlich geprüft werden. Dazu zählt
+  neben der Konsultation der Dokumentation auch ein Testdurchlauf, um
+  Zugangswege und Ausgabeformate zu prüfen.
+\item
+  \textbf{Auswahl geeigneter Suchstrategien}: Gibt es bereits
+  Anhaltspunkte darüber, wo und wie Forschende der Einrichtung ihre
+  Daten publizieren (beispielsweise aus Bedarfserhebungen)? Welche
+  Suchstrategien können mit den gewählten Datenquellen und vorhandenen
+  Ressourcen umgesetzt werden? In
+  \hyperref[grundprinzipien-und-schematischer-ablauf]{Kapitel 3.1}
+  werden verschiedene Suchstrategien vorgestellt. Empfehlenswert ist
+  nach Möglichkeit die Kombination verschiedener Suchstrategien.
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Eingeschränkte technische Kapazitäten
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Auswahl geeigneter Werkzeuge}: Sind programmatische Abfragen
+  möglich? Welche Werkzeuge stehen für die Weiterverarbeitung der Daten
+  zur Verfügung (z. B. bestimmte Skriptsprachen oder Text- und
+  Tabellenbearbeitungsprogramme)?
+\item
+  \textbf{Bestimmen des Ressourceneinsatzes}: Welche personellen
+  Kapazitäten stehen zur Verfügung -- wie viele Personen können sich mit
+  dem Thema beschäftigen und wie viel Arbeitszeit können sie darauf
+  verwenden?
+\end{itemize}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Vorgaben des Zielsystems
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Inputformate und Metadatenfelder}: Welche Anforderungen stellt
+  das Zielsystem?
+\item
+  \textbf{Importmöglichkeiten}: Verfügt das Zielsystem über
+  Schnittstellen und wenn ja, welche? Welcher Maß an Automatisierung
+  kann ereicht werden und welcher manueller Aufwand ist weiterhin
+  notwendig?
+\end{itemize}
+
+\subsection{Institutionelle
+Herausforderungen}\label{institutionelle-herausforderungen}
+
+Arbeitsgruppe 1 (Scoping the Needs of Open Science Monitoring) der Open
+Science Monitoring Initiative hat festgestellt, dass institutionelle
+Barrieren die größten Herausforderungen bei der Umsetzung von
+Monitoringaktivitäten darstellen (Salisu und Cortés, 2026). Dazu zählen
+begrenzte Ressourcen sowie mangelnde Governance und Nachhaltigkeit.
+Darum ist es wichtig, ausreichend personelle Kapazitäten für das
+Vorhaben einzuplanen und einen realistischen Zeitrahmen zu setzen. Zum
+Einstieg können die folgenden Ansätze in Betracht gezogen werden:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Wenn die verfügbaren Ressourcen beschränkt oder unklar sind, kann
+  zunächst stufenweise vorgegangen werden. Dabei wird zuerst eine
+  Minimalumsetzung anvisiert, beispielsweise in Form der Suchstrategie
+  „direkte Suche'' (s. \hyperref[direkte-suche]{Kapitel 3.2.1}) mit
+  lediglich einer Datenquelle. Dieser Ansatz kann ggf. später erweitert
+  werden, etwa indem mehr Datenquellen einbezogen werden, die
+  Suchstrategie modifiziert oder die Erfassung zusätzlich auf
+  Forschungssoftware ausgeweitet wird.
+\item
+  Empfehlenswert ist zunächst eine einmalige Durchführung mit
+  detaillierter Dokumentation der Arbeitsschritte. Die so entstehende
+  Basis unterstützt eine spätere Verstetigung und zeigt, ob
+  institutionelles Forschungsdatenmonitoring grundsätzlich umsetzbar
+  ist, bevor ein kontinuierlicher Betrieb etabliert wird. Strategische
+  Fragen wie die Ansiedlung der Zuständigkeit oder eine weitgehende
+  Automatisierung können vorerst zurückgestellt und erst bei einer
+  Verstetigung angegangen werden.
+\end{enumerate}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, bottomtitle=1mm, breakable, colback=white, colbacktitle=quarto-callout-tip-color!10!white, colframe=quarto-callout-tip-color-frame, coltitle=black, left=2mm, leftrule=.75mm, opacityback=0, opacitybacktitle=0.6, rightrule=.15mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Infobox: Welche Optionen existieren bei beschränkten oder unklaren
+Ressourcen?}, titlerule=0mm, toprule=.15mm, toptitle=1mm]
+
+„Perfect is the enemy of good.'' - Natürlich ist eine vollständige
+Erfassung wünschenswert. Aus den oben beschriebenen Gründen ist sie
+jedoch nicht immer realistisch. Wenn die „perfekte'' Lösung nicht
+möglich ist, können die folgenden Strategien ggf. dabei helfen, einen
+ersten Einstieg in das Monitoring von Forschungsdatenpublikationen zu
+erreichen:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Ressourcen mobilisieren}: Gibt es Personen oder Abteilungen an
+  der Einrichtung, die ebenfalls Interesse an der Erfassung von
+  Forschungsdatenpublikationen haben (Data Stewards, Fachreferent:innen,
+  Entwicklungsplanung o. ä.) und die ggf. Ressourcen beisteuern können?
+\item
+  \textbf{Auf eine oder wenige Datenquellen beschränken}:
+  Steckbriefartige Übersichten über ausgewählte Datenquellen sind am
+  Ende von \href{./3_Durchführung.qmd}{Kapitel 3} zu finden. Relevant
+  für die Entscheidung können u. a. die folgenden Aspekte sein:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Scope} \footnotemark{}: Woher bezieht die Datenquelle ihre
+    Daten? Welche weiteren Datenquellen sind inkludiert? Gibt es
+    fachspezifische Quellen oder bestimmte Projekte, die auf jeden Fall
+    enthalten sein sollen? Wenn möglichst viele Datenpublikationen
+    gefunden werden sollen, empfiehlt sich ein Aggregator wie DataCite.
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \textbf{Abfragemöglichkeiten}: Passen sie zu den vorhandenen
+      technischen Möglichkeiten? Kann z. B. die geplante Suchanfrage
+      über die Nutzeroberfläche gestellt werden, falls keine Nutzung der
+      API möglich ist? Ist ein Komplettexport der Trefferliste in einem
+      geeigneten Dateiformat möglich?
+    \item
+      \textbf{Metadaten}: Sind bestimmte Metadaten besonders wichtig (z.
+      B. Affiliations-Metadatenfeld)? Können diese bei der gewählten
+      Datenquelle abgefragt werden?
+    \item
+      \textbf{Offenheit}: Ist die Datenquelle frei von Zugangs- und
+      Nutzungsbeschränkungen?
+    \end{itemize}
+  \end{itemize}
+\item
+  \textbf{Suche einschränken}: Lässt sich die Suche einschränken,
+  beispielsweise auf Forschungsdatenpublikationen mit DOI oder auf
+  bestimmte Metadatenfelder?
+\item
+  \textbf{Suche präzisieren}: Wenige, konkrete Zielfragen formulieren
+  und die Datensammlung und -auswertung darauf ausrichten
+\item
+  \textbf{Vorhandene Verzeichnisse berücksichtigen}: Können bestehende
+  Verzeichnisse (z. B. FIS, Hochschulbibliografie, Repositorien) bei dem
+  Vorhaben helfen?
+\item
+  \textbf{Vorgehen dokumentieren}: Durch eine detaillierte Dokumentation
+  des Vorgehens kann auch angesichts schlecht planbarer Zeiträume sowie
+  personeller und finanzieller Engpässe später immer wieder auf dem
+  bisherigen Fortschritt aufgebaut werden
+\end{itemize}
+
+\end{tcolorbox}
+
+\footnotetext{Mit „Scope'' ist hier „Geltungsbereich'' gemeint. Da der
+englische Begriff im Deutschen geläufig ist, verwenden wir ihn im
+gesamten Dokument.}
+
+\chapter{Durchführung}\label{durchfuxfchrung}
+
+Das folgende Kapitel behandelt die praktische Durchführung des
+Monitorings des institutionellen Forschungsdatenoutputs. Es stellt
+leitende Grundprinzipien vor und fasst den schematischen Ablauf von
+Monitoringaktivitäten zusammen. Zudem werden zwei Suchstrategien - die
+direkte und die indirekte Suche - beschrieben. Abschließend werden
+exemplarische Datenquellen für die direkte Suche präsentiert.
+
+\section{Grundprinzipien und schematischer
+Ablauf}\label{grundprinzipien-und-schematischer-ablauf}
+
+Monitoringaktivitäten sollten grundsätzlich individuell auf die
+jeweilige Einrichtung zugeschnitten werden, einem klar definierten
+Anlass folgen, bestehende Rahmenbedingungen - etwa Leitlinien und
+Fächerprofile - berücksichtigen und alle relevanten Akteure einbeziehen,
+wobei diese je nach Einrichtung variieren.
+
+Einige Grundprinzipien sind auf alle Monitoringaktivitäten im Kontext
+Open Science anwendbar. 2025 veröffentlichte eine Gruppe internationaler
+Expert:innen die ``Principles of Open Science Monitoring'' (Bobrov u.~a.
+(2025)). Dieses Dokument formuliert Anforderungen an
+Monitoringaktivitäten wie die Offenheit und Qualität der genutzten
+Datenquellen oder die Berücksichtigung spezifischer Fächerkulturen.
+Einrichtungen, die ihren Forschungsdatenoutput messen möchten, wird
+nahegelegt, ihre Aktivitäten in regelmäßigen Abständen mit den
+Principles of Open Science Monitoring abzugleichen.
+
+Die praktische Ausgestaltung des Monitorings hängt neben den Zielen von
+weiteren Faktoren ab, etwa den vorhandenen Ressourcen. In den meisten
+Fällen wird der Ablauf die folgenden Schritte beinhalten:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Die Auswahl geeigneter Suchstrategien}. Diese werden in
+  \hyperref[suchstrategien]{Kapitel 3.2} näher vorgestellt.
+\item
+  \textbf{Die Auswahl geeigneter Datenquellen}. Einige Datenquellen
+  werden exemplarisch in
+  \hyperref[datenquellen-fuxfcr-die-direkte-suche]{Kapitel 3.3}
+  präsentiert.
+\item
+  \textbf{Die Durchführung der Abfragen}. Um die Überprüfbarkeit der
+  Ergebnisse und die Reproduzierbarkeit des Verfahrens sicherzustellen,
+  sollte die Durchführung gründlich dokumentiert werden, etwa indem
+  Skripte für die Abfragen erstellt und abgespeichert werden.
+  Insbesondere die verwendeten Suchbegriffe, Filter und das Abfragedatum
+  sind zu dokumentieren, etwa für die Einschränkung auf bestimmte
+  Publikationstypen oder Namensvarianten der Einrichtung. Einige
+  Beispiele werden ergänzend zu diesem Dokument voraussichtlich ab Q1
+  2027 in Notebooks zur Verfügung gestellt.
+\item
+  \textbf{Die Bereinigung der Ergebnisse}. Nach der Durchführung der
+  Abfragen muss die Treffermenge bereinigt werden. In erster Linie geht
+  es hierbei um das Entfernen von Dubletten, die Zusammenfassung von
+  Versionen und gegebenenfalls die einheitliche Ansetzung von Werten in
+  Freitextfeldern. Die Vereinheitlichung von Werten in Freitextfeldern,
+  etwa für die Namen von Autor:innen, Repositorien und
+  Förderorganisationen, kann sehr aufwendig sein (Kirsch und Wink
+  (2026)). Wenn Forschungsdaten über die Suche in Volltexten ermittelt
+  werden, zählt dazu auch der Ausschluss von Fällen, die lediglich
+  ``Datennachnutzung'' darstellen.
+\item
+  \textbf{Die Bewertung der Ergebnisse}. Die Treffermenge sollte auf
+  Korrektheit überprüft werden, um falschpositive Treffer
+  auszuschließen. Dazu zählt insbesondere eine Prüfung der
+  Affiliationsangaben, um sicherzustellen, dass die gefundenen
+  Forschungsdaten tatsächlich der Einrichtung zugeordnet werden können.
+\end{enumerate}
+
+Nach diesen Prozessschritten können die Ergebnisse schließlich für die
+Weiterverarbeitung im Zielsystem aufbereitet werden (s.
+\href{./4_Verwendung.qmd}{Kapitel 4}).
+
+Welche weiteren Maßnahmen zur Erleichterung zukünftiger
+Monitoringaktivitäten ergriffen werden können, wird in
+\href{./5_Vorbereitung}{Kapitel 5} genauer dargelegt.
+
+\section{Suchstrategien}\label{suchstrategien}
+
+Die grundlegende Herausforderung beim Monitoring des
+Forschungsdatenoutputs einer Einrichtung ist die gesicherte Herstellung
+eines Bezugs zwischen Forschungsdatensätzen und der Einrichtung. Diese
+Zuordnung kann durch zwei verschiedene Ansätze realisiert werden. Durch
+eine Kombination der beiden Ansätze erhöht sich die Treffermenge.
+
+Der Bezug zwischen einer Einrichtung und einem Datensatz lässt sich
+\textbf{direkt} herstellen, indem Metadatensätze, die Forschungsdaten
+beschreiben, durchsucht werden -- etwa nach Angaben zu Personen, welche
+die Datensätze erstellt haben, und ihrer Affiliation. Gee (2026)
+beschreibt die Durchführung dieser Suchstrategie umfassend am Beispiel
+der University of Texas. Häufig fehlen diese Angaben jedoch in den
+Metadaten, beispielsweise weil sie bei der Übergabe an ein Repositorium
+nicht mit überliefert werden (Robinson-Garcia u.~a. (2017)).
+
+Darum ist ergänzend die \textbf{indirekte} Suche über andere
+Forschungsoutputs, die der Einrichtung zugeordnet werden können,
+sinnvoll. Dazu zählen beispielsweise Zeitschriftenartikel, die auf
+zugrundeliegende Datensätze verweisen. Der Bezug zwischen einer
+Einrichtung und einem Datensatz wird dann indirekt über diesen
+Forschungsoutput hergestellt. Cohen u.~a. (2026) verdeutlichen am
+Beispiel der Charité Universitätsmedizin Berlin, wie mit diesem Ansatz
+Forschungsdatenpublikationen identifiziert werden können.
+
+Im Folgenden werden die beiden Ansätze näher beschrieben.
+
+\subsection{Direkte Suche}\label{direkte-suche}
+
+Forschungsdatensätze können einer Einrichtung direkt zugeordnet werden,
+wenn die Metadaten, die den Datensatz beschreiben, entsprechende Angaben
+enthalten. Für diese Suchstrategie können die unten beschriebenen
+Datenquellen genutzt werden.
+
+Grundsätzlich sind hier zwei Ansätze denkbar: die Suche in
+Affiliationsangaben oder die Suche nach Autor:innen. Einige Datenquellen
+nutzen in ihren Metadaten persistente Identifikatoren für Institutionen
+(z. B. ROR IDs) und Autor:innen (z. B. ORCID IDs). Diese ermöglichen
+eine eindeutige Zuordnung zur Einrichtung bzw. Person, darum wäre diese
+Option besonders wünschenswert für das Monitoring. Da persistente
+Identifikatoren allerdings nicht immer mit angegeben werden, ist
+ergänzend eine Suche in Freitextfeldern zu empfehlen, etwa im
+Freitextfeld für den Namen der Institution. Bei der Suche in
+Affiliationsangaben sollten möglichst viele verschiedene
+Ansetzungsformen und Schreibweisen des Einrichtungsnamens genutzt
+werden, zum Beispiel neben ``Humboldt-Universität zu Berlin'' auch ``HU
+Berlin'' oder ``Humboldt University Berlin''. Namensvarianten finden
+sich beispielsweise im ROR-Eintrag einer Einrichtung oder auch in der
+institutionellen Affiliationsrichtlinie, falls vorhanden.\footnote{Beispiel
+  für Namensvarianten im ROR-Profil der Humboldt-Universität zu Berlin:
+  \url{https://ror.org/01hcx6992}}
+
+Jede Suche wird verschiedene Treffermengen erzeugen, die im Anschluss
+dedupliziert werden sollten.
+
+Bei Datenquellen, die nicht auf Forschungsdaten spezialisiert sind,
+sollte die Suche auf Publikationstypen eingeschränkt werden, die
+Gegenstand des Monitorings sind. Nach welchen Werten zu suchen ist,
+hängt davon ab, wie die Datenquelle Publikationstypen beschreibt. Wenn
+kein kontrolliertes Vokabular genutzt wird, ist auch hier
+empfehlenswert, nach mehreren Varianten und Schreibweisen zu suchen,
+beispielsweise nach ``data'', ``dataset'' und ``data set''. Bei der Wahl
+von Suchbegriffen kann z. B. das Vokabular COAR Resource Types zurate
+gezogen werden.\footnote{\url{https://vocabularies.coar-repositories.org/resource_types/}
+  (abgerufen am 30.09.2026)}
+
+Die größte Limitation dieses Ansatzes ist, dass er wesentlich von der
+Metadatenqualität der genutzten Datenquellen abhängt (Robinson-Garcia
+u.~a. (2017)). Fehlende oder fehlerhafte Werte können das Ergebnis
+verfälschen.
+
+\subsection{Indirekte Suche}\label{indirekte-suche}
+
+Da Affiliationsangaben in Metadaten, die Forschungsdaten beschreiben,
+häufig fehlen (Habermann (2025)), kann als weiterer Ansatz eine
+indirekte Suche über Verweise auf Datensätze in Textpublikationen wie
+Zeitschriftenartikel oder Data Paper herangezogen werden. Die
+Verknüpfung zwischen einem Datensatz und einer Einrichtung erfolgt bei
+diesem Ansatz mittelbar über eine Textpublikation, die sowohl einer
+Einrichtung zugeordnet werden kann als auch auf einen Datensatz
+verweist, der die vorgestellten Ergebnisse stützt. Einige Einrichtungen
+sammeln bereits den Publikationsoutput der Einrichtungsangehörigen, z.
+B. in einem FIS oder in Form einer Hochschulbibliografie. Diese
+Sammlungen können als Basis dienen, zugehörige Datensätze zu finden.
+Auch der OA Monitor\footnote{\url{https://open-access-monitor.de/}
+  (abgerufen am 30.09.2026)} kann als Ausgangspunkt für diese
+Suchstrategie genutzt werden, da diese Datenquelle Textpublikationen mit
+wissenschaftlichen Einrichtungen verknüpft.
+
+Der Verweis auf einen Datensatz kann sowohl im Literaturverzeichnis der
+Textpublikation als auch an anderer Stelle im Volltext, zum Beispiel im
+Methodenteil oder in einem Data Availability Statement, erfolgen.
+Gregory u.~a. (2023) (S. 625) unterscheiden zwischen:
+
+\begin{itemize}
+\tightlist
+\item
+  data citation: Verweis auf Datensätze im Literaturverzeichnis
+\item
+  data mention: Verweis auf Datensätze an anderer Stelle
+\item
+  indirect data citation: Verweis auf eine Textpublikation statt des
+  Datensatzes im Literaturverzeichnis
+\end{itemize}
+
+``Data citations'' werden von verschiedenen Datenquellen erfasst, zum
+Beispiel vom Data Citation Corpus (DataCite und Make Data Count (2025))
+oder von DataCite (DataCite (2026)). Allerdings gibt es große
+Abweichungen zwischen den Datenquellen in der Abdeckung von
+Zitationsbeziehungen (Gerasimov u.~a. (2024) ; Strecker u.~a. (2025)).
+Darum sollten unbedingt mehrere Datenquellen kombiniert werden, um
+Lücken auszugleichen.
+
+Einige Einrichtungen extrahieren darüber hinaus bereits ``data
+mentions'', also Verweise auf Datensätze in Textpublikationen, um den
+Forschungsdatenoutput zu bestimmen. Hier ist insbesondere ein Projekt am
+QUEST Center for Responsible Research am Berlin Institute of Health at
+Charité zu nennen, das einen eigenen Workflow und Algorithmus für diesen
+Ansatz entwickelt hat (Iarkaeva u.~a. (2024) ; Riedel und Nachev
+(2026)). Die Methode ist jedoch für die Charité Universitätsmedizin
+Berlin und mit Fokus auf die Medizin entwickelt worden. Folglich kann
+diese Vorgehensweise nicht ohne Anpassung auf andere Institutionen oder
+Fachbereiche übertragen werden. Diese Anpassung hat das Team am Beispiel
+der Geowisseschaften für die Fachbibliothek Geowissenschaften an der
+Freien Universität Berlin\footnote{\url{https://www.geo.fu-berlin.de/bibliotheken/geo/index.html}
+  (abgerufen am 30.09.2026)} demonstriert (Iarkaeva u.~a. (o.~J.)). Auch
+an der Universitätsbibliothek Mannheim wurden Workflows und Software
+entwickelt, um über die Extraktion von Verweisen auf Datensätzen aus
+Publikationen in der Universitätsbibliografie den Forschungsdatenoutput
+zu erfassen (Universitätsbibliothek Mannheim (2026)).
+
+Im Rahmen der Prüfung der Treffermenge bei der Suchstrategie „indirekte
+Suche'' ist sicherzustellen, dass Fälle von ``Datennachnutzung''
+ausgeschlossen werden sollten. Leider ist der Begriff
+„Datennachnutzung'' nicht eindeutig definiert (Sandt u.~a. (2019)).
+Näherungsweise können Datensätze, die nicht von den Autor:innen der
+Textpublikation selbst erstellt wurden (also ``nachgenutzt'' wurden),
+herausgefiltert werden. Das ist wichtig, da sie nicht zum
+Forschungsoutput der Einrichtung gehören und das Ergebnis verfälschen
+würden. Wie das Herausfiltern nachgenutzter Datensätze durch einen
+Abgleich der Autor:innen erfolgen kann, beschreiben Cohen u.~a. (2026)
+für die Charité Universitätsmedizin Berlin.
+
+Dieser Ansatz bringt allerdings einige Limitationen mit sich. Zunächst
+hängt er wesentlich von den Zitationspraktiken der Forschenden ab.
+Studien zeigen, dass Forschende Datensätze oft nicht oder nur indirekt
+zitieren (Gregory u.~a. (2023)). Auch hängt er von der Verfügbarkeit von
+Volltexten ab: Textpublikationen können nur nach Verweisen auf
+Datensätze durchsucht werden, wenn Zugriff auf die Volltexte besteht.
+Darum ist es möglich, dass dieser Ansatz für bestimmte Einrichtungen
+oder Fächerprofile nur unvollständige Ergebnisse liefert. Insgesamt ist
+die indirekte Suche ressourcenintensiver als die direkte Suche (Gee
+(2026)).
+
+\section{Datenquellen für die direkte
+Suche}\label{datenquellen-fuxfcr-die-direkte-suche}
+
+Es gibt verschiedene Arten von Datenquellen, die für das Monitoring über
+die direkte Suche genutzt werden können. Datenquellen können
+beispielsweise unterschieden werden in individuelle Repositorien und
+Aggregatoren, die Metadaten aus mehreren Quellen zusammenführen. Einige
+Datenquellen sind spezialisiert auf Forschungsdaten, andere weisen
+darüber hinaus auch weitere Forschungsoutputs nach.
+
+Grundsätzlich empfiehlt es sich, zunächst die für die eigene Einrichtung
+relevanten Datenquellen zu identifizieren. Dabei sollten Abdeckung,
+Metadatenschema, Zugänge und Ausgabeformate berücksichtigt werden. Um
+die Transparenz der Ergebnisse sicherzustellen, sollten nach Möglichkeit
+offene Datenquellen genutzt werden, wie die UNESCO Recommendations on
+Open Science nahelegen: ``The monitoring of open science should be
+explicitly kept under public oversight, including the scientific
+community, and whenever possible supported by open non-proprietary and
+transparent infrastructures.'' (\emph{{UNESCO} Recommendation on Open
+Science} (2021) ; S. 34)
+
+Es ist empfehlenswert, bei der Suche zunächst auf Aggregatoren zu
+setzen, da dies Ressourcen spart und einheitlichere Treffermengen
+liefert. Je nach Bedarf sollte darüber hinaus auch in individuellen
+Repositorien recherchiert werden -- v.a. dann, wenn bekannt ist, dass
+Einrichtungsangehörige auch kleinere oder disziplinspezifische
+Repositorien nutzen, die bspw. keine DOIs vergeben (etwa
+Sequenzdatenbanken). Darüber hinaus kann eine Direktsuche in
+Repositorien zur Evaluation der Vollständigkeit der über Suchmaschinen
+gefundenen Publikationen herangezogen werden.
+
+Da sich Datenquellen im Laufe der Zeit verändern können, etwa wenn das
+Metadatenschema aktualisiert wird, wird an dieser Stelle auf Beispiele
+für spezifische Abfragen verzichtet. Stattdessen werden wir
+voraussichtlich in Q1 2027 interaktive Notebooks veröffentlichen, die
+angepasst und ergänzt werden können.
+
+Im Folgenden werden einige zentrale offene Datenbanken vorgestellt, die
+als Aggregatoren einen guten Einstieg in das Monitoring bieten können.
+Kriterien für die Auswahl von Datenquellen sind in der Infobox in
+\hyperref[voruxfcberlegungen]{Kapitel 2} zu finden.
+
+\subsection{BASE}\label{base}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1327}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8673}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Typ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Suchmaschine ; Aggregator
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Beschreibung & \url{https://www.base-search.net/about/en/index.php} \\
+Abdeckung & Metadaten zu Forschungsoutputs, die von Datengebenden über
+OAI-PMH-Schnittstellen zum Harvesting angeboten werden;
+\href{https://www.base-search.net/about/de/about_sources_date.php}{Datenlieferanten} \\
+Metadatenschema & \href{https://oai.base-search.net/\#oai-dc}{oai-dc} ;
+\href{https://oai.base-search.net/\#base-dc}{base-dc} \\
+Zugänge & GUI mit
+``\href{https://www.base-search.net/Search/Advanced}{Erweiterter
+Suche}'' ; API (\href{https://oai.base-search.net/}{OAI-PMH}) ; Der
+Zugang via API ist ausschließlich für nicht-kommerzielle Zwecke
+gestattet und erfordert einen API-Key, der nach erfolgter Registrierung
+zur Verfügung gestellt wird (siehe
+\url{https://ubib-baseapi.ub.uni-bielefeld.de/}, zuletzt aufgerufen am
+02.09.2026). Das Anfragenlimit beträgt eine Anfrage pro Sekunde. \\
+Suchfelder & Publikationstyp kann auf Forschungsdaten eingeschränkt
+werden (doctype:7) ;Kein Metadatenfeld für Affiliation / ROR ID
+vorhanden, daher muss mit Freitext gesucht werden. \\
+Ausgabeformate & GUI: verschiedene Formate, u. a. JSON (kein csv) ; API:
+XML \\
+\end{longtable}
+}
+
+\subsection{DataCite}\label{datacite}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1327}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8673}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Typ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+DOI registration agency ; Aggregator
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Beschreibung & \url{https://datacite.org/mission/} \\
+Abdeckung & Metadaten zu Forschungsoutputs, für die eine DOI bei
+DataCite vergeben wurde, sowie verwandte Publikationen
+(\href{https://support.datacite.org/docs/works-in-datacite-commons}{Quelle}) \\
+Metadatenschema & \href{https://doi.org/10.14454/qdd3-ps68}{DataCite
+Metadata Schema v4.7} \\
+Zugänge & DataCite Commons (\href{https://commons.datacite.org/}{GUI}) ;
+DataCite \href{https://support.datacite.org/docs/api}{REST API} mit
+\href{https://support.datacite.org/docs/rate-limit}{rate limits} ;
+DataCite metadata dashboards
+(\href{https://metadata.datacite.org/}{GUI}) ; Die öffentliche REST API
+kann ohne Authentifizierung genutzt werden und wird von DataCite für das
+Abrufen und Suchen von DOI-Metadaten empfohlen. \\
+Suchfelder & Im Tab ``Organizations'' kann mit ROR ID gesucht werden,
+dies führt zum Dashboard für die Institution. Die Treffermenge kann dann
+auf den work type „Dataset`` eingeschränkt werden. \\
+Ausgabeformate & DataCite Commons: Download einer csv-Datei; DataCite
+REST API: JSON \\
+\end{longtable}
+}
+
+\subsection{OpenAIRE}\label{openaire}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1327}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8673}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Typ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aggregator
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Beschreibung & \url{https://www.openaire.eu/faqs} \\
+Abdeckung & Zahlreiche europäische Datenquellen, darunter sowohl
+DOI-Agenturen und Aggregatoren als auch Repositorien
+(\href{https://explore.openaire.eu/search/find/dataproviders}{Quellenliste}) \\
+Metadatenschema &
+\href{https://doi.org/10.5281/zenodo.4238938}{JSON-Schema} \\
+Zugänge & OpenAIRE Explore \href{https://explore.openaire.eu/}{(GUI)} ;
+OpenAIRE Graph
+(\href{https://graph.openaire.eu/docs/apis/graph-api/}{API}) ; Die
+öffentliche Graph API kann sowohl mit als auch ohne Authentifizierung
+genutzt werden. Das Anfragenlimit beträgt bei authentifiziertem Zugang
+7200 Anfragen pro Stunde, bei unauthentifiziertem Zugang 60 Anfragen pro
+Stunde. Zur Authentifizierung ist ein API-Key erforderlich; dieser wird
+nach Erstellung eines Nutzeraccounts zur Verfügung gestellt. \\
+Suchfelder & Institutionen sind als kontrolliertes Vokabular angelegt
+und können in der Advanced Search in Research products mit
+``Organization is'' ausgewählt werden. Filter auf ``Research Data''
+möglich \\
+Ausgabeformate & GUI: csv \\
+\end{longtable}
+}
+
+\subsection{OpenAlex}\label{openalex}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1327}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.8673}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Typ
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aggregator
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Beschreibung & \url{https://openalex.org/about} \\
+Abdeckung & Aggregatoren sowie Repositorien
+(\href{https://openalex.org/sources?page=1&filter=type:repository}{Repositorien-Liste},
+\href{https://help.openalex.org/hc/en-us/articles/28932712154391-How-does-OpenAlex-work}{Information
+zu Datenquellen},
+\href{https://help.openalex.org/hc/en-us/articles/24397285563671-About-the-data}{Noch
+eine Information zu Datenquellen}) \\
+Metadatenschema &
+\href{https://developers.openalex.org/api-reference/introduction}{API
+Overview}\_\_Institutionen werden automatisch zugeordnet
+(\href{https://help.openalex.org/hc/en-us/articles/24831328396311-Institutions-and-Raw-Affiliation-String-Parsing}{Beschreibung}) \\
+Zugänge & \href{https://openalex.org/}{OpenAlex GUI},
+\href{https://developers.openalex.org/}{API},
+\href{https://developers.openalex.org/download/overview}{Snapshot} ;
+Suchfilter Institution über die Nutzeroberfläche (mit Lookup) ; Ab
+Februar 2026 ist für die Nutzung der API im real-produktiven Maßstab ein
+API-Key erforderlich. Dieser wird nach der Erstellung eines
+Nutzeraccounts zur Verfügung gestellt und ist im Basismodell kostenlos.
+Das Anfragenlimit beträgt 100 Anfragen pro Sekunde und 100.000 Credits
+pro Tag. \\
+Suchfelder & Im Suchfilter ``Institution'' können per Lookup
+Institutionen ausgewählt werden. Der Publikationstyp (``Type'') kann auf
+``dataset'' gefiltert werden. \\
+Ausgabeformate & GUI: vollständiger Export nach Login (kostenfrei), csv
+oder ``csv excel-optimiert'' (d.~h.
+\href{https://help.openalex.org/hc/en-us/articles/24829724234007-Export-results-from-the-OpenAlex-website}{nicht
+zu viel Inhalt pro Zelle}) ; REST API: JSON ; Snapshot: JSON, Parquet \\
+\end{longtable}
+}
+
+\chapter{Verwendung}\label{verwendung}
+
+Einrichtungen verfügen über unterschiedliche technische Möglichkeiten,
+die aus den verschiedenen Quellen erhobenen Daten zu verwenden. Je nach
+Zielsetzung (s. \hyperref[voruxfcberlegungen]{Kapitel 2}) variieren die
+Zwecke und Prioritäten. Dieses Kapitel gibt zunächst einen Überblick
+über die möglichen Zielsysteme für die erhobenen Daten und skizziert
+anschließend den Ingest\footnote{Mit „Ingest'' ist hier die Einspeisung
+  in ein System gemeint. Da der englische Begriff im Deutschen geläufig
+  ist, verwenden wir ihn im gesamten Dokument.}-Vorgang mit den zu
+berücksichtigenden Entscheidungen und Rahmenbedingungen.
+
+\section{Zielsysteme}\label{zielsysteme}
+
+\subsection{Forschungsinformationssysteme}\label{forschungsinformationssysteme}
+
+Die Verwendung eines FIS als Zielsystem liegt nahe, sofern die eigene
+Institution eines betreibt bzw. zur Verfügung stellt.
+
+Es gibt verschiedene Softwarelösungen für ein FIS.\footnote{\url{https://kfid-online.de/fis_landkarte_visual/fis_landkarte_software.php}
+  (abgerufen am 30.09.2026)} Im Folgenden wird eine Auswahl von
+FIS-Softwarelösungen inkl. einiger Besonderheiten ihres jeweiligen
+Umgangs mit Forschungsdaten vorgestellt.
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://wiki.lyrasis.org/display/DSPACECRIS}{DSpace-CRIS}:
+  DSpace-CRIS unterstützt ein erweitertes, an Dublin Core und CERIF
+  orientiertes Datenmodell, konfigurierbare Beziehungen, Workflows,
+  ORCID-Anbindungen sowie REST-Schnittstellen.\footnote{\url{https://4science.com/english-dspace-cris-7-has-landed/}
+    (abgerufen am 30.09.2026)} Ein eigener Dokumenttyptyp für
+  Forschungsdatenpublikationen mit lokal individuell konfigurierten
+  Metadatenfeldern ist beispielsweise möglich. Mit DSpace 10.0 wurde
+  2026 die Integration von DSpace-CRIS-Funktionen in den DSpace-Kern
+  begonnen; der Funktionsumfang kann deshalb je nach verwendeter
+  Softwareversion deutlich variieren.\footnote{\url{https://dspace.org/dspace-10-0-released/}
+    (abgerufen am 30.09.2026)}
+\item
+  \href{https://www.elsevier.com/solutions/pure}{Pure}: Die Erfassung
+  von Forschungsdaten ist als eigener Content-Type „Forschungsdaten'',
+  „Datasets'' möglich. Verknüpfungen zu Personen, Organisationseinheiten
+  etc. werden in Form von „Master data'' erfasst.\footnote{\url{https://helpcenter.pure.elsevier.com/overview-of-content-types}
+    (abgerufen am 30.09.2026)} In Pure lassen sich auch Berichte zum
+  Forschungsdatenaufkommen einer Einrichtung umsetzen sowie eine
+  (Zweit-)Veröffentlichung der gefundenen Forschungsdatensätze im
+  Pure-eigenen Open Science Portal realisieren.
+\item
+  \href{https://www.symplectic.co.uk/theelementsplatform/}{Elements}:
+  Die Erfassung von Forschungsdaten war in Elements seit jeher als
+  eigener Datentyp (mit dem Anzeigenamen „Dataset'') möglich. Bei der
+  Konfiguration von Elements kann der Datentyp zudem umbenannt werden
+  (z. B. in „Forschungsdaten'') oder einen eigenen Datentyp mit einem
+  eigenen Satz von Metadatenfeldern erstellen. Für Elements ist
+  „Dataset'' ein Untertyp der Kategorie „Publikation''; die Kategorie
+  lässt sich jedoch ebenfalls umbenennen (z. B. in „Scholar and Creative
+  Work'', falls die semantische Bandbreite erhöht werden soll, bspw. mit
+  Blick auf nicht veröffentlichte Forschungsdaten wie solche mit
+  „restricted access''). Elements verfügt über eine Integration von
+  Figshare, welche die Aufnahme von Metadaten zur Beschreibung von
+  Forschungsdaten unterstützt und bei der Aufnahme einen Datensatz
+  direkt mit einem Benutzer im Elements-Objektmodell verknüpft. Ebenso
+  kann Elements so konfiguriert werden, dass es Metadaten zur
+  Beschreibung von Forschungsdaten aus dem institutionellen Repositorium
+  einer Einrichtung übernimmt. Derzeit unterstützt Elements
+  Integrationen von DSpace, EPrints, Hyrax und Figshare for
+  Institutions. Mittels der Elements-Benutzeroberfläche lassen sich
+  Metadaten zur Beschreibung von Forschungsdaten hinzufügen; alternativ
+  können sie über die Elements-API aus anderen strukturierten
+  Datenquellen bezogen werden, sofern entsprechende Zugriffsrechte
+  vorliegen.
+\item
+  \href{https://clarivate.com/academia-government/ko/scientific-and-academic-research/research-funding-analytics/converis/}{Converis}:
+  In der FIS-Software sind ebenfalls schon seit jeher individuelle
+  Anpassungen am Datenmodell und Metadatenschema möglich; das System
+  kann Publikationen, Personen, Organisationseinheiten, Projekte und
+  weitere Forschungsinformationen zusammenführen und mit Repositorien
+  sowie öffentlichen Forschungsportalen verbinden. Die Converis-Instanz
+  der Universität Kassel enthält bspw. den Publikationstyp
+  „Forschungsdatenpublikation''.\footnote{\url{https://forschung.uni-kassel.de/converis/portal/list?show=Publication&filter=\%5Bfpublyear\%3D\%5D\%2C\%5Bfpublicationtype\%3D15998\%5D&sortBy=publYear&sortOrder=false&cypher=All&page=1&items=10&showAll=&treeView=false&moreOrLess=\%5Bfpublyear\%3Dtrue\%5D\%2C\%5Bfpublicationtype\%3Dfalse\%5D&auxfun=&lang=de_DE}
+    (abgerufen am 30.09.2026)} Das FIS der
+  Friedrich-Alexander-Universität Erlangen-Nürnberg basiert ebenfalls
+  auf Converis und erfasst Forschungsdaten; die Entwickler:innen können
+  zum Erfahrungsaustausch angesprochen werden.
+\item
+  \href{https://www.his.de/hisinone/forschungsmanagement}{HISinOne-RES}:
+  Das System enthält Funktionalitäten für ein umfassendes
+  Forschungsmanagement und orientiert sich beim Metadatenschema eng am
+  Kerndatensatz Forschung (KDSF). Der KDSF-Systematik entsprechend gibt
+  es einen Publikationstyp „Forschungsdaten'', der mit anderen Objekten
+  wie Personen, Projekten und Förderinformationen verknüpft werden kann.
+  Außerdem bietet die Software Optionen des automatisierten Ingests per
+  API. Importmöglichkeiten bestehen via ORCID, RIS, BibTeX, OpenAlex und
+  OAI-PMH. Um den Import von Metadaten aus Radar Local (RADAR XML) per
+  API zu ermöglichen, hat die Universitätsbibliothek Würzburg ein
+  XSLT-Stylesheet zur Metadatentransformation erstellt, welches seit
+  Januar 2026 zusammen mit dem FIZ Karlsruhe auch zur Nachnutzung
+  bereitgestellt wird.\footnote{\url{https://github.com/ER-FIZKarlsruhe/radar-stylesheets}
+    (abgerufen am 30.09.2026)}
+\end{itemize}
+
+\subsection{Institutionelles
+Repositorium}\label{institutionelles-repositorium}
+
+Forschungsdaten bzw. ihre Metadaten können auch im institutionellen
+Repositorium, das entweder ein reines Forschungsdaten- oder ein
+gemischtes Daten- und Textrepositorium sein kann, verzeichnet werden.
+Institutionen entscheiden sich für das institutionelle Repositorium als
+Zielsystem beispielsweise, weil die Einrichtung kein
+Forschungsinformationssystem nutzt oder weil eine regelmäßige
+automatisierte Übertragung von Publikationsmetadaten vom Repositorium
+ins Forschungsinformationssystem bereits etabliert ist. Im zweiten Fall
+kann die bestehende Integration für die aus externen Quellen
+geharvesteten Metadaten ohne weitere Entwicklungsarbeit auf
+Forschungsdaten ausgeweitet werden.
+
+Beispiele für Forschungsdatenrepositorien als Zielsysteme finden sich
+bei:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://dataverse.lib.virginia.edu/dataverse/libradata?q=&fq2=metadataSource\%3A\%5C\%22Harvested\%5C\%22&fq0=subtreePaths\%3A\%5C\%22\%2F1\%5C\%22&fq1=dvObjectType\%3A\%28dataverses+OR+datasets\%29&types=dataverses\%3Adatasets&sort=dateSort&order=}{University
+  of Virginia Dataverse}
+\item
+  \href{https://dataverse.harvard.edu/dataverse/harvard;jsessionid=3945204ee9c13b5ef80975f097f4?q=&fq1=metadataSource\%3A\%5C\%22Harvested\%5C\%22&fq0=dvObjectType\%3A\%28dataverses+OR+datasets\%29&types=dataverses\%3Adatasets&sort=dateSort&order=}{Harvard
+  Dataverse}
+\item
+  \href{https://university.open.ac.uk/library-research-support/research-data-management/open-university-research-data-management-policy}{The
+  Open University}: „4.2 Where data have been archived in a repository
+  other than ORDO or the OU Scholarship Exchange, a metadata-only record
+  should be published on ORDO which describes the data and provides a
+  persistent link (such as a DOI) to the data.''
+\item
+  Baldwin und Green (2024)
+\item
+  \href{https://www.uef.fi/en/open-research-data}{University of Eastern
+  Finland}
+\end{itemize}
+
+Die folgenden Softwarelösungen für Repositorien sind derzeit weit
+verbreitet:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.mycore.de/en/}{MyCoRe}
+\item
+  \href{https://dspace.lyrasis.org/}{DSpace} (das auch eine FIS-Version
+  anbietet, siehe oben). In DSpace können diverse Publikationstypen mit
+  jeweils eigenem Metadatensatz konfiguriert werden, ab Version 9 auch
+  als eigenständige Entitäten, die miteinander in Beziehung gesetzt
+  werden können.
+\item
+  \href{https://www.eprints.org/uk/}{EPrints} (EPrints (2015))
+\item
+  \href{https://inveniosoftware.org/}{Invenio} (als
+  Open-Source-Framework für groß anzulegende digitale Repositorien oder
+  spezifisch InvenioRDM für Forschungsdaten)
+\item
+  \href{https://www.fiz-karlsruhe.de/de/produkte-und-dienstleistungen/radar}{RADAR}
+  (In den Betriebsvarianten RADAR Local und RADAR Cloud)
+\end{itemize}
+
+Gegebenenfalls muss vor der Erfassung von Forschungsdaten zunächst ein
+Dokumenttyp oder eine Entität für Forschungsdaten angelegt werden.
+
+\subsection{Hochschulbibliografie und
+Bibliothekskatalog}\label{hochschulbibliografie-und-bibliothekskatalog}
+
+Des Weiteren können Forschungsdaten in der Hochschulbibliografie
+verzeichnet oder in den Bibliothekskatalog aufgenommen werden.
+
+Die Universität Heidelberg verzeichnet beispielsweise in ihrer
+Hochschulbibliografie heiBIB auch
+Forschungsdatenpublikationen.\footnote{\url{https://heibib.ub.uni-heidelberg.de/search/Search/Results?type=AllFields&filter\%5B\%5D=format\%3A\%22Research+Data\%22}
+  (abgerufen am 30.09.2026)} Ein weiteres Beispiel ist die Universität
+Bamberg, die seit Anfang 2022 Forschungsinformationen zu Forschungsdaten
+in ihrer Universitätsbibliografie im FIS verzeichnet und mit
+Forschungsinformationen zu Personen, Einrichtungen, Projekten,
+Publikationen und Auszeichnungen verknüpft (Ziegler und Franke (2023) ;
+S. 1 - 13).
+
+Im gemeinsamen Katalog der Bibliotheksverbünde BVB und KOBV, B3Kat,
+können Forschungsdatenpublikationen manuell erfasst werden.\footnote{\url{https://www.bib-bvb.de/web/kkb-online/forschungsdaten}
+  (abgerufen am 30.09.2026)} Das Discovery-System EBSCO, das Daten an
+mehrere Bibliothekskataloge liefert, bezieht Metadaten unter anderem von
+der Bielefeld Academic Search Engine (BASE), die auch
+Forschungsdatenpublikationen verzeichnet. Auf diese Art gelangen
+Datenpublikations-Metadaten also auch automatisch über Umwege in manche
+Bibliothekskataloge.
+
+Eine Art Hochschulbibliografie für Daten führt die University of
+Helsinki mit ihrem Data catalogue. „The metadata are gathered in Data
+catalogue through automatic data transfer (harvesting), and user
+submissions. For harvestable repositories, the researcher must have the
+"University of Helsinki" in their affiliation for the metadata to appear
+in the Data catalogue.''\footnote{\url{https://www.helsinki.fi/en/research/services-researchers/data-support/preservation-research-data/data-catalogue}
+  (abgerufen am 30.09.2026)}
+
+\section{Schritte zum Ingest in das
+Zielsystem}\label{schritte-zum-ingest-in-das-zielsystem}
+
+Nach den Vorarbeiten (s. \hyperref[voruxfcberlegungen]{Kapitel 2}) und
+der Datensuche (s. \hyperref[durchfuxfchrung]{Kapitel 3}) sollen die
+identifizierten Publikationsmetadaten nun in das anvisierte Zielsystem
+überführt werden. Unabhängig vom konkreten Zielsystem umfasst der
+Ingest-Prozess die folgenden Schritte.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Abbildung, Sichtbarkeit und Berechtigungen festlegen} Um die
+  erfassten Forschungsdaten importieren oder händisch eintragen zu
+  können, muss sichergestellt sein, dass passende Metadatenfelder im
+  Zielsystem existieren oder geschaffen werden können, idealerweise auf
+  Basis bestehender gängiger Standards wie dem Kerndatensatz
+  Forschung.\footnote{\url{https://www.kerndatensatz-forschung.de/kdsf20/kdsf20.php}
+    (abgerufen am 30.09.2026)} Das Zielsystem hat eine bestimmte
+  Struktur mit festgelegten Elementen. Ein CRIS kann beispielsweise in
+  Sammlungen für Fachbereiche organisiert sein und Entitäten wie
+  „Artikel'', „Dissertation'', „Person'', „Projekt'' u. a. enthalten.
+  Wie sollen die Metadaten der Datenpublikationen abgebildet werden?
+  Gibt es bspw. einen Elementtyp „Dataset'' oder „Datensatz''? Die
+  gewünschte Darstellungsform ist bei den weiteren Überlegungen
+  (Ingest-Optionen, Metadatenschema) zu berücksichtigen. Ebenso sollte
+  vorab geplant werden, welche Beschränkungen und Berechtigungen für die
+  eingespielten Daten gelten sollen (read / write). Je nachdem, wie
+  diese im Zielsystem organisiert sind, können oder sollten die
+  Berechtigungen direkt beim Ingest gesetzt werden, bspw. über
+  entsprechende Metadatenfelder oder zusätzliche Angaben im
+  Ingest-Prozess.
+\item
+  \textbf{Ingest-Optionen des Zielsystems prüfen} In den meisten Fällen
+  ist eine manuelle Eingabe der Publikationsmetadaten nicht
+  wünschenswert. In manche Systeme (z. B. DSpace) können Daten in
+  strukturierter Form (z. B. als CSV-Datei mit bestimmten
+  Spaltenbezeichnungen, oder im OAIS-Format) importiert werden.
+  Möglicherweise steht auch eine API für den Import zur Verfügung. Für
+  den Import müssen ggf. die nötigen Berechtigungen erteilt werden.
+\item
+  \textbf{Metadatenschema des Zielsystems prüfen} Das Metadatenschema
+  des Zielsystems kann von denen der genutzten Datenquellen abweichen.
+  Beispielsweise können die Namen der Autor:innen im Metadatenfeld
+  dc.contributor.author stehen, in dcterms.creator oder in Feldern aus
+  noch anderen Metadatenschemata. Damit die Metadaten korrekt in das
+  Zielsystem übertragen werden, muss ein Mapping zwischen dem
+  Metadatenschema der Treffermenge auf das des Zielsystems erstellt
+  werden.
+\item
+  \textbf{Datensatz-Metadaten auf Zielsystem anpassen} Anschließend
+  werden die Publikationsmetadaten transformiert, um a) dem
+  Metadatenschema des Zielsystems und b) ggf. der für den Ingest
+  erforderlichen strukturierten Form zu entsprechen. Für diesen Schritt
+  ist eine gute Dokumentation von besonderer Bedeutung, um eine
+  wiederholte oder regelmäßige Durchführung vorzubereiten. Die Dokumente
+  für die Transformation können ggf. auch veröffentlicht werden, um die
+  Nachnutzung durch Dritte zu ermöglichen.
+\item
+  \textbf{Ingest testen} Vor dem Komplett-Ingest ist ein Test mit
+  begrenztem Umfang (z. B. 10 Publikationen) unbedingt empfehlenswert.
+\item
+  \textbf{Ingest durchführen} War der Test erfolgreich, kann der Ingest
+  vollständig durchgeführt und anschließend geprüft werden.
+\item
+  \textbf{Überprüfen und dokumentieren} Eine Überprüfung des Ingests,
+  entweder stichprobenartig oder automatisiert und vollständig, ist
+  angeraten. Eine gute Dokumentation hilft, wie immer, sowohl bei der
+  Identifizierung von Fehlerquellen als auch bei einer potentiellen
+  erneuten Ausführung zu einem späteren Zeitpunkt.
+\end{itemize}
+
+\chapter{Vorbereitung}\label{vorbereitung}
+
+Bestimmte Rahmenbedingungen können die Erfassung des
+Forschungsdatenoutputs an einer Einrichtung erleichtern. Das ist
+insbesondere bei permanentem Monitoring relevant, also wenn die
+Erfassung in regelmäßigen Abständen wiederholt werden soll. Im Folgenden
+wird auf einige dieser Rahmenbedingungen eingegangen und beschreiben
+Maßnahmen beschrieben, die zukünftige Monitoringaktivitäten unterstützen
+können. Die beschriebenen Maßnahmen betreffen neben dem Sammeln der
+Metadaten auch die Motivation und Befähigung von Forschenden.
+
+\section{Organisatorische Maßnahmen für
+Sammlungen}\label{organisatorische-mauxdfnahmen-fuxfcr-sammlungen}
+
+Mit gezielten Maßnahmen können Prozesse und Infrastrukturen besser auf
+die Erfassung von Forschungsdatenpublikationen vorbereitet werden. Da
+Voraussetzungen an jeder Einrichtung sehr vielseitig sein können, dienen
+die genannten Beispiele primär der Orientierung.
+
+\subsection{Leit- und Richtlinien}\label{leit--und-richtlinien}
+
+Um einen Rahmen für das Monitoring von Forschungsdatenpublikationen zu
+schaffen und entsprechende Abfragen zu vereinfachen, können
+Einrichtungen die Absicht einer möglichst vollständigen Erfassung in
+Open-Science- oder Forschungsdatenleitlinien aufnehmen. Eine
+verpflichtende Erfassung sieht beispielsweise die Research Data
+Management Policy der Buckinghamshire New University vor: „All research
+data must be registered with the University whether it is hosted by the
+University or retained elsewhere'' (Buckinghamshire New University
+(2016) ; S. 3). Hierbei lassen sich auch Regelungen zur Nutzung des
+institutionellen Repositoriums und zu Communities der Institution in
+externen Repositorien wie Zenodo festhalten.
+
+Formulierte Vorgaben und Handreichungen zielen darauf ab, eine
+bestmöglichen Angabe von Metadaten bei Forschungsdatenpublikationen
+durch die Autor:innen der eigenen Einrichtung zu erreichen. Dies umfasst
+neben der korrekten Affiliationsangabe, etwa festgelegt durch eine
+Affiliationsrichtlinie, auch die Förderung der Nutzung von persistenten
+Identifikatoren für Einrichtungen (ROR) und Autor:innen (ORCID).
+Affiliationsrichtlinien werden in der Regel nach Abstimmung mit dem
+Präsidium erarbeitet und vom Senat verabschiedet. Viele universitäre
+Einrichtungen haben eine Affiliationsrichtlinie, beispielsweise die TU
+Clausthal.\footnote{\url{https://doi.org/10.21268/20260119-0}}
+
+\subsection{Institutsseitige Empfehlungen für die
+Repositorienwahl}\label{institutsseitige-empfehlungen-fuxfcr-die-repositorienwahl}
+
+Es gibt eine Vielzahl von Forschungsdatenrepositorien, die sich mit
+Blick auf ihren Anwendungsbereich, die technische Basis, Implementierung
+von Standards und weiteren Eigenschaften unterscheiden. Das Verzeichnis
+re3data weist inzwischen mehr als 3500 Repositorien nach.\footnote{\href{https://www.re3data.org/}{https://www.re3data.org}
+  (abgerufen am 30.09.2026)} Forschungsförderer und Akteure wie z. B.
+DINI definieren vermehrt Anforderungen an geeignete
+Forschungsdatenrepositorien, um Forschende Orientierung bei der
+Repositorienwahl zu geben (Gollwitzer u.~a. (2020)). Auch Einrichtungen
+können Empfehlungen aussprechen, wie etwa die ETH Zürich in den
+„Guidelines for Research Data Management at ETH Zurich''\footnote{\url{https://ethz.ch/content/dam/ethz/main/eth-zurich/organisation/rechtssammlung/414.2en.pdf}
+  (abgerufen am 30.09.2026)} oder die Forschungsdatenleitlinie der
+Max-Weber-Stiftung\footnote{\url{https://doi.org/10.5281/zenodo.10219502}}.
+
+Durch Empfehlungen wie diese können Einrichtungen ihre Angehörigen an
+Forschungsdatenrepositorien verweisen, die gewünschte Eigenschaften
+aufweisen. Hierzu zählen beispielsweise die Nutzung persistenter
+Identifikatoren oder das Harvesten der Datensätze durch Aggregatoren.
+Wenn Forschende ihre Daten dort veröffentlichen, wird die zukünftige
+Erfassung des Publikationsoutputs erleichtert.
+
+\subsection{Technische Voraussetzungen
+schaffen}\label{technische-voraussetzungen-schaffen}
+
+Je nach gewünschtem Verfahren (s. \hyperref[durchfuxfchrung]{Kapitel 3})
+und Voraussetzungen des Zielsystems (s. \hyperref[verwendung]{Kapitel
+4}) können (semi-)automatisierte Importroutinen implementiert werden.
+Das für die Erfassung zuständige Team kann unabhängig von Forschenden
+Einträge importieren. Auch manuelle Such- und Erfassungsvorgänge sind --
+mit entsprechendem Aufwand -- denkbar, etwa für einen anlassbezogenen
+Überblick (s. \hyperref[ziele]{Kapitel 2.1}).
+
+\subsection{Teilnahme am ORCID-DE
+Konsortium}\label{teilnahme-am-orcid-de-konsortium}
+
+Sofern es keine vertragliche Verpflichtung gibt, obliegt die
+Entscheidung, einen persönlichen ORCID-Account einzurichten und zu
+pflegen, jedem Forschenden selbst. Während das Einrichten und die Angabe
+der ORCID meist ohne Unterstützungs- oder Korrekturbedarf abläuft,
+erfolgt die aktive Pflege der Einträge nicht immer konsequent.
+Einrichtungen, die Mitglied im ORCID-DE Konsortium sind, erhalten die
+Möglichkeit, die ORCID-Einträge ihrer Forschenden zu kuratieren und sie
+somit bei der Pflege des Accounts zu unterstützen. Der Zugriff auf die
+ORCID-Einträge erfolgt von technischer Seite über eine API und bedarf
+der expliziten Zustimmung des jeweiligen Forschenden. Weitere
+Informationen zum Vorgang sind unter
+\url{https://www.orcid-de.org/konsortium/ueber-das-konsortium} und auf
+den verknüpften Seiten zu finden.
+
+Durch diese Serviceleistung kann die Akzeptanz der ORCID bei Forschenden
+erhöht und zugleich die Metadatenqualität in den institutseigenen
+Forschungsinformationssystemen verbessert werden. Dennoch ist an dieser
+Stelle anzumerken, dass die Konsortialmitgliedschaft nicht kostenlos
+ist. Einrichtungen müssen hier abwägen, ob sie den Mitgliedsbetrag
+aufbringen können bzw. wollen. Auch der erforderliche Personaleinsatz
+für die Datenpflege sollte bedacht werden.
+
+\section{Motivation und Befähigung von
+Forschenden}\label{motivation-und-befuxe4higung-von-forschenden}
+
+Die Einbindung von Forschenden in den Prozess der Sammlung und
+Sichtbarmachung des Forschungsoutputs der eigenen Einrichtung bereits
+während des Publikationsprozesses kann zu einer Verbesserung der
+Metadatenqualität führen und so das spätere Auffinden der Datensätze
+sowie das Transferieren in andere Systeme erleichtern. Wesentliche
+Punkte bei diesem Vorgehen sind die Motivation und die Befähigung der
+Forschenden, sich aktiv in den Prozess einzubringen. Hierfür müssen
+seitens der Einrichtung die Rahmenbedingungen in Form von Leit- und
+Richtlinien ausgearbeitet, verabschiedet und veröffentlicht werden.
+Außerdem können Anreize geschaffen werden, die das Mitwirken der
+Forschenden positiv beeinflussen. Um die Forschenden über ihre Rolle im
+Prozess, das damit verbundene Ziel und die zugrundeliegenden Bedingungen
+aufzuklären sowie dafür zu sensibilisieren, ist eine zielgerichtete
+Informationsbereitstellung von großer Bedeutung.
+
+\subsection{Anreizsysteme}\label{anreizsysteme}
+
+Die Publikation von Forschungsdaten sowie die damit verknüpfte Beachtung
+der Leit- und Richtlinien lassen sich durch bestimmte Anreizmechanismen
+fördern.
+
+Durch die Berücksichtigung von Open-Science-Praktiken in Einstellungs-
+und Evaluationsverfahren oder in der leistungsorientierten Mittelvergabe
+können Anreize für die Veröffentlichung von Forschungsdaten gesetzt
+werden. Dies erfolgt bereits an einigen Einrichtungen, wie eine
+internationale Sammlung von Stellenausschreibungen zeigt (Schönbrodt
+u.~a. (2018)). Darüber hinaus können Datenpublikationen inkl. korrekter
+Affiliationsangaben durch Preise honoriert werden.
+
+\subsection{Informationsangebote für
+Forschende}\label{informationsangebote-fuxfcr-forschende}
+
+Um die Forschenden als aktive Akteure über die anvisierte Sammlung und
+die damit designierte Verbesserung der Sichtbarkeit von Forschungsdaten
+der eigenen Einrichtung zu sensibilisieren, sind zielgerichtete
+Informationen -- auch über die am jeweiligen Standort herrschende
+Verbindlichkeit der Umsetzung - essentiell.
+
+Die Informationsangebote können die folgenden Aspekte in Bezug auf die
+Datenpublikation behandeln (soweit zutreffend):
+
+\begin{itemize}
+\tightlist
+\item
+  die Nutzung persistenter Identifier (insbesondere DOI, ORCID, ROR)
+\item
+  die Wahl eines Repositoriums (Auswahlkriterien, empfohlene
+  Repositorien, Verweis auf das institutionelle Repositorium)
+\item
+  Institutsseitige Vorgaben
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Forschungsdatenleitlinie oder Open-Science-Leitlinie
+  \item
+    Affiliationsrichtlinie
+  \item
+    Leitlinien für die Datenaufnahme und -kuration in Repositorien (z.
+    B. in Zenodo-Communities)
+  \item
+    Vorgaben zur Dateneinspeisung ins FIS
+  \item
+    Honorierung guter Praxis bei Einstellungsverfahren
+  \end{enumerate}
+\item
+  FAIR Data Principles
+\end{itemize}
+
+Forschende können hierbei über unterschiedliche Kommunikationskanäle
+erreicht werden. Dafür bieten sich die folgenden Wege an:
+
+\begin{itemize}
+\tightlist
+\item
+  Internetseiten des lokalen Forschungsdatenmanagements oder der
+  zugehörigen Universitätsbibliothek
+\item
+  Unterlagen in Onboarding- und Offboarding-Verfahren
+\item
+  Newsletter
+\item
+  Leitlinien und Handlungsempfehlungen
+\end{itemize}
+
+Eine dynamische Informationsbereitstellung kann unter anderem durch die
+direkte Interaktion mit den Forschenden auf Informationsveranstaltungen,
+Multiplikatorveranstaltungen (z. B. Sitzungstermine im Senat oder
+Fakultätsrat), in Onboarding-Gesprächen und in gezielten Schulungen
+erfolgen.
+
+Hierbei ist hervorzuheben, dass erfahrungsgemäß insbesondere
+(Post-)Doktoranden gut über Schulungen und Workshops zu Themen des
+Forschungsdatenmanagements erreichbar sind, aber auch andere Zielgruppen
+können durch spezialisierte Angebote angesprochen werden.
+
+Neben dem FDM- und Bibliothekspersonal werden hinsichtlich der
+Kommunikation mit den Forschenden aber auch die Präsidiumsmitglieder,
+welche für das Ressort Forschung zuständig sind, in der Verantwortung
+gesehen, sich unterstützend einzubringen. Eine vom Präsidiumsmitglied
+verfasste Rundmail, in der die Forschenden dazu ermutigend aufgefordert
+werden, eine ORCID anzulegen und zu pflegen, die Affiliationsrichtlinie
+zu beachten oder bestimmte Vorgaben bei der Datenpublikation zu
+erfüllen, kann eine verstärkende Wirkung besitzen.
+
+\chapter{Zusammenfassung}\label{zusammenfassung}
+
+Abschließend lässt sich festhalten, dass ein institutionelles Monitoring
+dezentral publizierter Forschungsdaten realisierbar, aber mit einigen
+Herausforderungen verbunden ist.
+
+Zu den Herausforderungen gehört insbesondere der Ressourceneinsatz, der
+für die Umsetzung erforderlich ist, und die Limitationen der verwendeten
+Datenquellen, z. B. mit Blick auf deren Datenqualität oder
+Veränderlichkeit (Demes (2026)). Auch das Policy-Umfeld ist geprägt von
+dynamischen Entwicklungen. So diskutieren verschiedene Akteure die
+Berücksichtigung von Open-Science-Praktiken in Evaluations- und
+Berufungsverfahren und setzen damit Anreize für die Erfassung des
+Forschungsdatenoutputs, und die internationale Open Science Monitoring
+Initiative fördert den Austausch und setzt sich für mehr
+Standardisierung ein. Diese Entwicklungen können schwer zu überblicken
+sein.
+
+Das Monitoring des institutionellen Forschungsdatenoutputs ist ein
+umfangreiches Vorhaben, das nicht nur ein Verständnis für
+institutionelle Gegebenheiten, Datenquellen und Suchstrategien\st{,}
+sondern auch zumindest grundlegende technische Fähigkeiten voraussetzt.
+Das Monitoring betrifft darüber hinaus verschiedene Bereiche der
+Einrichtungen und profitiert darum von klaren Zuständigkeiten und
+Vorgaben.
+
+Diese Handreichung zeigt auf, dass erste Schritte möglich sind, die
+schrittweise ausgebaut und so immer bessere Ergebnisse liefern können.
+Das Dokument sammelt Erfahrungen und bereitet sie in einer Form auf, die
+hoffentlich anderen Interessierten den Einstieg in das Thema
+erleichtert. Dieses Dokument wird zukünftig ergänzt um Notebooks, die
+konkrete Beispiele für Suchanfragen liefern.
+
+\chapter*{Literaturverzeichnis}\label{literaturverzeichnis}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+\markboth{Literaturverzeichnis}{Literaturverzeichnis}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{1}
+\bibitem[\citeproctext]{ref-baldwin_instant_2024}
+Baldwin, Julie, und Jonathan Green. 2024. \emph{Instant Data Finding and
+cataloguing externally hosted research datasets through automation}.
+Figshare. \url{https://doi.org/10.6084/M9.FIGSHARE.25233181}.
+
+\bibitem[\citeproctext]{ref-bobrov_principles_2025}
+Bobrov, Evgeny, Laetitia Bracco, Marin Dacos, u.~a. 2025. \emph{The
+Principles of Open Science Monitoring}.
+\url{https://doi.org/10.5281/zenodo.17853227}.
+
+\bibitem[\citeproctext]{ref-buckinghamshire_new_university_research_2016}
+Buckinghamshire New University. 2016. \emph{Research Data Management
+Policy}.
+\url{https://www.bucks.ac.uk/sites/default/files/2021-03/research_data_management_policy.pdf}.
+
+\bibitem[\citeproctext]{ref-cohen_matching_2026}
+Cohen, Avihay, Blanka Ivanovic, Anastasiia Iarkaeva, Vladislav Nachev,
+und Evgeny Bobrov. 2026. \emph{Matching data references and
+institutional output to map the reuse of biomedical research data}.
+z9kjf\_v4. {MetaArXiv}. \url{https://doi.org/10.31222/osf.io/z9kjf_v4}.
+
+\bibitem[\citeproctext]{ref-datacite_datacite_2026}
+DataCite. 2026. \emph{{DataCite} Public Data File 2025}. {DataCite}.
+\url{https://doi.org/10.14454/T5QB-D995}.
+
+\bibitem[\citeproctext]{ref-datacite_data_2025}
+DataCite, und Make Data Count. 2025. \emph{Data Citation Corpus Data
+File}. Version v3.0. Zenodo.
+\url{https://doi.org/10.5281/zenodo.14897662}.
+
+\bibitem[\citeproctext]{ref-demes_overhaul_2026}
+Demes, Kyle. 2026. {„An Overhaul of Type Classification. {OpenAlex}
+blog``}. Juli 15.
+\url{https://blog.openalex.org/an-overhaul-of-type-classification/}.
+
+\bibitem[\citeproctext]{ref-eprints_eprints_2015}
+EPrints. 2015. {„{EPrints} for Research Data-- {EPrints} Services``}.
+Juli 9.
+\url{https://uk.eprints-hosting.org/uk/index.php/flavours/eprints-for-research-data-1/}.
+
+\bibitem[\citeproctext]{ref-gee_hunt_2026}
+Gee, Bryan M. 2026. {„The hunt for research data: Development of an
+open-source workflow for tracking institutionally-affiliated research
+data publications``}. \emph{Journal of {eScience} Librarianship} 15 (1).
+\url{https://doi.org/10.7191/jeslib.1170}.
+
+\bibitem[\citeproctext]{ref-gerasimov_comparison_2024}
+Gerasimov, Irina, Binita KC, Armin Mehrabian, James Acker, und Michael
+P. McGuire. 2024. {„Comparison of datasets citation coverage in Google
+Scholar, Web of Science, Scopus, Crossref, and {DataCite}``}.
+\emph{Scientometrics} 129 (7): 3681--704.
+\url{https://doi.org/10.1007/s11192-024-05073-5}.
+
+\bibitem[\citeproctext]{ref-gollwitzer_management_2020}
+Gollwitzer, Mario, Andrea Abele-Brehm, Christian Fiebach, u.~a. 2020.
+\emph{Management und Bereitstellung von Forschungsdaten in der
+Psychologie: Überarbeitung der {DGPs}-Empfehlungen}. {PsyArXiv}.
+\url{https://doi.org/10.31234/osf.io/hcxtm}.
+
+\bibitem[\citeproctext]{ref-gregory_tracing_2023}
+Gregory, Kathleen, Anton Ninkov, Chantal Ripp, Emma Roblin, Isabella
+Peters, und Stefanie Haustein. 2023. {„Tracing data: A survey
+investigating disciplinary differences in data citation``}.
+\emph{Quantitative Science Studies} 4 (3): 622--49.
+\url{https://doi.org/10.1162/qss_a_00264}.
+
+\bibitem[\citeproctext]{ref-habermann_datacite_2025}
+Habermann, Ted. 2025. {„{DataCite} Facets and Metadata Completeness.
+Metadata Game Changers``}. \url{https://doi.org/10.59350/55etd-e8154}.
+
+\bibitem[\citeproctext]{ref-iarkaeva_methodology_nodate}
+Iarkaeva, Anastasiia, Maaike Duine, und Andreas Hübner. o.~J.
+\emph{Methodology to detect Open Data underlying the journal articles'
+full texts of the Department of Earth Sciences, Freie Universität
+Berlin}. \url{https://doi.org/10.57874/Z5FK-WE46}.
+
+\bibitem[\citeproctext]{ref-iarkaeva_workflow_2024}
+Iarkaeva, Anastasiia, Vladislav Nachev, und Evgeny Bobrov. 2024.
+{„Workflow for detecting biomedical articles with underlying open and
+restricted-access datasets``}. \emph{{PLOS} {ONE}} 19 (5): e0302787.
+\url{https://doi.org/10.1371/journal.pone.0302787}.
+
+\bibitem[\citeproctext]{ref-kirsch_assessing_2026}
+Kirsch, Danielle R., und Isaac Wink. 2026. {„Assessing Researcher Data
+Sharing Practices Using Publicly Available Dataset Metadata: A
+Reproducible Workflow for Institutional Stakeholders``}. \emph{Journal
+of Librarianship and Scholarly Communication} 14 (1).
+\url{https://doi.org/10.31274/jlsc.22913}.
+
+\bibitem[\citeproctext]{ref-putnings_go_2024}
+Putnings, Markus, Anna Daudrich, Nils Dille, Anastasiia Iarkaeva, Janina
+Kühner, und Alica Wollmann. 2024. \emph{{GO} {UNITE}! Empfehlungen zur
+Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution}.
+Zenodo. \url{https://doi.org/10.5281/zenodo.11102368}.
+
+\bibitem[\citeproctext]{ref-riedel_oddpub_2026}
+Riedel, Nico, und Vladislav Nachev. 2026. \emph{{ODDPub}: A text-mining
+algorithm to detect data sharing in biomedical publications}. Version
+7.3.0. Released. \url{https://doi.org/10.5281/zenodo.3741403}.
+
+\bibitem[\citeproctext]{ref-robinson-garcia_datacite_2017}
+Robinson-Garcia, Nicolas, Philippe Mongeon, Wei Jeng, und Rodrigo
+Costas. 2017. {„{DataCite} as a novel bibliometric source: Coverage,
+strengths and limitations``}. \emph{Journal of Informetrics} 11 (3):
+841--54. \url{https://doi.org/10.1016/j.joi.2017.07.003}.
+
+\bibitem[\citeproctext]{ref-van_de_sandt_definition_2019}
+Sandt, Stephanie van de, Sünje Dallmeier-Tiessen, Artemis Lavasa, und
+Vivien Petras. 2019. {„The Definition of Reuse``}. \emph{Data Science
+Journal} 18 (1): 22. \url{https://doi.org/10.5334/dsj-2019-022}.
+
+\bibitem[\citeproctext]{ref-schonbrodt_academic_2018}
+Schönbrodt, Felix, Leonhard Schramm, Franka Etzel, u.~a. 2018.
+\emph{Academic job offers that mentioned open science}. {OSF}.
+\url{https://doi.org/10.17605/OSF.IO/7JBNT}.
+
+\bibitem[\citeproctext]{ref-strecker_how_2025}
+Strecker, Dorothea, Kerstin Soltau, und Felix Bach. 2025. {„How Are
+Research Data Referenced? The Use Case of the Research Data Repository
+{RADAR}``}. \emph{Research Data Management: Challenges in a Changing
+World} (Heidelberg), 146--59.
+\url{https://doi.org/10.11588/heibooks.1652}.
+
+\bibitem[\citeproctext]{ref-noauthor_unesco_2021}
+\emph{{UNESCO} Recommendation on Open Science}. 2021. {UNESCO}.
+\url{https://doi.org/10.54677/MNMH8546}.
+
+\bibitem[\citeproctext]{ref-noauthor_ub-mannheimmadabi_2026}
+Universitätsbibliothek Mannheim. 2026. \emph{{UB}-Mannheim/madabi}.
+Released. \url{https://github.com/UB-Mannheim/madabi}.
+
+\bibitem[\citeproctext]{ref-ziegler_6_2023}
+Ziegler, Barbara, und Fabian Franke. 2023. {„6 in 1: Publikationen,
+Forschungsdaten, Projekte, Forschende, Einrichtungen, Auszeichnungen``}.
+\emph{o-bib. Das offene Bibliotheksjournal} 10 (1): 1--13.
+\url{https://doi.org/10.5282/O-BIB/5868}.
+
+\end{CSLReferences}
+
+
+
+
+\end{document}
