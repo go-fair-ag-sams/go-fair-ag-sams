@@ -55,4 +55,4 @@ format:
   pdf:
     documentclass: scrreprt
     number-depth: 3
-    keep-tex: true
+    #keep-tex: true
