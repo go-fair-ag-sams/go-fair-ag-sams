@@ -1,0 +1,89 @@
+{
+  "title": "GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution",
+  "creators": [
+    {
+      "name": "Strecker, Dorothea",
+      "orcid": "0000-0002-9754-3807",
+      "affiliation": "Institut für Bibliotheks- und Informationswissenschaft, Humboldt-Universität zu Berlin, Deutschland"
+    },
+    {
+      "name": "Cordes, Birte",
+      "orcid": "0000-0001-5068-5034",
+      "affiliation": "Universitätsbibliothek, Universität Kassel, Deutschland"
+    },
+    {
+      "name": "Daudrich, Anna",
+      "orcid": "0000-0002-7663-5630",
+      "affiliation": "Hochschulbibliothek, ZHAW Zürcher Hochschule für Angewandte Wissenschaften, Schweiz"
+    },
+    {
+      "name": "Hiller, Jessica",
+      "orcid": "0009-0000-1619-0070",
+      "affiliation": "Universitätsbibliothek, Technische Universität Clausthal, Deutschland"
+    },
+    {
+      "name": "Schuster, Isabel",
+      "orcid": "0009-0009-0780-8006",
+      "affiliation": "Universitätsbibliothek, Friedrich-Alexander-Universität Erlangen-Nürnberg, Deutschland"
+    },
+    {
+      "name": "Spenger, Martin",
+      "orcid": "0000-0002-8841-5985",
+      "affiliation": "Universitätsbibliothek, Ludwig-Maximilians-Universität München, Deutschland"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Iarkaeva, Anastasiia",
+      "orcid": "0000-0002-7370-1663",
+      "affiliation": "Berlin Institute of Health, Charité - Universitätsmedizin Berlin, Deutschland"
+    },
+    {
+      "name": "Putnings, Markus",
+      "orcid": "0000-0002-6014-9048",
+      "affiliation": "Bibliothek, Technische Hochschule Deggendorf, Deutschland"
+    },
+    {
+      "name": "Asef, Esther",
+      "orcid": "0000-0003-2411-4953",
+      "affiliation": "Universitätsbibliothek, Charité - Universitätsmedizin Berlin, Deutschland"
+    },
+    {
+      "name": "Malzer, Christian",
+      "orcid": "0009-0005-0522-7102",
+      "affiliation": "Bibliothek, Universität Würzburg, Deutschland"
+    }
+  ],
+  "version": "2.0.0",
+  "access_right": "open",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "license": "cc-by-4.0",
+  "language": "deu",
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.11102368",
+      "relation": "isNewVersionOf",
+      "resource_type": "publication"
+    },
+    {
+      "identifier": "https://go-fair-ag-sams.github.io/go-fair-ag-sams/",
+      "relation": "isIdenticalTo",
+      "resource_type": "publication"
+    }
+  ],
+  "keywords": [
+    "Forschungsdaten",
+    "Forschungsdatenmonitoring",
+    "Forschungsdatenmanagement",
+    "institutioneller Forschungsdatenoutput",
+    "Sichtbarkeit von Forschungsdaten",
+    "FAIR Data",
+    "GO UNITE!"
+  ],
+  "communities": [
+    {
+      "identifier": "go_fair_initiative"
+    }
+  ]
+}
