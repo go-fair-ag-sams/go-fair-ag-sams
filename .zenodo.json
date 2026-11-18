@@ -36,22 +36,26 @@
     {
       "name": "Iarkaeva, Anastasiia",
       "orcid": "0000-0002-7370-1663",
-      "affiliation": "Berlin Institute of Health, Charité - Universitätsmedizin Berlin, Deutschland"
+      "affiliation": "Berlin Institute of Health, Charité - Universitätsmedizin Berlin, Deutschland", 
+      "role": "relatedperson"
     },
     {
       "name": "Putnings, Markus",
       "orcid": "0000-0002-6014-9048",
-      "affiliation": "Bibliothek, Technische Hochschule Deggendorf, Deutschland"
+      "affiliation": "Bibliothek, Technische Hochschule Deggendorf, Deutschland", 
+      "role": "relatedperson"
     },
     {
       "name": "Asef, Esther",
       "orcid": "0000-0003-2411-4953",
-      "affiliation": "Universitätsbibliothek, Charité - Universitätsmedizin Berlin, Deutschland"
+      "affiliation": "Universitätsbibliothek, Charité - Universitätsmedizin Berlin, Deutschland", 
+      "role": "relatedperson"
     },
     {
       "name": "Malzer, Christian",
       "orcid": "0009-0005-0522-7102",
-      "affiliation": "Bibliothek, Universität Würzburg, Deutschland"
+      "affiliation": "Bibliothek, Universität Würzburg, Deutschland", 
+      "role": "relatedperson"
     }
   ],
   "version": "2.0.0",
