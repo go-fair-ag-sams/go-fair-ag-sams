@@ -4,7 +4,17 @@
     "href": "index.html",
     "title": "GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution",
     "section": "",
-    "text": "Über dieses Dokument\nDieses Dokument zeigt praxisnah, wie verstreut veröffentlichte Forschungsdaten effizient identifiziert und der eigenen Einrichtung zugeordnet werden können.\nDer Teil Strategien enthält allgemeine Überlegungen zur Konzeption und Durchführung des Monitorings von institutionellem Forschungsdatenoutput.\nAktuell arbeiten wir ergänzend an Notebooks, die Code und Text kombinieren und beispielhaft zeigen, wie bestimmte Datenquellen abgefragt werden können. Die Notebooks werden voraussichtlich in Q1 2027 veröffentlicht.\nDiese Version ist eine Aktualisierung und Überarbeitung von:\nPutnings, M., Daudrich, A., Dille, N., Iarkaeva, A., Kühner, J., & Wollmann, A. (2024). GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution. Zenodo. https://doi.org/10.5281/zenodo.11102368",
+    "text": "Über dieses Dokument\nDieses Dokument zeigt praxisnah, wie verstreut veröffentlichte Forschungsdaten effizient identifiziert und der eigenen Einrichtung zugeordnet werden können und ist unter der Lizenz Creative Commons Attribution 4.0 International lizenziert. Eine PDF-Version des Dokuments ist unter der DOI 10.5281/zenodo.24333919 auf Zenodo veröffentlicht.\nDer Teil Strategien enthält allgemeine Überlegungen zur Konzeption und Durchführung des Monitorings von institutionellem Forschungsdatenoutput.\nAktuell arbeiten wir ergänzend an Notebooks, die Code und Text kombinieren und beispielhaft zeigen, wie bestimmte Datenquellen abgefragt werden können. Die Notebooks werden voraussichtlich in Q1 2027 veröffentlicht.\nDiese Version ist eine Aktualisierung und Überarbeitung von:\nPutnings, M., Daudrich, A., Dille, N., Iarkaeva, A., Kühner, J., & Wollmann, A. (2024). GO UNITE! Empfehlungen zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution. Zenodo. https://doi.org/10.5281/zenodo.11102368",
+    "crumbs": [
+      "Über dieses Dokument"
+    ]
+  },
+  {
+    "objectID": "index.html#förderung",
+    "href": "index.html#förderung",
+    "title": "GO UNITE! Strategien zur Sammlung und Sichtbarkeit von Forschungsdaten der eigenen Institution",
+    "section": "Förderung",
+    "text": "Förderung\nDie Arbeit von Dorothea Strecker wurde gefördert durch die Deutsche Forschungsgemeinschaft (DFG) - Projektnummer 528466070. Die Arbeit von Jessica Hiller wurde gefördert durch das Niedersächsischen Ministerium für Wissenschaft und Kultur (MWK), und der VolkswagenStiftung im Rahmen des gemeinsamen Wissenschaftsförderprogramms zukunft.niedersachsen - Förderkennzeichen 11-76251-115702023.",
     "crumbs": [
       "Über dieses Dokument"
     ]
